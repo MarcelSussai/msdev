@@ -10,11 +10,10 @@ const Container = styled.div`
 
 const LogoContainer = (props: any) => {
 
-  const {isHide} = props
 
   return (
     <Container>
-      <LogoComponent isHide={isHide} />
+      <LogoComponent />
     </Container>
   )
 }

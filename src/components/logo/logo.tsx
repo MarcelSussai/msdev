@@ -1,4 +1,6 @@
+import { useContext } from "react"
 import styled from "styled-components"
+import { AppCtx } from "../../contexts/ctxGlobal"
 import { colors } from "../../styles/theme"
 import { fncTransition } from "../../styles/theme/snippetsCSS"
 
@@ -48,7 +50,9 @@ const Svg = styled.svg`
 
 const LogoComponent = (props: any) => {
 
-  const {isHide} = props
+  
+  const context = useContext(AppCtx)
+  const {isHide} = context
 
   const {} = props
   return (
