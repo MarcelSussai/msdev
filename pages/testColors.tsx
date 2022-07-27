@@ -2,6 +2,8 @@ import colors from "../src/styles/theme/colors"
 import styled from 'styled-components'
 import Head from '../src/components/head'
 import MainStyledTest from "../src/styles/mainStyledTest"
+import MainDefaultLayout from "../src/components/layout/mainDefaultLayout"
+
 
 const {
   pictonBlue,
@@ -31,7 +33,8 @@ const ContainerColor = styled.div<any>`
   justify-content: flex-start;
   border: solid 2px #000;
   position: relative;
-  color: ${riverBed.x050};
+  color: ${riverBed.x650};
+  margin-top: 56px;
 
   &:before {
     ${({text}) => `content: '${text}';`}
@@ -93,9 +96,8 @@ const ColorComponent = (props: any) => {
 const TestColors = () => {
   return (
     <>
-      <Head title="Testando Cores" />
-
-      <MainStyledTest>
+      <MainDefaultLayout title='Teste de cores'>
+      
         <ContainerColorsAll>
           <ColorComponent cor={pictonBlue}    nameColor={"pictonBlue"} />
           <ColorComponent cor={celery}        nameColor={"celery"} />
@@ -107,7 +109,7 @@ const TestColors = () => {
           <ColorComponent cor={richLilac}     nameColor={"richLilac"} />
           <ColorComponent cor={ripeMango}     nameColor={"ripeMango"} />
         </ContainerColorsAll>
-      </MainStyledTest>
+      </MainDefaultLayout>
 
     </>
   )

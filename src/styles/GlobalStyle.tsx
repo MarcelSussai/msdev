@@ -6,6 +6,7 @@ import { colors } from './theme'
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
+    outline: 0;
   }
 
   ul[class], ol[class] {
@@ -30,19 +31,22 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html::-webkit-scrollbar {
-    
+    width: 12px;
   }
   html::-webkit-scrollbar-button  {
+    display: none;
     
   }
   html::-webkit-scrollbar-track  {
     
   }
   html::-webkit-scrollbar-track-piece {
+    background: ${colors.pictonBlue.x300};
     
   }
   html::-webkit-scrollbar-thumb {
-    
+    background: ${colors.celery.x300};
+    border-radius: 24px;
   }
 
   html {
@@ -61,11 +65,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
-    background: linear-gradient(
-      45deg,
-      ${colors.riverBed.x400},
-      ${colors.riverBed.x500}
-    );
+    background: ${colors.riverBed.x150};
   }
 
   ul[class], ol[class] {

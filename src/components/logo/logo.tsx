@@ -9,32 +9,47 @@ const Svg = styled.svg`
   height: 100%;
 
   path.top-left {
-    ${fncTransition({dur: '1s'})}
+    ${fncTransition({dur: '1s', dly: '1s'})}
+    opacity: 1;
     &.move {
+      ${fncTransition({dur: '1s', dly: '.1s'})}
       transform: translate3d(-80px, -80px, 0);
+      opacity: 0;
     }
   }
   path.top-right {
-    ${fncTransition({dur: '1s'})}
+    ${fncTransition({dur: '1s', dly: '.9s'})}
+    opacity: 1;
     &.move {
+      ${fncTransition({dur: '1s', dly: '.2s'})}
       transform: translate3d(80px, -80px, 0);
+      opacity: 0;
     }
   }
   path.bottom-right {
-    ${fncTransition({dur: '1s'})}
+    ${fncTransition({dur: '1s', dly: '.8s'})}
+    opacity: 1;
     &.move {
+      ${fncTransition({dur: '1s', dly: '.3s'})}
       transform: translate3d(80px, 80px, 0);
+      opacity: 0;
     }
   }
   path.bottom-left {
-    ${fncTransition({dur: '1s'})}
+    ${fncTransition({dur: '1s', dly: '.7s'})}
+    opacity: 1;
     &.move {
+      ${fncTransition({dur: '1s', dly: '.4s'})}
       transform: translate3d(-80px, 80px, 0);
+      opacity: 0;
     }
   }
 `
 
 const LogoComponent = (props: any) => {
+
+  const {isHide} = props
+
   const {} = props
   return (
     <Svg
@@ -92,7 +107,7 @@ const LogoComponent = (props: any) => {
           2.95289 27.1401 4.09504Z"
         fill={colors.riverBed.x650}
         stroke={colors.paleGoldenRod.x500}
-        className="top-left "
+        className={isHide ? 'top-left move' : 'top-left'}
       />
       <path
         d="M77.905 27.1401L54.8599 4.09504C53.7178
@@ -101,7 +116,7 @@ const LogoComponent = (props: any) => {
           27.4733 79.0471 28.2822 77.905 27.1401Z"
         fill={colors.riverBed.x650}
         stroke={colors.paleGoldenRod.x500}
-        className="top-right"
+        className={isHide ? 'top-right move' : 'top-right'}
       />
       <path
         d="M54.8599 77.905L77.905 54.8599C79.0471 53.7178 81
@@ -110,7 +125,7 @@ const LogoComponent = (props: any) => {
           54.8599 77.905Z"
         fill={colors.riverBed.x650}
         stroke={colors.paleGoldenRod.x500}
-        className="bottom-right"
+        className={isHide ? 'bottom-right move' : 'bottom-right'}
       />
       <path
         d="M4.09503 54.8599L27.1401 77.905C28.2822 79.0471
@@ -119,7 +134,7 @@ const LogoComponent = (props: any) => {
           53.7178 4.09503 54.8599Z"
         fill={colors.riverBed.x650}
         stroke={colors.paleGoldenRod.x500}
-        className="bottom-left"
+        className={isHide ? 'bottom-left move' : 'bottom-left'}
       />
     </Svg>
   )
