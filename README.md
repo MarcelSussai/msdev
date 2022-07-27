@@ -1,7 +1,9 @@
-# Starter com as seguintes configurações já feitas:
+# A nova versão de meu site ...
 
-- Typescript
-- Styled-components
-- Theme do styled
-- Contexto Global
-- Criado pastas
+## Em desenvolvimento ...
+
+### mais detalhes em breve ...
+
+#### Acesse meu site atual, logo outra versão reformulada do zero com novas seções nascerá!
+
+#### <a href="https://marcelsussai.dev" target="_blank">marcelsussai.dev</a>
