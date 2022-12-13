@@ -41,11 +41,11 @@ const GlobalStyle = createGlobalStyle`
     
   }
   html::-webkit-scrollbar-track-piece {
-    background: ${colors.pictonBlue.x300};
+    background: ${colors.pictonBlue.c300};
     
   }
   html::-webkit-scrollbar-thumb {
-    background: ${colors.celery.x300};
+    background: ${colors.celery.c300};
     border-radius: 24px;
   }
 
@@ -65,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.4;
     overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
-    background: ${colors.riverBed.x150};
+    background: white;
   }
 
   ul[class], ol[class] {

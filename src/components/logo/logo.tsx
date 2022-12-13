@@ -1,54 +1,18 @@
+import { useContext } from "react"
 import styled from "styled-components"
-import { colors } from "../../styles/theme"
-import { fncTransition } from "../../styles/theme/snippetsCSS"
+import { AppCtx } from "../../contexts/ctxGlobal"
 
 
 const Svg = styled.svg`
   margin: 0;
   width: 100%;
   height: 100%;
-
-  path.top-left {
-    ${fncTransition({dur: '1s', dly: '1s'})}
-    opacity: 1;
-    &.move {
-      ${fncTransition({dur: '1s', dly: '.1s'})}
-      transform: translate3d(-80px, -80px, 0);
-      opacity: 0;
-    }
-  }
-  path.top-right {
-    ${fncTransition({dur: '1s', dly: '.9s'})}
-    opacity: 1;
-    &.move {
-      ${fncTransition({dur: '1s', dly: '.2s'})}
-      transform: translate3d(80px, -80px, 0);
-      opacity: 0;
-    }
-  }
-  path.bottom-right {
-    ${fncTransition({dur: '1s', dly: '.8s'})}
-    opacity: 1;
-    &.move {
-      ${fncTransition({dur: '1s', dly: '.3s'})}
-      transform: translate3d(80px, 80px, 0);
-      opacity: 0;
-    }
-  }
-  path.bottom-left {
-    ${fncTransition({dur: '1s', dly: '.7s'})}
-    opacity: 1;
-    &.move {
-      ${fncTransition({dur: '1s', dly: '.4s'})}
-      transform: translate3d(-80px, 80px, 0);
-      opacity: 0;
-    }
-  }
 `
 
 const LogoComponent = (props: any) => {
 
-  const {isHide} = props
+  const {theme} = useContext(AppCtx)
+  const {colors} = theme
 
   const {} = props
   return (
@@ -57,14 +21,14 @@ const LogoComponent = (props: any) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 82 82"
     >
-      <circle cx={41} cy={41} r={40} fill={colors.riverBed.x800} className="sombra" />
+      <circle cx={41} cy={41} r={40} fill={colors.riverBed.c800} className="sombra" />
       <path
         d="M45.2099 8.05079C42.7525 7.67771
           40.2402 7.97563 37.9376 8.91315C35.0382
           10.0896 32.4255 11.8777 30.277 14.156L5.14758
           39.3402L12.397 46.613L49.2687 9.63052C48.0365
           8.83377 46.6556 8.29632 45.2099 8.05079Z"
-        fill={colors.pictonBlue.x500}
+        fill={colors.pictonBlue.c500}
       />
       <path
         d="M74.3376 37.1793C74.0161 35.0524 73.0247
@@ -98,43 +62,7 @@ const LogoComponent = (props: any) => {
           52.1119C70.5336 49.9613 72.3122 47.3404 73.4678
           44.4325C74.3899 42.1326 74.6899 39.6313 74.3376
           37.1793Z"
-        fill={colors.celery.x500}
-      />
-      <path
-        d="M27.1401 4.09504L4.09504 27.1401C2.95289
-          28.2822 1 27.4733 1 25.8581V2.81303C1 1.81172
-          1.81172 1 2.81303 1H25.8581C27.4733 1 28.2822
-          2.95289 27.1401 4.09504Z"
-        fill={colors.riverBed.x650}
-        stroke={colors.paleGoldenRod.x500}
-        className={isHide ? 'top-left move' : 'top-left'}
-      />
-      <path
-        d="M77.905 27.1401L54.8599 4.09504C53.7178
-          2.95289 54.5267 0.999999 56.1419 0.999999L79.187
-          1C80.1883 1 81 1.81172 81 2.81303L81 25.8581C81
-          27.4733 79.0471 28.2822 77.905 27.1401Z"
-        fill={colors.riverBed.x650}
-        stroke={colors.paleGoldenRod.x500}
-        className={isHide ? 'top-right move' : 'top-right'}
-      />
-      <path
-        d="M54.8599 77.905L77.905 54.8599C79.0471 53.7178 81
-          54.5267 81 56.1419L81 79.187C81 80.1883 80.1883 81
-          79.187 81L56.1419 81C54.5267 81 53.7178 79.0471
-          54.8599 77.905Z"
-        fill={colors.riverBed.x650}
-        stroke={colors.paleGoldenRod.x500}
-        className={isHide ? 'bottom-right move' : 'bottom-right'}
-      />
-      <path
-        d="M4.09503 54.8599L27.1401 77.905C28.2822 79.0471
-          27.4733 81 25.8581 81L2.81303 81C1.81172 81 1 80.1883
-          1 79.187L0.999999 56.1419C0.999999 54.5267 2.95289
-          53.7178 4.09503 54.8599Z"
-        fill={colors.riverBed.x650}
-        stroke={colors.paleGoldenRod.x500}
-        className={isHide ? 'bottom-left move' : 'bottom-left'}
+        fill={colors.celery.c500}
       />
     </Svg>
   )

@@ -18,7 +18,7 @@ const PortfolioIcon = (props: any) => (
         3.00006 20H17.0001C17.5305 20 18.0392 19.7893 18.4143
         19.4142C18.7893 19.0391 19.0001 18.5304 19.0001
         18V12H11.0001V14H9.00006V12Z"
-      fill={colors.ripeMango.x200}
+      fill="black"
     />
     <path
       d="M9 11H0V5C0 3.9 0.9 3 2 3H6V2C6 1.46957 6.21071
@@ -27,7 +27,7 @@ const PortfolioIcon = (props: any) => (
         0.960859 14 1.46957 14 2V3H18C18.5304 3 19.0391 3.21071
         19.4142 3.58579C19.7893 3.96086 20 4.46957 20
         5V11H11V9H9V11ZM12 3V2H8V3H12Z"
-      fill={colors.ripeMango.x500}
+      fill="black"
     />
   </Svg>
 )

@@ -2,19 +2,19 @@
 
 
 interface fncTransitionProps {
-  dur?: string
-  eas?: string
-  tar?: string
-  dly?: string
+  duration?: string
+  easing?: string
+  target?: string
+  delay?: string
 }
 export const fncTransition = (props: fncTransitionProps) => {
-  const { dur, eas, tar, dly} = props
+  const { duration, easing, target, delay} = props
   return `
     transition:
-      ${ tar || ' all ' }
-      ${ dur || ' .2s ' }
-      ${eas || ' ease-in-out '}
-      ${dly || ''};
+      ${ target   || ' all ' }
+      ${ duration || ' .2s ' }
+      ${ easing   || ' ease-in-out '}
+      ${ delay    || ''};
   `
 }
 

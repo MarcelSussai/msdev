@@ -86,10 +86,10 @@ export const makingLightColors = (
   ).map((color) => (color))
 }
 
-export const listOfColors = (mainColor: string, amountD = 4, amountL = 4 ) => {
+export const listOfColors = (mainColor: string, amountD = 9, amountL = 9 ) => {
 
   const darkColorsAmount = amountD
-  const darkestAmount = 84
+  const darkestAmount = 80
   const darkColorsMixRotate = 0
   const darkSaturation = 100
 
