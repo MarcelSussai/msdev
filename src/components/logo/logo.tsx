@@ -1,12 +1,29 @@
-import { useContext } from "react"
-import styled from "styled-components"
-import { AppCtx } from "../../contexts/ctxGlobal"
+import { useContext } from 'react'
+import styled from 'styled-components'
+import { AppCtx } from '../../contexts/ctxGlobal'
+import { fncTransition } from '../../styles/theme/snippetsCSS'
 
 
 const Svg = styled.svg`
+  // --
+  ${fncTransition({})}
+  --color-shadow-filter: ${ ({theme}) => theme.colors.riverBed.c950 }64;
+  // --
   margin: 0;
   width: 100%;
   height: 100%;
+  /* filter: drop-shadow(-6px -6px 6px var(--color-shadow-filter)); */
+  // --
+`
+const Circle = styled.circle`
+  // --
+  ${fncTransition({})}
+  --color-stroke: ${ ({theme}) => theme.colors.paleGoldenRod.c500 };
+  // --
+  fill: url('#gradient-circle');
+  stroke-width: 1px;
+  stroke: var(--color-stroke);
+  // --
 `
 
 const LogoComponent = (props: any) => {
@@ -21,7 +38,13 @@ const LogoComponent = (props: any) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 82 82"
     >
-      <circle cx={41} cy={41} r={40} fill={colors.riverBed.c800} className="sombra" />
+      <defs>
+        <linearGradient id="gradient-circle" gradientTransform='rotate(32)'>
+          <stop offset={0} stopColor={colors.riverBed.c950} />
+          <stop offset={100} stopColor={colors.riverBed.c800} />
+        </linearGradient>
+      </defs>
+      <Circle cx={41} cy={41} r={40} />
       <path
         d="M45.2099 8.05079C42.7525 7.67771
           40.2402 7.97563 37.9376 8.91315C35.0382

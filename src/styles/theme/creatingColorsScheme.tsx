@@ -7,7 +7,7 @@ export const rawHexColorToHexColor = (rawHexColor: string) => (
   '#' + rawHexColor : rawHexColor
 )
 
-export const hexColorToRawHexColor = (number: string) => number.substring(1, number.length)
+export const hexColorToRawHexColor = (hex: string) => hex.substring(1, hex.length)
 
 export const isValidHex = (color: string) => {
 

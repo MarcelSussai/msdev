@@ -1,5 +1,5 @@
 import { Main } from '../../styles/MainStyled'
-import LogoComponent from '../logo/logo'
+import Header from '../header'
 import Head from './../head'
 
 
@@ -16,7 +16,7 @@ const MainDefaultLayout = (props: any) => {
   return (
     <>
       <Head title={title} />
-      <LogoComponent />
+      <Header />
       <Main>
         {children}
       </Main>

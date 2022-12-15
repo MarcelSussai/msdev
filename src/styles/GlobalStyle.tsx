@@ -30,23 +30,22 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  html::-webkit-scrollbar {
-    width: 12px;
-  }
-  html::-webkit-scrollbar-button  {
-    display: none;
-    
-  }
   html::-webkit-scrollbar-track  {
     
   }
+  html::-webkit-scrollbar {
+    width: 10px;
+  }
+  html::-webkit-scrollbar-button  {
+    display: none;
+  }
   html::-webkit-scrollbar-track-piece {
-    background: ${colors.pictonBlue.c300};
+    background: ${colors.riverBed.c300};
+    border-left: solid 2px ${colors.riverBed.c150}80;
     
   }
   html::-webkit-scrollbar-thumb {
-    background: ${colors.celery.c300};
-    border-radius: 24px;
+    background: ${colors.riverBed.c600};
   }
 
   html {
@@ -64,8 +63,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     line-height: 1.4;
     overflow-x: hidden;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     background: white;
+    background: ${colors.riverBed.c250};
   }
 
   ul[class], ol[class] {

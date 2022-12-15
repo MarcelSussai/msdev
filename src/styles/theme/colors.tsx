@@ -2,10 +2,18 @@ import { listOfColors } from "./creatingColorsScheme"
 
 
 const pictonBlue    = listOfColors('#3C90E5', 9, 9)
-const celery        = listOfColors('#3CE579', 9, 9)
+const celery        = listOfColors('#3ce579', 9, 9)
 const riverBed      = listOfColors('#758CA0', 9, 9)
-const paleGoldenRod = listOfColors('#faf0be', 9, 9)
-const yellow        = listOfColors('#F9F871', 9, 9)
+const paleGoldenRod = listOfColors('#EEE8A9', 9, 9)
+const cream         = listOfColors('#FFEDCB', 9, 9)
+const yellow        = listOfColors('#F8F872', 9, 9)
+const wine          = listOfColors('#904B72', 9, 9)
+const grape         = listOfColors('#8170BC', 9, 9)
+const orange        = listOfColors('#E5913C', 9, 9)
+const red           = listOfColors('#E53C3B', 9, 9)
+const green         = listOfColors('#009A5E', 9, 9)
+const blue          = listOfColors('#3D3CE5', 9, 9)
+const greyPurple    = listOfColors('#555480', 9, 9)
 
 const makingTones = (color: any) => {
   return {
@@ -32,11 +40,20 @@ const makingTones = (color: any) => {
 }
 
 const colors = {
+  white:          '#FFFFFF',
   pictonBlue:     makingTones(pictonBlue),
   celery:         makingTones(celery),
   riverBed:       makingTones(riverBed),
   paleGoldenRod:  makingTones(paleGoldenRod),
   yellow:         makingTones(yellow),
+  wine:           makingTones(wine),
+  grape:          makingTones(grape),
+  orange:         makingTones(orange),
+  red:            makingTones(red),
+  green:          makingTones(green),
+  cream:          makingTones(cream),
+  blue:           makingTones(blue),
+  greyPurple:     makingTones(greyPurple),
 }
 
 export default colors

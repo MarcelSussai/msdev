@@ -4,7 +4,7 @@ import React, {
 import { ThemeProvider } from 'styled-components'
 import theme from '../styles/theme'
 
-interface PropsAppCtx {
+interface IAppCtx {
   ctx_Test: string
   setCtx_Test: Dispatch<SetStateAction<string>>
   isHide: Boolean
@@ -17,10 +17,10 @@ const DEFAULT_VALUE = {
   setCtx_Test: () => {},
   isHide: false,
   setIsHide: () => {},
-  theme
+  theme: theme
 }
 
-export const AppCtx = createContext<PropsAppCtx>(DEFAULT_VALUE)
+export const AppCtx = createContext<IAppCtx>(DEFAULT_VALUE)
 
 interface ICtxProvider {
   children?: ReactNode

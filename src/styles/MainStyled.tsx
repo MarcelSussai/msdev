@@ -2,12 +2,10 @@
 import styled from 'styled-components'
 import { fncTransition } from './theme/snippetsCSS'
 
-interface MainProps {
-  isMenuHidden?: boolean
-}
-export const Main = styled.main<MainProps>`
-  ${fncTransition({duration: '.4s'})}
+
+export const Main = styled.main`
+  ${fncTransition({})}
   display: flex;
   flex-direction: column;
-  padding: 8px 8px 8px 8px;
+  padding: 128px 8px 8px 8px;
 `
