@@ -9,6 +9,6 @@ export default () => {
   
   return (
   <MainDefaultToolsLayout title="Color Tools">
-    <ToolsTitle>{`Ferramentas para desenvolver cores melhores`}</ToolsTitle>
+    <ToolsTitle>{`Ferramentas de cores`}</ToolsTitle>
   </MainDefaultToolsLayout>
 )}
