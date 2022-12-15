@@ -11,7 +11,7 @@ export const ContainerToolTitle = styled.h1`
   ${ShadowEffect_03}
   // --
   line-height: 1.2;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   color: ${ ({theme}) => theme.colors.riverBed.c750 };
   font-weight: 900;
@@ -20,13 +20,16 @@ export const ContainerToolTitle = styled.h1`
   background: ${ ({theme}) => theme.colors.riverBed.c300 };
   border-radius: 8px;
   // --
-  ${mediaQueryMinW('412')} {
+  ${mediaQueryMinW('340')} {
+    font-size: 24px;
+  }
+  ${mediaQueryMinW('432')} {
     font-size: 32px;
   }
-  ${mediaQueryMinW('520')} {
+  ${mediaQueryMinW('528')} {
     font-size: 40px;
   }
-  ${mediaQueryMinW('632')} {
+  ${mediaQueryMinW('640')} {
     font-size: 48px;
   }
   // --
