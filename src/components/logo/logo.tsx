@@ -14,6 +14,7 @@ const Svg = styled.svg`
   height: 100%;
   /* filter: drop-shadow(-6px -6px 6px var(--color-shadow-filter)); */
   // --
+  // --
 `
 const Circle = styled.circle`
   // --
@@ -24,14 +25,12 @@ const Circle = styled.circle`
   stroke-width: 1px;
   stroke: var(--color-stroke);
   // --
+  // --
 `
 
-const LogoComponent = (props: any) => {
+const LogoComponent = () => {
 
   const {theme} = useContext(AppCtx)
-  const {colors} = theme
-
-  const {} = props
   return (
     <Svg
       fill="none"
@@ -40,8 +39,8 @@ const LogoComponent = (props: any) => {
     >
       <defs>
         <linearGradient id="gradient-circle" gradientTransform='rotate(32)'>
-          <stop offset={0} stopColor={colors.riverBed.c950} />
-          <stop offset={100} stopColor={colors.riverBed.c800} />
+          <stop offset={0} stopColor={theme.colors.riverBed.c950} />
+          <stop offset={100} stopColor={theme.colors.riverBed.c800} />
         </linearGradient>
       </defs>
       <Circle cx={41} cy={41} r={40} />
@@ -51,7 +50,7 @@ const LogoComponent = (props: any) => {
           10.0896 32.4255 11.8777 30.277 14.156L5.14758
           39.3402L12.397 46.613L49.2687 9.63052C48.0365
           8.83377 46.6556 8.29632 45.2099 8.05079Z"
-        fill={colors.pictonBlue.c500}
+        fill={theme.colors.pictonBlue.c500}
       />
       <path
         d="M74.3376 37.1793C74.0161 35.0524 73.0247
@@ -85,7 +84,7 @@ const LogoComponent = (props: any) => {
           52.1119C70.5336 49.9613 72.3122 47.3404 73.4678
           44.4325C74.3899 42.1326 74.6899 39.6313 74.3376
           37.1793Z"
-        fill={colors.celery.c500}
+        fill={theme.colors.celery.c500}
       />
     </Svg>
   )

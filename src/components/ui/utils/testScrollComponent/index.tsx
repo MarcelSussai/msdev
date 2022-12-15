@@ -1,13 +1,11 @@
-import * as S from './style'
+import { useEffect } from 'react';
 
-
-
-export default () => {
-
-
-  
-  return (
-  <>
-    
-  </>
-)}
+// --------
+export default () => (
+  <div>
+    teste teste teste teste teste teste teste teste
+    <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+    <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+    teste teste teste teste teste teste teste teste
+  </div>
+)

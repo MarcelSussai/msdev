@@ -1,18 +1,16 @@
 import styled from 'styled-components'
 import {
+  fncTransition,
+  fontMuseo,
   animation_01,
   animation_02,
   animation_03,
   animation_04,
-  animation_05,
-  fncTransition, fontMuseo, GlassEffect_01, GlassEffect_02, GlassEffect_03, mediaQueryMinW, ShadowEffect_01, ShadowEffect_02
+  GlassEffect_01,
+  ShadowEffect_01,
 } from '../../styles/theme/snippetsCSS'
 // --------
-export interface IIsOpen {
-  isOpen: boolean
-}
-// ----
-interface IDrawItemButton extends IIsOpen {}
+
 // --------
 export const Header = styled.header`
   // --
@@ -20,8 +18,9 @@ export const Header = styled.header`
   position: relative;
   width: 100%;
   // --
+  // --
 `
-// ----
+
 export const GlassBehindLogotype = styled.div`
   // --
   --size-radius-01: 4px;
@@ -43,7 +42,7 @@ export const GlassBehindLogotype = styled.div`
   // --
   // --
 `
-// ----
+
 export const ContainerLogo = styled.div`
   // --
   --size: 72px;
@@ -57,8 +56,9 @@ export const ContainerLogo = styled.div`
   transform: scale(0);
   animation: ${animation_02} 1s .8s ease-in-out forwards;
   // --
+  // --
 `
-// ----
+
 export const ContainerAllLogo = styled.div`
   // --
   --bg-color-01: ${ ({theme}) => theme.colors.riverBed.c850 };
@@ -96,8 +96,9 @@ export const ContainerAllLogo = styled.div`
     background:${ ({theme}) => theme.colors.paleGoldenRod.c500 };
   }
   // --
+  // --
 `
-// ----
+
 export const ContainerLogotype = styled.h1`
   // --
   --margin-left: 76px;
@@ -111,8 +112,9 @@ export const ContainerLogotype = styled.h1`
   transform: scale(0);
   animation: ${animation_02} 1s 1s ease-in-out forwards;
   // --
+  // --
 `
-// ----
+
 export const ContainerMarcelSussai = styled.div`
   // --
   --font-size: 24px;
@@ -123,8 +125,9 @@ export const ContainerMarcelSussai = styled.div`
   flex-wrap: nowrap;
   gap: 4px;
   // --
+  // --
 `
-// ----
+
 export const Marcel = styled.div`
   // --
   --color-text: ${ ({theme}) => theme.colors.pictonBlue.c500 };
@@ -136,8 +139,9 @@ export const Marcel = styled.div`
   line-height: 1;
   font-size: var(--font-size);
   // --
+  // --
 `
-// ----
+
 export const Sussai = styled.div`
   // --
   --color-text: ${ ({theme}) => theme.colors.celery.c500 };
@@ -148,8 +152,9 @@ export const Sussai = styled.div`
   line-height: 1;
   font-size: var(--font-size);
   // --
+  // --
 `
-// ----
+
 export const DescriptionJob = styled.div`
   // --
   --color-text: ${ ({theme}) => theme.colors.paleGoldenRod.c500 };
@@ -157,7 +162,6 @@ export const DescriptionJob = styled.div`
   // --
   color: var(--color-text);
   font-size: 14px;
-  /* margin-left: var(--margin-left); */
   font-weight: 400;
   line-height: 1;
   width: 100%;
@@ -167,8 +171,9 @@ export const DescriptionJob = styled.div`
   text-align: center;
   justify-content: flex-end;
   // --
+  // --
 `
-// ----
+
 export const AestheticsNav = styled.div`
   // --
   ${fncTransition({})}
@@ -183,5 +188,6 @@ export const AestheticsNav = styled.div`
   box-shadow: 0 2px 12px 4px ${ ({theme}) => theme.colors.riverBed.c850 }D0;
   border-bottom: solid 16px ${ ({theme}) => theme.colors.riverBed.c550 };
   // --
+  // --
 `
-// ----
+

@@ -25,7 +25,7 @@ export const fncTransition = (props: fncTransitionProps) => {
 // ----
 export const ScrollStyle_01 = S.css`
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
     border-radius: 16px;
   }
   &::-webkit-scrollbar-button  {
@@ -39,6 +39,9 @@ export const ScrollStyle_01 = S.css`
     background: ${({theme}) => theme.colors.riverBed.c600};
     border-radius: 16px;
   }
+  scrollbar-width: thin;
+  scrollbar-color: ${({theme}) => theme.colors.riverBed.c600} ${({theme}) => theme.colors.riverBed.c200};
+  
 `
 // ----
 export const GlassEffect_01 = S.css`
@@ -75,6 +78,14 @@ background: linear-gradient(0deg, var(--color-01), var(--color-02));
 box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
 // ----
+export const GlassEffect_05 = S.css`
+--color-01: ${ ({theme}) => theme.colors.riverBed.c400 }64;
+--color-02: ${ ({theme}) => theme.colors.riverBed.c350 }64;
+backdrop-filter: blur(2px);
+background: linear-gradient(45deg, var(--color-01), var(--color-02));
+box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
+`
+// ----
 export const ShadowEffect_01 = S.css`
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }64;
   box-shadow: 1px 4px 8px 8px var(--shadow-color-01), -1px -1px 8px 8px #FFFFFF72;
@@ -95,6 +106,14 @@ export const ShadowEffect_02 = S.css`
     ;
 
   }
+`
+// ----
+export const ShadowEffect_03 = S.css`
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c400 }D0;
+  box-shadow:
+    2px 4px 4px 2px var(--shadow-color-01),
+    -2px -4px 4px 2px #FFFFFF80
+  ;
 `
 // ----
 export const fontMuseo = `

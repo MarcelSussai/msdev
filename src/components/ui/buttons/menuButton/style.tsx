@@ -36,7 +36,7 @@ export const ContainerButtonMenu = styled.div`
   // --
   // --
 `
-// ----
+
 export const ButtonMenu = styled.button`
   // --
   --size-01: 32px;
@@ -60,7 +60,7 @@ export const ButtonMenu = styled.button`
   // --
   // --
 `
-// ----
+
 export const DrawItemButton = styled.div<IDrawItemButton>`
   // --
   --size-height: 3px;
@@ -75,9 +75,9 @@ export const DrawItemButton = styled.div<IDrawItemButton>`
   position: relative;
   // --
   &::after, &::before {
-    // --
+    // -
     ${fncTransition({duration: '.4s'})}
-    // --
+    // -
     content: '';
     width: var(--size-width);
     height: var(--size-height);
@@ -88,7 +88,6 @@ export const DrawItemButton = styled.div<IDrawItemButton>`
     transform-origin: center;
   }
   &::before {
-    /* width: 12px; */
     ${
       ({theme, isOpen}) => isOpen ?
         `
@@ -121,5 +120,6 @@ export const DrawItemButton = styled.div<IDrawItemButton>`
     }
     bottom: -5px;
   }
+  // --
   // --
 `

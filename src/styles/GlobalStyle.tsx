@@ -52,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-size: 16px;
     overflow-x: hidden;
+    scrollbar-color: ${colors.riverBed.c600} ${colors.riverBed.c200};
   }
 
   a {

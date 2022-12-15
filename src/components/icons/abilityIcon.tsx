@@ -1,5 +1,6 @@
-import styled from "styled-components"
-import { colors } from "../../styles/theme"
+import { useContext } from 'react'
+import styled from 'styled-components'
+import { AppCtx } from '../../contexts/ctxGlobal'
 
 
 
@@ -7,9 +8,9 @@ const Svg = styled.svg`
   margin: 0;
 `
 
-const AbilityIcon = (props: any) => {
+const AbilityIcon = () => {
 
-  
+  const {theme} = useContext(AppCtx)
 
   return(
     <Svg
@@ -22,13 +23,13 @@ const AbilityIcon = (props: any) => {
           12.7333 0.818182 13.3333 1.81818 13.3333H18.1818C19.1818
           13.3333 20 12.7333 20 12V1.33333C20 0.6 19.1818 0 18.1818
           0ZM18.1818 12H1.81818V2.66667H18.1818V12Z"
-        fill={colors.yellow.c200}
+        fill={theme.colors.paleGoldenRod.c200}
       />
       <path
         d="M4.54559
           3.99951V10.6662H8.18196V9.33285H6.36378V5.33285H8.18196V3.99951H4.54559ZM13.6365
           9.33285H11.8183V10.6662H15.4547V3.99951H11.8183V5.33285H13.6365V9.33285Z"
-        fill={colors.yellow.c500}
+        fill={theme.colors.paleGoldenRod.c500}
       />
     </Svg>
   )

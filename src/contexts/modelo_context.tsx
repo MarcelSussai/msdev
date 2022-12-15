@@ -2,7 +2,7 @@ import React, {
   useState, createContext, ReactNode, Dispatch, SetStateAction
 } from 'react'
 
-interface IAppCtx {
+interface IModeloCtx {
   
 }
 
@@ -10,22 +10,22 @@ const DEFAULT_VALUE = {
   
 }
 
-export const AppCtx = createContext<IAppCtx>(DEFAULT_VALUE)
+export const ModeloCtx = createContext<IModeloCtx>(DEFAULT_VALUE)
 
-interface ICtxProvider {
+interface ICtxModeloProvider {
   children?: ReactNode
 }
-export default function CtxProvider({ children }: ICtxProvider) {
+export default function CtxModeloProvider({ children }: ICtxModeloProvider) {
 
   
 
   return (
     <>      
-      <AppCtx.Provider value={{ 
+      <ModeloCtx.Provider value={{ 
         
       }} >
           { children }
-      </AppCtx.Provider>
+      </ModeloCtx.Provider>
     </>
   )
 }

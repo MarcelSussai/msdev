@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import {
-  fncTransition, GlassEffect_01, GlassEffect_03, GlassEffect_04, ScrollStyle_01
+  fncTransition,
+  GlassEffect_04,
+  ScrollStyle_01
 } from '../../../styles/theme/snippetsCSS'
+import { IIsOpen } from '../../ui/buttons/menuButton/style'
 // --------
-interface IIsOpen {
-  isOpen: boolean
-}
+
 interface INav extends IIsOpen {}
 interface IContainerLinksMenu extends IIsOpen {}
 interface IContainerAll extends IIsOpen {}
@@ -22,13 +23,13 @@ export const Nav = styled.nav<INav>`
   // --
   // --
 `
-// ----
+
 export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
   ${fncTransition({duration: '.8s',})}
   ${ScrollStyle_01}
   // --
-  width: 216px;
+  width: 224px;
   overflow-y: auto;
   scroll-behavior: smooth;
   height: 64%;
@@ -36,11 +37,10 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   z-index: 800;
   position: fixed;
   transform: ${ ({isOpen}) => !isOpen ? `translate3D(calc(-100% - 32px), 0, 0)` : `translate3D(0, 0, 0)` };
-  
   // --
   // --
 `
-// ----
+
 export const ContainerAll = styled.div<IContainerAll>`
   // --
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
@@ -62,7 +62,7 @@ export const ContainerAll = styled.div<IContainerAll>`
   // --
   // --
 `
-// ----
+
 export const GlassBehind = styled.div<IGlassBehind>`
   // --
   ${fncTransition({duration: '.8s'})}
