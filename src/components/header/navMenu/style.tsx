@@ -17,6 +17,8 @@ export const Nav = styled.nav<INav>`
   ${fncTransition({duration: '.2s',})}
   // --
   width: 0;
+  opacity: 0;
+  ${ ({isOpen}) => !isOpen ? `opacity: 0;` : `opacity: 1;` }
   ${ ({isOpen}) => !isOpen ? `width: 0;` : `width: 226px;` }
   height: 100%;
   z-index: 0;
