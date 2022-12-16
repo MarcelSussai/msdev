@@ -1,9 +1,26 @@
 import styled from 'styled-components'
 import { Main } from '../../styles/MainStyled'
+import { mediaQueryMinW } from '../../styles/theme/snippetsCSS'
+import ToolsTitle from '../toolsTitle'
 import Head from './../head'
 
 const StyledMain = styled(Main)`
-  padding: 16px;
+  // --
+  // --
+  padding: 112px 0px 0px 0px;
+  gap: 32px;
+  // --
+  // --
+  ${mediaQueryMinW('336')} {
+    padding: 116px 0px 0px 0px;
+  }
+  ${mediaQueryMinW('412')} {
+    padding: 122px 0px 0px 0px;
+  }
+  ${mediaQueryMinW('496')} {
+    padding: 132px 0px 0px 0px;
+  }
+  // --
 `
 
 const MainDefaultToolsLayout = (props: any) => {
@@ -11,6 +28,7 @@ const MainDefaultToolsLayout = (props: any) => {
   const {
     children,
     title,
+    text
   } = props
 
 
@@ -18,6 +36,7 @@ const MainDefaultToolsLayout = (props: any) => {
   return (
     <>
       <Head title={title} />
+      <ToolsTitle>{text}</ToolsTitle>
       <StyledMain>
         {children}
       </StyledMain>

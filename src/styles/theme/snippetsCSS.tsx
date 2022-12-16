@@ -47,7 +47,7 @@ export const ScrollStyle_01 = S.css`
 export const GlassEffect_01 = S.css`
   --color-01: ${ ({theme}) => theme.colors.riverBed.c550 }40;
   --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(2.4px);
   background: linear-gradient(160deg, var(--color-01), var(--color-02));
   box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
@@ -63,27 +63,27 @@ export const GlassEffect_02 = S.css`
 `
 // ----
 export const GlassEffect_03 = S.css`
---color-01: ${ ({theme}) => theme.colors.riverBed.c750 }40;
---color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
-backdrop-filter: blur(2px);
-background: linear-gradient(-160deg, var(--color-01), var(--color-02));
-box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c750 }40;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(-160deg, var(--color-01), var(--color-02));
+  box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
 // ----
 export const GlassEffect_04 = S.css`
---color-01: ${ ({theme}) => theme.colors.riverBed.c350 }64;
---color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
-backdrop-filter: blur(2px);
-background: linear-gradient(0deg, var(--color-01), var(--color-02));
-box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c350 }64;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(0deg, var(--color-01), var(--color-02));
+  box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
 // ----
 export const GlassEffect_05 = S.css`
---color-01: ${ ({theme}) => theme.colors.riverBed.c400 }64;
---color-02: ${ ({theme}) => theme.colors.riverBed.c350 }64;
-backdrop-filter: blur(2px);
-background: linear-gradient(45deg, var(--color-01), var(--color-02));
-box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c400 }64;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c350 }64;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(45deg, var(--color-01), var(--color-02));
+  box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
 // ----
 export const ShadowEffect_01 = S.css`
@@ -111,9 +111,19 @@ export const ShadowEffect_02 = S.css`
 export const ShadowEffect_03 = S.css`
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c400 }D0;
   box-shadow:
-    2px 4px 4px 2px var(--shadow-color-01),
-    -2px -4px 4px 2px #FFFFFF80
+    8px 8px 8px 4px var(--shadow-color-01),
+    -4px -6px 8px 6px #FFFFFF80
   ;
+`
+export const ShadowEffect_04 = S.css`
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c350 }A0;
+  box-shadow:
+    8px 8px 4px 2px var(--shadow-color-01),
+    -2px -2px 6px 2px #FFFFFF96,
+    inset -0px -0px 4px 2px ${ ({theme}) => theme.colors.riverBed.c350 }A0
+  ;
+  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 };
+  border-radius: 8px;
 `
 // ----
 export const fontMuseo = `

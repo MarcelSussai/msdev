@@ -10,8 +10,10 @@ export default ({
 }: IToolsTitle) => {
   
   return (
-    <S.ContainerToolTitle>
-      {children}
-    </S.ContainerToolTitle>
+    <S.ContainerAll>
+      <S.ContainerToolTitle>
+        {children}
+      </S.ContainerToolTitle>
+    </S.ContainerAll>
   )
 }

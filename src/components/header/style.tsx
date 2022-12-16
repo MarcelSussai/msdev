@@ -181,12 +181,12 @@ export const AestheticsNav = styled.div`
   position: fixed;
   transform: translate3d(0, -100%, 0);
   width: 100%;
-  height: 80px;
+  height: 76px;
   background: ${ ({theme}) => theme.colors.riverBed.c850 };
   z-index: 1;
   animation: ${animation_04} .8s ease-in-out forwards;
   box-shadow: 0 2px 12px 4px ${ ({theme}) => theme.colors.riverBed.c850 }D0;
-  border-bottom: solid 16px ${ ({theme}) => theme.colors.riverBed.c550 };
+  border-bottom: solid 6px ${ ({theme}) => theme.colors.riverBed.c550 };
   // --
   // --
 `
