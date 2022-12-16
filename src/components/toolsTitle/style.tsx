@@ -19,6 +19,7 @@ export const ContainerAll = styled.div`
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c150 }80;
   position: fixed;
   width: calc(100% - 32px);
+  z-index: 900;
   // --
   // --
   ${mediaQueryMinW('496')} {

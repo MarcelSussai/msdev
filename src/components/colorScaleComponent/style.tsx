@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {
   fncTransition,
+  GlassEffect_07,
   mediaQueryMinW,
   ShadowEffect_04,
 } from '../../styles/theme/snippetsCSS'
@@ -132,10 +133,16 @@ export const TitleH2 = styled.h2`
 export const TitleH3 = styled.h3`
   // --
   ${fncTransition({})}
+  ${GlassEffect_07}
   // --
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 300;
+  width: 100%;
+  padding: 8px;
+  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c100 };
+  text-align: center;
   color: ${ ({theme}) => theme.colors.riverBed.c600 };
+  /* background: ${ ({theme}) => theme.colors.riverBed.c100 }; */
   // --
   // --
   // --

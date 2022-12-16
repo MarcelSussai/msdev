@@ -94,6 +94,14 @@ export const GlassEffect_06 = S.css`
   box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
 
+export const GlassEffect_07 = S.css`
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c100 }A0;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c100 }56;
+  backdrop-filter: blur(3px);
+  background: linear-gradient(160deg, var(--color-01), var(--color-02));
+  // box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
+`
+
 export const ShadowEffect_01 = S.css`
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }64;
   box-shadow: 2px 2px 8px 8px var(--shadow-color-01), -2px -2px 8px 8px #FFFFFF72;
