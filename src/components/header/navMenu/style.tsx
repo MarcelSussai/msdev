@@ -16,6 +16,7 @@ export const Nav = styled.nav<INav>`
   // --
   ${fncTransition({duration: '.2s',})}
   // --
+  width: 0;
   ${ ({isOpen}) => !isOpen ? `width: 0;` : `width: 226px;` }
   height: 100%;
   z-index: 0;
@@ -36,6 +37,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   margin-top: 136px;
   z-index: 800;
   position: fixed;
+  transform: translate3D(calc(-100% - 32px), 0, 0);
   transform: ${ ({isOpen}) => !isOpen ? `translate3D(calc(-100% - 32px), 0, 0)` : `translate3D(0, 0, 0)` };
   // --
   // --
