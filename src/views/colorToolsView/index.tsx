@@ -8,7 +8,7 @@ export default () => {
 
   
   return (
-  <MainDefaultToolsLayout title="Color Tools" text="Ferramentas de cores">
+  <MainDefaultToolsLayout title="Color Tools" text="Informações sobre cores">
     <ColorScaleComponent />
   </MainDefaultToolsLayout>
 )}
