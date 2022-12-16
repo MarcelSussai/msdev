@@ -14,11 +14,9 @@ interface IGlassBehind extends IIsOpen {}
 // --------
 export const Nav = styled.nav<INav>`
   // --
-  ${fncTransition({duration: '.2s',})}
+  ${fncTransition({duration: '1s',})}
   // --
   width: 0;
-  opacity: 0;
-  ${ ({isOpen}) => !isOpen ? `opacity: 0;` : `opacity: 1;` }
   ${ ({isOpen}) => !isOpen ? `width: 0;` : `width: 226px;` }
   height: 100%;
   z-index: 0;
@@ -56,6 +54,7 @@ export const ContainerAll = styled.div<IContainerAll>`
   position: fixed;
   left: 0;
   z-index: 2;
+  transform: translate3D(calc(-100% - 32px), 0, 0);
   background: ${ ({theme}) => theme.colors.riverBed.c900 };
   transform: ${ ({isOpen}) => !isOpen ? `translate3D(calc(-100% - 32px), 0, 0)` : `translate3D(0, 0, 0)` };
   border-right: solid 6px;
@@ -82,6 +81,7 @@ export const GlassBehind = styled.div<IGlassBehind>`
   border-left: none;
   border-top: none;
   border-bottom: none;
+  transform: translate3D(-100%, 0, 0);
   transform: ${ ({isOpen}) => !isOpen ? `translate3D(-100%, 0, 0)` : `translate3D(0, 0, 0)` };
   // --
   // --
