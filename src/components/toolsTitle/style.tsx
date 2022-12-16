@@ -1,11 +1,7 @@
 import styled from 'styled-components'
 import {
   fncTransition,
-  GlassEffect_01,
-  GlassEffect_02,
-  GlassEffect_03,
-  GlassEffect_04,
-  GlassEffect_05,
+  GlassEffect_06,
   mediaQueryMinW,
   ShadowEffect_03
 } from '../../styles/theme/snippetsCSS'
@@ -15,11 +11,12 @@ import {
 export const ContainerAll = styled.div`
   // --
   ${fncTransition({})}
-  ${GlassEffect_01}
+  ${GlassEffect_06}
   // --
   padding: 24px;
   margin: 16px;
-  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c100 }80;
+  border-radius: 8px;
+  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c150 }80;
   position: fixed;
   width: calc(100% - 32px);
   // --
@@ -33,11 +30,11 @@ export const ContainerAll = styled.div`
 
 export const ContainerToolTitle = styled.h1`
   // --
-  --color: ${ ({theme}) => theme.colors.riverBed.c550 };
+  --color: ${ ({theme}) => theme.colors.riverBed.c650 };
   --border-style: solid;
   --border-size: 1px;
-  --border-color-01: ${ ({theme}) => theme.colors.riverBed.c250 };
-  --border-color-02: ${ ({theme}) => theme.colors.riverBed.c100 };
+  --border-color-01: ${ ({theme}) => theme.colors.riverBed.c100 };
+  --border-color-02: ${ ({theme}) => theme.colors.riverBed.c250 };
   --bg-color-01: ${ ({theme}) => theme.colors.riverBed.c200 };
   ${fncTransition({})}
   ${ShadowEffect_03}
@@ -49,7 +46,7 @@ export const ContainerToolTitle = styled.h1`
   width: 100%;
   padding: 8px ;
   background: var(--bg-color-01);
-  border-radius: 8px;
+  border-radius: 4px;
   border-left: var(--border-style) var(--border-size) var(--border-color-01);
   border-top: var(--border-style) var(--border-size) var(--border-color-01);
   border-bottom: var(--border-style) var(--border-size) var(--border-color-02);
@@ -61,11 +58,11 @@ export const ContainerToolTitle = styled.h1`
     font-size: 20px;
   }
   ${mediaQueryMinW('412')} {
-    font-size: 26px;
+    font-size: 22px;
   }
   ${mediaQueryMinW('496')} {
     padding: 8px 16px;
-    font-size: 32px;
+    font-size: 28px;
     max-width: fit-content;
   }
   // --

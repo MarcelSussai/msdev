@@ -134,7 +134,8 @@ export const TitleH3 = styled.h3`
   ${fncTransition({})}
   // --
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 600;
+  color: ${ ({theme}) => theme.colors.riverBed.c600 };
   // --
   // --
   // --
@@ -221,7 +222,7 @@ export const CubeColor = styled.div<ICubeColor>`
   // --
   // --
   background: ${ ({color}) => color };
-  min-width: ${ ({isMain}) => isMain ? '40px' : '4px' };
+  min-width: ${ ({isMain}) => isMain ? '80px' : '4px' };
   ${ ({isMain}) => isMain ? `border: solid 2px #FFFFFF96;` : '' }
   height: 32px;
   // --
@@ -236,6 +237,7 @@ export const TipsTones = styled.div<ITipsTones>`
   line-height: 1;
   font-weight: ${ ({isMain}) => isMain ? '600' : '300' };
   width: 100%;
+  color: ${ ({theme}) => theme.colors.riverBed.c600 };
   // --
   // --
   // --

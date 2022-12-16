@@ -82,7 +82,7 @@ export const GlassBehind = styled.div<IGlassBehind>`
   border-top: none;
   border-bottom: none;
   transform: translate3D(-100%, 0, 0);
-  transform: ${ ({isOpen}) => !isOpen ? `translate3D(-100%, 0, 0)` : `translate3D(0, 0, 0)` };
+  ${ ({isOpen}) => !isOpen ? `transform: translate3D(-100%, 0, 0);` : `transform: translate3D(0, 0, 0);` }
   // --
   // --
 `

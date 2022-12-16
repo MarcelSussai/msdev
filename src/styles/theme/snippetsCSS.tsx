@@ -11,7 +11,7 @@ interface fncTransitionProps {
 }
 // --------
 export const mediaQueryMinW = (size: string) => `@media (min-width: ${size}px)`
-// ----
+
 export const fncTransition = (props: fncTransitionProps) => {
   const { duration, easing, target, delay} = props
   return `
@@ -22,7 +22,7 @@ export const fncTransition = (props: fncTransitionProps) => {
       ${ delay    || ''};
   `
 }
-// ----
+
 export const ScrollStyle_01 = S.css`
   &::-webkit-scrollbar {
     width: 8px;
@@ -43,15 +43,15 @@ export const ScrollStyle_01 = S.css`
   scrollbar-color: ${({theme}) => theme.colors.riverBed.c600} ${({theme}) => theme.colors.riverBed.c200};
   
 `
-// ----
+
 export const GlassEffect_01 = S.css`
   --color-01: ${ ({theme}) => theme.colors.riverBed.c550 }40;
   --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
-  backdrop-filter: blur(2.4px);
+  backdrop-filter: blur(1.6px);
   background: linear-gradient(160deg, var(--color-01), var(--color-02));
   box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
-// ----
+
 export const GlassEffect_02 = S.css`
   ${fncTransition({})}
   --color-01: ${ ({theme}) => theme.colors.riverBed.c150 }E0;
@@ -61,7 +61,7 @@ export const GlassEffect_02 = S.css`
     --color-01: ${ ({theme}) => theme.colors.cream.c500 }FF;
   }
 `
-// ----
+
 export const GlassEffect_03 = S.css`
   --color-01: ${ ({theme}) => theme.colors.riverBed.c750 }40;
   --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
@@ -69,7 +69,7 @@ export const GlassEffect_03 = S.css`
   background: linear-gradient(-160deg, var(--color-01), var(--color-02));
   box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
-// ----
+
 export const GlassEffect_04 = S.css`
   --color-01: ${ ({theme}) => theme.colors.riverBed.c350 }64;
   --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
@@ -77,7 +77,7 @@ export const GlassEffect_04 = S.css`
   background: linear-gradient(0deg, var(--color-01), var(--color-02));
   box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
-// ----
+
 export const GlassEffect_05 = S.css`
   --color-01: ${ ({theme}) => theme.colors.riverBed.c400 }64;
   --color-02: ${ ({theme}) => theme.colors.riverBed.c350 }64;
@@ -85,12 +85,20 @@ export const GlassEffect_05 = S.css`
   background: linear-gradient(45deg, var(--color-01), var(--color-02));
   box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
 `
-// ----
+
+export const GlassEffect_06 = S.css`
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c450 }B0;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }56;
+  backdrop-filter: blur(3px);
+  background: linear-gradient(160deg, var(--color-01), var(--color-02));
+  box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
+`
+
 export const ShadowEffect_01 = S.css`
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }64;
   box-shadow: 1px 4px 8px 8px var(--shadow-color-01), -1px -1px 8px 8px #FFFFFF72;
 `
-// ----
+
 export const ShadowEffect_02 = S.css`
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c500 }64;
   box-shadow:
@@ -107,14 +115,15 @@ export const ShadowEffect_02 = S.css`
 
   }
 `
-// ----
+
 export const ShadowEffect_03 = S.css`
-  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c400 }D0;
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c600 }A0;
   box-shadow:
     8px 8px 8px 4px var(--shadow-color-01),
-    -4px -6px 8px 6px #FFFFFF80
+    -4px -4px 8px 6px #FFFFFF80
   ;
 `
+
 export const ShadowEffect_04 = S.css`
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c350 }A0;
   box-shadow:
@@ -125,11 +134,11 @@ export const ShadowEffect_04 = S.css`
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 };
   border-radius: 8px;
 `
-// ----
+
 export const fontMuseo = `
   font-family: 'MuseoModerno', cursive;
 `
-// ----
+
 export const animation_01 = S.keyframes`
   from {
     width: 0;
@@ -144,7 +153,7 @@ export const animation_01 = S.keyframes`
     overflow: visible;
   }
 `
-// ----
+
 export const animation_02 = S.keyframes`
   from {
     transform: scale(0);
@@ -155,7 +164,7 @@ export const animation_02 = S.keyframes`
     opacity: 1;
   }
 `
-// ----
+
 export const animation_03 = S.keyframes`
   from {
     opacity: 0;
@@ -166,7 +175,7 @@ export const animation_03 = S.keyframes`
     width: 288px;
   }
 `
-// ----
+
 export const animation_04 = S.keyframes`
   from {
     opacity: 0;
@@ -177,8 +186,19 @@ export const animation_04 = S.keyframes`
     transform: translate3d(0, 0, 0);
   }
 `
-// ----
+
 export const animation_05 = S.keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`
+
+export const animation_06 = S.keyframes`
   from {
     opacity: 0;
     transform: translate3d(0, 100%, 0);
