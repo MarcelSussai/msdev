@@ -58,7 +58,7 @@ export const GlassEffect_02 = S.css`
   backdrop-filter: blur(2px);
   background: var(--color-01);
   &:hover {
-    --color-01: ${ ({theme}) => theme.colors.cream.c500 }FF;
+    --color-01: ${ ({theme}) => theme.colors.cream.c300 }FF;
   }
 `
 
@@ -67,7 +67,7 @@ export const GlassEffect_03 = S.css`
   --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
   backdrop-filter: blur(2px);
   background: linear-gradient(-160deg, var(--color-01), var(--color-02));
-  box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
+  box-shadow: -2px 0 6px 2px ${ ({theme}) => theme.colors.riverBed.c550 }32;
 `
 
 export const GlassEffect_04 = S.css`
@@ -90,8 +90,8 @@ export const GlassEffect_06 = S.css`
   --color-01: ${ ({theme}) => theme.colors.riverBed.c450 }B0;
   --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }56;
   backdrop-filter: blur(3px);
-  background: linear-gradient(160deg, var(--color-01), var(--color-02));
-  box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
+  background: linear-gradient(160deg, var(--color-01), var(--color-02), var(--color-01));
+  box-shadow: 2px 2px 8px ${ ({theme}) => theme.colors.riverBed.c850 }48;
 `
 
 export const GlassEffect_07 = S.css`
@@ -120,7 +120,6 @@ export const ShadowEffect_02 = S.css`
       -2px -4px 4px 4px #FFFFFFA0,
       inset -0px -0px 8px 2px ${ ({theme}) => theme.colors.cream.c800 }A0
     ;
-
   }
 `
 

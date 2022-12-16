@@ -12,7 +12,7 @@ interface IDrawItemButton extends IIsOpen {}
 // --------
 export const ContainerButtonMenu = styled.div`
   // --
-  --size-radius-01: 4px;
+  --size-radius-01: 8px;
   ${fncTransition({})}
   ${GlassEffect_03}
   // --

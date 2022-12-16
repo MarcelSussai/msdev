@@ -57,7 +57,7 @@ export const ContainerAll = styled.div<IContainerAll>`
   transform: translate3D(calc(-100% - 32px), 0, 0);
   background: ${ ({theme}) => theme.colors.riverBed.c900 };
   transform: ${ ({isOpen}) => !isOpen ? `translate3D(calc(-100% - 32px), 0, 0)` : `translate3D(0, 0, 0)` };
-  border-right: solid 6px;
+  border-right: solid 4px;
   border-image-source: linear-gradient(0deg, var(--bg-color-02), var(--bg-color-03));
   border-image-slice: 1;
   box-shadow: 4px 0 16px 4px ${ ({theme}) => theme.colors.riverBed.c750 }80;

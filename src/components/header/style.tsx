@@ -61,7 +61,7 @@ export const ContainerLogo = styled.div`
 
 export const ContainerAllLogo = styled.div`
   // --
-  --bg-color-01: ${ ({theme}) => theme.colors.riverBed.c850 };
+  --bg-color-01: ${ ({theme}) => theme.colors.riverBed.c900 };
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
   ${fncTransition({})}
@@ -176,17 +176,21 @@ export const DescriptionJob = styled.div`
 
 export const AestheticsNav = styled.div`
   // --
+  --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
+  --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
   ${fncTransition({})}
   // --
   position: fixed;
   transform: translate3d(0, -100%, 0);
   width: 100%;
-  height: 76px;
+  height: 72px;
   background: ${ ({theme}) => theme.colors.riverBed.c850 };
   z-index: 1;
   animation: ${animation_04} .8s ease-in-out forwards;
   box-shadow: 0 2px 12px 4px ${ ({theme}) => theme.colors.riverBed.c850 }D0;
-  border-bottom: solid 6px ${ ({theme}) => theme.colors.riverBed.c550 };
+  border-bottom: solid 4px;
+  border-image-source: linear-gradient(-90deg, var(--bg-color-02), var(--bg-color-03));
+  border-image-slice: 1;
   // --
   // --
 `
