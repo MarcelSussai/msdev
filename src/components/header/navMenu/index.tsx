@@ -14,8 +14,6 @@ export default () => {
     <S.GlassBehind isOpen={isMenuOpen} />
     <S.ContainerLinksMenu isOpen={isMenuOpen}>
       <TestScrollComponent />
-      <TestScrollComponent />
-      <TestScrollComponent />
     </S.ContainerLinksMenu>
   </S.Nav>
 )}
