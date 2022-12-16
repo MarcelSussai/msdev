@@ -96,7 +96,7 @@ export const GlassEffect_06 = S.css`
 
 export const ShadowEffect_01 = S.css`
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }64;
-  box-shadow: 1px 4px 8px 8px var(--shadow-color-01), -1px -1px 8px 8px #FFFFFF72;
+  box-shadow: 2px 2px 8px 8px var(--shadow-color-01), -2px -2px 8px 8px #FFFFFF72;
 `
 
 export const ShadowEffect_02 = S.css`

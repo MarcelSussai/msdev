@@ -113,7 +113,7 @@ export const TitleH2 = styled.h2`
   background: ${ ({theme}) => theme.colors.riverBed.c100 };
   text-align: center;
   line-height: 1.2;
-  color: ${ ({theme}) => theme.colors.riverBed.c350};
+  color: ${ ({theme}) => theme.colors.riverBed.c450};
   // --
   // --
   ${mediaQueryMinW('352')} {

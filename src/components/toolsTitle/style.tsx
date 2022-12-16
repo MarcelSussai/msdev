@@ -35,7 +35,7 @@ export const ContainerToolTitle = styled.h1`
   --border-size: 1px;
   --border-color-01: ${ ({theme}) => theme.colors.riverBed.c100 };
   --border-color-02: ${ ({theme}) => theme.colors.riverBed.c250 };
-  --bg-color-01: ${ ({theme}) => theme.colors.riverBed.c200 };
+  --bg-color-01: ${ ({theme}) => theme.colors.riverBed.c050 }A0;
   ${fncTransition({})}
   ${ShadowEffect_03}
   // --
