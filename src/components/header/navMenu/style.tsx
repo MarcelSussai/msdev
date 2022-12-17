@@ -17,7 +17,7 @@ export const Nav = styled.nav<INav>`
   ${fncTransition({duration: '1s',})}
   // --
   width: 0;
-  ${ ({isOpen}) => !isOpen ? `width: 0;` : `width: 226px;` }
+  ${ ({isOpen}) => !isOpen ? `width: 0;` : `width: 232px;` }
   height: 100%;
   z-index: 0;
   position: fixed;
@@ -30,7 +30,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   ${fncTransition({duration: '.8s',})}
   ${ScrollStyle_01}
   // --
-  width: 224px;
+  width: 240px;
   overflow-y: auto;
   scroll-behavior: smooth;
   height: 64%;
@@ -50,7 +50,7 @@ export const ContainerAll = styled.div<IContainerAll>`
   ${fncTransition({duration: '.8s',})}
   // --
   height: 100%;
-  width: 160px;
+  width: 184px;
   position: fixed;
   left: 0;
   z-index: 2;
@@ -76,7 +76,7 @@ export const GlassBehind = styled.div<IGlassBehind>`
   left: 0px;
   top: 0px;
   position: fixed;
-  width: 220px;
+  width: 236px;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;
   border-left: none;
   border-top: none;

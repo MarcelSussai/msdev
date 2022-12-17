@@ -124,10 +124,13 @@ export const ShadowEffect_02 = S.css`
 `
 
 export const ShadowEffect_03 = S.css`
-  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c600 }A0;
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c500 }A0;
+  --shadow-color-02: ${ ({theme}) => theme.colors.riverBed.c500 }A0;
   box-shadow:
-    8px 8px 8px 4px var(--shadow-color-01),
-    -4px -4px 8px 6px #FFFFFF80
+    8px 8px 8px 2px var(--shadow-color-01),
+    -8px -8px 8px 2px #FFFFFF80,
+    0px 8px 8px 2px var(--shadow-color-02),
+    0px -8px 8px 2px #FFFFFF80
   ;
 `
 
