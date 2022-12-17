@@ -12,14 +12,14 @@ interface IDrawItemButton extends IIsOpen {}
 // --------
 export const ContainerButtonMenu = styled.div`
   // --
-  --size-radius-01: 8px;
+  --size-radius-01: 0px;
   ${fncTransition({})}
   ${GlassEffect_06}
   // --
   position: fixed;
   width: 88px;
   height: 88px;
-  right: 12px;
+  right: 0px;
   bottom: 12px;
   display: flex;
   justify-content: center;
@@ -31,13 +31,13 @@ export const ContainerButtonMenu = styled.div`
   transform: scale(0);
   animation: ${animation_05} 2s 1.2s ease-in-out forwards;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;
-  /* border-right: none;
-  border-top-left-radius: var(--size-radius-01);
-  border-bottom-left-radius: var(--size-radius-01); */
+  border-right: none;
   border-radius: 80px;
+  border-top-right-radius: var(--size-radius-01);
+  border-bottom-right-radius: var(--size-radius-01);
   // --
   // --
-  ${mediaQueryMinW('408')} {
+  ${mediaQueryMinW('400')} {
     bottom: unset;
     top: 24px;
   }

@@ -63,6 +63,9 @@ export const MainColorsOfTheme = styled.section`
   ${mediaQueryMinW('1408')} {
     grid-template-columns: repeat(8, 1fr);
   }
+  ${mediaQueryMinW('2200')} {
+    grid-template-columns: repeat(12, 1fr);
+  }
   // --
 `
 
