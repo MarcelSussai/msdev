@@ -142,7 +142,7 @@ export const TitleH3 = styled.h3`
   font-weight: 300;
   width: 100%;
   padding: 8px;
-  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c100 };
+  border: solid 4px ${ ({theme}) => theme.colors.white };
   text-align: center;
   color: ${ ({theme}) => theme.colors.riverBed.c600 };
   /* background: ${ ({theme}) => theme.colors.riverBed.c100 }; */
@@ -243,7 +243,7 @@ export const CubeColor = styled.div<ICubeColor>`
 export const TipsTones = styled.div<ITipsTones>`
   // --
   // --
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   font-weight: ${ ({isMain}) => isMain ? '600' : '300' };
   width: 100%;

@@ -6,7 +6,7 @@ const Svg = styled.svg`
   margin: 0;
 `
 
-const PeopleIcon = (props: any) => {
+const PeopleIcon = () => {
   
   const {theme} = useContext(AppCtx)
   return (
@@ -14,7 +14,8 @@ const PeopleIcon = (props: any) => {
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
+      width="100%"
+      height="100%"
     >
       <path
         d="M3.41278 15.9453V15.5954C3.41278 14.9456 3.86361 14.3458 4.5148
@@ -31,7 +32,7 @@ const PeopleIcon = (props: any) => {
           14.2458 17.6888 14.8456 17.7389 15.4954V15.7953C17.7389 16.6451 15.2343
           18.6444 14.483 18.9943C12.1788 20.094 8.12137 20.094 6.26799
           19.1443C5.41644 18.7444 3.41278 16.795 3.41278 15.9453Z"
-        fill="black"
+        fill={theme.colors?.paleGoldenRod?.c200}
       />
       <path
         d="M0.00664207 10.3468C-0.193723 4.79849 4.16421 0.199937 9.67426
@@ -46,7 +47,7 @@ const PeopleIcon = (props: any) => {
           4.19868C14.6333 2.59918 12.3792 1.74945 10.075 1.74945C7.7708
           1.74945 5.56678 2.64917 3.86368 4.24867C2.21067 5.84816 1.25892
           8.04747 1.15874 10.3468Z"
-        fill="black"
+        fill={theme.colors?.paleGoldenRod?.c500}
       />
     </Svg>
   )

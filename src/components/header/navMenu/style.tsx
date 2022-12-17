@@ -12,7 +12,9 @@ import { IIsOpen } from '../../ui/buttons/menuButton/style'
 // --------
 
 interface INav extends IIsOpen {}
-interface IContainerLinksMenu extends IIsOpen {}
+interface IContainerLinksMenu extends IIsOpen {
+  delay?: string
+}
 interface IContainerAll extends IIsOpen {}
 interface IGlassBehind extends IIsOpen {}
 // --------
@@ -31,10 +33,10 @@ export const Nav = styled.nav<INav>`
 
 export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
-  ${fncTransition({duration: '.8s',})}
+  ${fncTransition({duration: '.8s'})}
   ${ScrollStyle_01}
   // --
-  width: 240px;
+  width: 256px;
   overflow-y: auto;
   scroll-behavior: smooth;
   height: 52%;
@@ -43,7 +45,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   display: flex;
   flex-direction: column;
   position: fixed;
-  gap: 16px;
+  gap: 8px;
   transform: translate3D(calc(-100% - 32px), 0, 0);
   transform: ${ ({isOpen}) => !isOpen ? `translate3D(calc(-100% - 32px), 0, 0)` : `translate3D(0, 0, 0)` };
   // --
@@ -57,7 +59,7 @@ export const ContainerAll = styled.div<IContainerAll>`
   ${fncTransition({duration: '.8s',})}
   // --
   height: 100%;
-  width: 184px;
+  width: 200px;
   position: fixed;
   left: 0;
   z-index: 2;
@@ -101,20 +103,32 @@ export const Alink = styled.a`
   // --
   width: 100%;
   /* width: calc(100% - 8px); */
-  padding: 12px;
+  height: 48px;
+  padding: 6px 16px 6px 16px;
   line-height: 1;
-  color: ${ ({theme}) => theme.colors.paleGoldenRod.c050 };
-  border-right: solid 8px ${ ({theme}) => theme.colors.riverBed.c850 };
+  color: ${ ({theme}) => theme.colors.riverBed.c850 };
+  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }24;
+  border-left: none;
+  /* border-right: none; */
   display: flex;
+  align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
   justify-content: space-between;
   gap: 8px;
   position: relative;
   line-height: 1;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  text-shadow:
+    2px 2px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0,
+    0px 0px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0,
+    -4px 2px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0,
+    2px -4px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0,
+    -2px -2px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0
+  ;
   // --
   // --
   // --
@@ -122,19 +136,29 @@ export const Alink = styled.a`
 
 export const ContainerIcon = styled.div`
   // --
-  --size-01: 48px;
+  --size-01: 44px;
+  --border-radius: 44px;
   ${fncTransition({duration: '.4s'})}
 
   // --
   width: var(--size-01);
-  /* height: var(--size-01); */
-  height: 100%;
-  padding: 4px 8px 4px 16px;
+  height: var(--size-01);
+  /* height: 100%; */
+  padding: 0px 8px 0px 8px;
+  /* padding: 8px; */
   position: absolute;
-  background: ${ ({theme}) => theme.colors.riverBed.c900 }C0;
+  background: ${ ({theme}) => theme.colors.riverBed.c950 }D0;
   right: 0px;
-  /* border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius); */
+  border-radius: var(--border-radius);
+  /* border-left: solid 2px ${ ({theme}) => theme.colors.paleGoldenRod.c500 }; */
+  border: solid 2px ${ ({theme}) => theme.colors.riverBed.c050 }E0;
+  /* border-radius: 80px; */
+  /* margin: 4px; */
   // --
   // --
   // --

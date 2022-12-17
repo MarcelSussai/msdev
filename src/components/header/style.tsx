@@ -161,14 +161,14 @@ export const DescriptionJob = styled.div`
   ${fncTransition({})}
   // --
   color: var(--color-text);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  text-align: center;
+  text-align: end;
   justify-content: flex-end;
   // --
   // --

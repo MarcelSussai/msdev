@@ -17,6 +17,8 @@ const AbilityIcon = () => {
       viewBox="0 0 20 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
     >
       <path
         d="M18.1818 0H1.81818C0.818182 0 0 0.6 0 1.33333V12C0
@@ -29,7 +31,7 @@ const AbilityIcon = () => {
         d="M4.54559
           3.99951V10.6662H8.18196V9.33285H6.36378V5.33285H8.18196V3.99951H4.54559ZM13.6365
           9.33285H11.8183V10.6662H15.4547V3.99951H11.8183V5.33285H13.6365V9.33285Z"
-        fill={theme.colors.paleGoldenRod.c500}
+        fill={theme.colors?.paleGoldenRod?.c600}
       />
     </Svg>
   )

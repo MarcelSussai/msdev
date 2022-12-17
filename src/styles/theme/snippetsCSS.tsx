@@ -95,21 +95,23 @@ export const GlassEffect_06 = S.css`
 `
 
 export const GlassEffect_07 = S.css`
-  --color-01: ${ ({theme}) => theme.colors.riverBed.c100 }A0;
-  --color-02: ${ ({theme}) => theme.colors.riverBed.c100 }56;
-  backdrop-filter: blur(3px);
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c100 }80;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c100 }80;
   background: linear-gradient(160deg, var(--color-01), var(--color-02));
-  // box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
+  box-shadow: 0 0 8px 2px ${ ({theme}) => theme.colors.riverBed.c350 }64;
 `
 
 export const GlassEffect_08 = S.css`
   ${fncTransition({})}
-  --color-01: ${ ({theme}) => theme.colors.riverBed.c250 }40;
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c050 }20;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 };
   backdrop-filter: blur(2px);
-  background: var(--color-01);
+  background: var(--color-01) ;
+  box-shadow: inset 0 0 16px 2px ${ ({theme}) => theme.colors.riverBed.c500 }64;
   &:hover {
-    --color-01: ${ ({theme}) => theme.colors.riverBed.c650 }F0;
-    color: ${ ({theme}) => theme.colors.paleGoldenRod.c500 }FF;
+    box-shadow: inset 0 0 16px 8px ${ ({theme}) => theme.colors.cream.c750 }A0;
+    --color-01: ${ ({theme}) => theme.colors.cream.c500 }C0;
+    color: ${ ({theme}) => theme.colors.riverBed.c700 }FF;
   }
 `
 
@@ -158,6 +160,9 @@ export const ShadowEffect_04 = S.css`
 
 export const fontMuseo = `
   font-family: 'MuseoModerno', cursive;
+`
+export const fontGeorama = `
+  font-family: 'Georama', sans-serif;
 `
 
 export const animation_01 = S.keyframes`

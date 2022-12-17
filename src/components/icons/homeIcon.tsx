@@ -26,7 +26,7 @@ const HomeIcon = () => {
           3.39993 19.9496 3.84993
           19.9496H9.49993V13.4996H12.6499V19.9996H15.5999C16.4499
           19.9996 17.1499 19.2996 17.1499 18.3996V10.8496L9.99993 3.59961Z"
-        fill={theme.colors?.paleGoldenRod?.c300}
+        fill={theme.colors?.paleGoldenRod?.c200}
       />
     </Svg>
   )

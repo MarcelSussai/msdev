@@ -64,7 +64,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     line-height: 1.4;
     overflow-x: hidden;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Georama', sans-serif;
     background: white;
     background: ${colors.riverBed.c250};
   }

@@ -3,6 +3,8 @@ import Link from 'next/link'
 import * as S from './style'
 import { HeaderCtx } from '../../../contexts/ctxHeader'
 import HomeIcon from '../../icons/homeIcon'
+import PeopleIcon from '../../icons/peopleIcon'
+import { menuItemsArray } from './configLinks'
 
 
 export default () => {
@@ -14,14 +16,20 @@ export default () => {
     <S.ContainerAll isOpen={isMenuOpen} />
     <S.GlassBehind isOpen={isMenuOpen} />
     <S.ContainerLinksMenu isOpen={isMenuOpen}>
-      <Link href='#' passHref>
-        <S.Alink onClick={handleToggleMenuOpen}>
-          <span>{`Home`}</span>
-          <S.ContainerIcon>
-            <HomeIcon />
-          </S.ContainerIcon>
-        </S.Alink>
-      </Link>
+      {
+        menuItemsArray.map((item, i) => {
+          return (
+            <Link href={item.link} passHref>
+              <S.Alink onClick={handleToggleMenuOpen}>
+                <span>{item.name}</span>
+                <S.ContainerIcon>
+                  <item.Icon />
+                </S.ContainerIcon>
+              </S.Alink>
+            </Link>
+          )
+        })
+      }
       
     </S.ContainerLinksMenu>
   </S.Nav>
