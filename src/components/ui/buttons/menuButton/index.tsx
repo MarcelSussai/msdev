@@ -11,7 +11,7 @@ export default () => {
   return (
   <>
     <S.ContainerButtonMenu>
-      <S.ButtonMenu onClick={handleToggleMenuOpen}>
+      <S.ButtonMenu isOpen={isMenuOpen} onClick={handleToggleMenuOpen}>
         <S.DrawItemButton isOpen={isMenuOpen} />
       </S.ButtonMenu>
     </S.ContainerButtonMenu>

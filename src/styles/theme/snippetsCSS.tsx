@@ -54,7 +54,7 @@ export const GlassEffect_01 = S.css`
 
 export const GlassEffect_02 = S.css`
   ${fncTransition({})}
-  --color-01: ${ ({theme}) => theme.colors.riverBed.c150 }E0;
+  --color-01: ${ ({theme}) => theme.colors.grape.c100 }F0;
   backdrop-filter: blur(2px);
   background: var(--color-01);
   &:hover {
@@ -115,8 +115,10 @@ export const GlassEffect_08 = S.css`
 `
 
 export const ShadowEffect_01 = S.css`
-  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }00;
-  box-shadow: 2px 2px 8px 8px var(--shadow-color-01), -2px -2px 8px 8px #FFFFFF00;
+  /*
+    --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }00;
+    box-shadow: 2px 2px 8px 8px var(--shadow-color-01), -2px -2px 8px 8px #FFFFFF00;
+  */
 `
 
 export const ShadowEffect_02 = S.css`
@@ -124,7 +126,7 @@ export const ShadowEffect_02 = S.css`
   box-shadow:
     2px 4px 4px 4px var(--shadow-color-01),
     -2px -4px 4px 4px #FFFFFF00,
-    inset -0px -0px 8px 2px ${ ({theme}) => theme.colors.greyPurple.c400 }80
+    inset -0px -0px 8px 2px ${ ({theme}) => theme.colors.riverBed.c400 }80
   ;
   &:hover {
     box-shadow:
@@ -149,12 +151,12 @@ export const ShadowEffect_03 = S.css`
 export const ShadowEffect_04 = S.css`
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c350 }A0;
   box-shadow:
-    8px 8px 4px 2px var(--shadow-color-01),
-    -2px -2px 6px 2px #FFFFFF96,
+    4px 4px 6px 2px var(--shadow-color-01),
+    -4px -4px 6px 2px #FFFFFF96,
     inset -0px -0px 4px 2px ${ ({theme}) => theme.colors.riverBed.c350 }A0
   ;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 };
-  border-radius: 8px;
+  border-radius: 16px;
 `
 
 export const fontMuseo = `

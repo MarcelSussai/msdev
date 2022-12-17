@@ -9,6 +9,7 @@ export interface IIsOpen {
   isOpen: boolean
 }
 interface IDrawItemButton extends IIsOpen {}
+interface IButtonMenu extends IIsOpen {}
 // --------
 export const ContainerButtonMenu = styled.div`
   // --
@@ -44,12 +45,16 @@ export const ContainerButtonMenu = styled.div`
   // --
 `
 
-export const ButtonMenu = styled.button`
+export const ButtonMenu = styled.button<IButtonMenu>`
   // --
   --size-01: 48px;
   --radius-01: 4px;
+  --color-01: ${
+    ({theme, isOpen}) => !isOpen ?
+      theme.colors.grape.c100 :
+      theme.colors.wine.c100
+  }F0;
   ${fncTransition({})}
-  ${GlassEffect_02}
   ${ShadowEffect_02}
   // --
   outline: 0;
@@ -61,11 +66,17 @@ export const ButtonMenu = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(2px);
+  background: var(--color-01);
   border-radius: 80px;
   transform: translate3d(100%, 0, 0);
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c200 }96;
   animation: ${animation_05} 2s 1.8s ease-in-out forwards;
   cursor: pointer;
+  // --
+  &:hover {
+    --color-01: ${ ({theme}) => theme.colors.cream.c300 }FF;
+  }
   // --
   // --
 `

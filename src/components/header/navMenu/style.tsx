@@ -33,11 +33,10 @@ export const Nav = styled.nav<INav>`
 
 export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
-  ${fncTransition({duration: '.4s'})}
-  ${({isOpen}) => !isOpen ? fncTransition({duration: '.4s'}) : fncTransition({duration: '1s'})}
+  ${({isOpen}) => !isOpen ? fncTransition({duration: '.3s'}) : fncTransition({duration: '1.6s'})}
   ${ScrollStyle_01}
   // --
-  width: 288px;
+  width: 240px;
   overflow-y: auto;
   scroll-behavior: smooth;
   height: 64%;
@@ -46,7 +45,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   display: flex;
   flex-direction: column;
   position: fixed;
-  gap: 6px;
+  gap: 8px;
   transform: ${ ({isOpen}) => !isOpen ? `translate3D(calc(-100% - 32px), 0, 0)` : `translate3D(0, 0, 0)` };
   // --
   // --
@@ -56,10 +55,10 @@ export const ContainerAll = styled.div<IContainerAll>`
   // --
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
-  ${fncTransition({duration: '.6s'})}
+  ${fncTransition({duration: '.8s'})}
   // --
   height: 100%;
-  width: 216px;
+  width: 160px;
   position: fixed;
   left: 0;
   z-index: 2;
@@ -76,7 +75,7 @@ export const ContainerAll = styled.div<IContainerAll>`
 
 export const GlassBehind = styled.div<IGlassBehind>`
   // --
-  ${fncTransition({duration: '.3s'})}
+  ${fncTransition({duration: '.6s'})}
   ${GlassEffect_04}
   // --
   height: 100%;
@@ -84,7 +83,7 @@ export const GlassBehind = styled.div<IGlassBehind>`
   left: 0px;
   top: 0px;
   position: fixed;
-  width: 268px;
+  width: 220px;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;
   border-left: none;
   border-top: none;
@@ -102,9 +101,9 @@ export const Alink = styled.a`
   // --
   width: calc(100% - 8px);
   /* width: 100%; */
-  height: 40px;
+  height: 44px;
   margin-left: 8px;
-  padding: 0px 0px 0px 1px;
+  padding: 2px 2px 2px 3px;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }24;
   border-left: none;
   /* border-right: none; */
@@ -171,7 +170,7 @@ export const SpanText = styled.span`
   --border-radius: 64px;
   ${fncTransition({duration: '.4s'})}
   // --
-  width: calc(100% - 76px);
+  width: calc(100% - 80px);
   display: flex;
   justify-content: flex-end;
   align-items: center;
