@@ -20,7 +20,7 @@ interface IGlassBehind extends IIsOpen {}
 // --------
 export const Nav = styled.nav<INav>`
   // --
-  ${fncTransition({duration: '1s',})}
+  ${fncTransition({duration: '.2s',})}
   // --
   width: 0;
   ${ ({isOpen}) => !isOpen ? `width: 0;` : `width: 288px;` }
@@ -33,7 +33,7 @@ export const Nav = styled.nav<INav>`
 
 export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
-  ${fncTransition({duration: '.8s'})}
+  ${fncTransition({duration: '1s'})}
   ${ScrollStyle_01}
   // --
   width: 288px;
@@ -56,7 +56,7 @@ export const ContainerAll = styled.div<IContainerAll>`
   // --
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
-  ${fncTransition({duration: '.8s',})}
+  ${fncTransition({duration: '1s'})}
   // --
   height: 100%;
   width: 216px;
@@ -99,7 +99,7 @@ export const GlassBehind = styled.div<IGlassBehind>`
 export const Alink = styled.a`
   // --
   --border-radius: 80px;
-  ${fncTransition({duration: '.3s'})}
+  ${fncTransition({duration: '.4s'})}
   ${GlassEffect_08}
   // --
   width: calc(100% - 8px);
@@ -171,6 +171,7 @@ export const ContainerIcon = styled.div`
 export const SpanText = styled.span`
   // --
   --border-radius: 64px;
+  ${fncTransition({duration: '.4s'})}
   // --
   width: calc(100% - 76px);
   display: flex;
