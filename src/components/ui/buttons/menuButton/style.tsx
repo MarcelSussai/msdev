@@ -66,7 +66,7 @@ export const ButtonMenu = styled.button`
 export const DrawItemButton = styled.div<IDrawItemButton>`
   // --
   --size-height: 3px;
-  --size-width: 16px;
+  --size-width: 20px;
   --border-radius: 8px;
   ${fncTransition({})}
   // --
