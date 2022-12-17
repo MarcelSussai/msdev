@@ -23,7 +23,7 @@ export const Nav = styled.nav<INav>`
   ${fncTransition({duration: '1s',})}
   // --
   width: 0;
-  ${ ({isOpen}) => !isOpen ? `width: 0;` : `width: 232px;` }
+  ${ ({isOpen}) => !isOpen ? `width: 0;` : `width: 288px;` }
   height: 100%;
   z-index: 0;
   position: fixed;
@@ -36,7 +36,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   ${fncTransition({duration: '.8s'})}
   ${ScrollStyle_01}
   // --
-  width: 256px;
+  width: 288px;
   overflow-y: auto;
   scroll-behavior: smooth;
   height: 52%;
@@ -59,7 +59,7 @@ export const ContainerAll = styled.div<IContainerAll>`
   ${fncTransition({duration: '.8s',})}
   // --
   height: 100%;
-  width: 200px;
+  width: 232px;
   position: fixed;
   left: 0;
   z-index: 2;
@@ -85,7 +85,7 @@ export const GlassBehind = styled.div<IGlassBehind>`
   left: 0px;
   top: 0px;
   position: fixed;
-  width: 236px;
+  width: 268px;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;
   border-left: none;
   border-top: none;
@@ -98,15 +98,15 @@ export const GlassBehind = styled.div<IGlassBehind>`
 
 export const Alink = styled.a`
   // --
+  --border-radius: 80px;
   ${fncTransition({duration: '.2s'})}
   ${GlassEffect_08}
   // --
-  width: 100%;
-  /* width: calc(100% - 8px); */
-  height: 48px;
-  padding: 6px 16px 6px 16px;
-  line-height: 1;
-  color: ${ ({theme}) => theme.colors.riverBed.c850 };
+  width: calc(100% - 8px);
+  /* width: 100%; */
+  height: 40px;
+  margin-left: 8px;
+  padding: 0px 0px 0px 1px;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }24;
   border-left: none;
   /* border-right: none; */
@@ -117,18 +117,17 @@ export const Alink = styled.a`
   justify-content: space-between;
   gap: 8px;
   position: relative;
-  line-height: 1;
-  font-weight: 700;
-  font-size: 18px;
   border-top-right-radius: 80px;
   border-bottom-right-radius: 80px;
-  text-shadow:
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  /* text-shadow:
     2px 2px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0,
     0px 0px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0,
     -4px 2px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0,
     2px -4px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0,
     -2px -2px 6px ${ ({theme}) => theme.colors.riverBed.c250 }A0
-  ;
+  ; */
   // --
   // --
   // --
@@ -136,8 +135,8 @@ export const Alink = styled.a`
 
 export const ContainerIcon = styled.div`
   // --
-  --size-01: 44px;
-  --border-radius: 44px;
+  --size-01: 40px;
+  --border-radius: 64px;
   ${fncTransition({duration: '.4s'})}
 
   // --
@@ -147,8 +146,9 @@ export const ContainerIcon = styled.div`
   padding: 0px 8px 0px 8px;
   /* padding: 8px; */
   position: absolute;
-  background: ${ ({theme}) => theme.colors.riverBed.c950 }D0;
-  right: 0px;
+  
+  background: ${ ({theme}) => theme.colors.riverBed.c950 }E0;
+  right: -1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,9 +156,35 @@ export const ContainerIcon = styled.div`
   border-bottom-left-radius: var(--border-radius); */
   border-radius: var(--border-radius);
   /* border-left: solid 2px ${ ({theme}) => theme.colors.paleGoldenRod.c500 }; */
-  border: solid 2px ${ ({theme}) => theme.colors.riverBed.c050 }E0;
+  border-top: solid 2px ${ ({theme}) => theme.colors.celery.c300 }FF;
+  border-left: solid 2px ${ ({theme}) => theme.colors.celery.c300 }FF;
+  border-right: solid 2px ${ ({theme}) => theme.colors.pictonBlue.c300 }FF;
+  border-bottom: solid 2px ${ ({theme}) => theme.colors.pictonBlue.c300 }FF;
+  box-shadow: -4px 0 8px ${ ({theme}) => theme.colors.riverBed.c750 }80;
   /* border-radius: 80px; */
   /* margin: 4px; */
+  // --
+  // --
+  // --
+`
+
+export const SpanText = styled.span`
+  // --
+  --border-radius: 64px;
+  // --
+  width: calc(100% - 60px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 12px 8px 0;
+  height: 100%;
+  background: ${ ({theme}) => theme.colors.riverBed.c950 }D0;
+  color: ${ ({theme}) => theme.colors.riverBed.c150 };
+  line-height: 1;
+  font-weight: 300;
+  font-size: 16px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
   // --
   // --
   // --

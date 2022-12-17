@@ -109,9 +109,8 @@ export const GlassEffect_08 = S.css`
   background: var(--color-01) ;
   box-shadow: inset 0 0 16px 2px ${ ({theme}) => theme.colors.riverBed.c500 }64;
   &:hover {
-    box-shadow: inset 0 0 16px 8px ${ ({theme}) => theme.colors.cream.c750 }A0;
-    --color-01: ${ ({theme}) => theme.colors.cream.c500 }C0;
-    color: ${ ({theme}) => theme.colors.riverBed.c700 }FF;
+    box-shadow: inset 0 0 16px 8px ${ ({theme}) => theme.colors.cream.c700 }A0;
+    --color-01: ${ ({theme}) => theme.colors.cream.c500 }A0;
   }
 `
 

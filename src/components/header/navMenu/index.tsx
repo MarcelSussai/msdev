@@ -21,7 +21,7 @@ export default () => {
           return (
             <Link href={item.link} passHref>
               <S.Alink onClick={handleToggleMenuOpen}>
-                <span>{item.name}</span>
+                <S.SpanText>{item.name}</S.SpanText>
                 <S.ContainerIcon>
                   <item.Icon />
                 </S.ContainerIcon>
