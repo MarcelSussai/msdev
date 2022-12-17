@@ -28,7 +28,7 @@ export const ContainerButtonMenu = styled.div`
   z-index: 900;
   /* padding: 8px; */
   padding: 12px 8px 8px 10px;
-  transform: scale(0);
+  transform: translate3d(100%, 0, 0);
   animation: ${animation_05} 2s 1.2s ease-in-out forwards;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;
   border-right: none;
@@ -62,6 +62,7 @@ export const ButtonMenu = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 80px;
+  transform: translate3d(100%, 0, 0);
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c200 }96;
   animation: ${animation_05} 2s 1.8s ease-in-out forwards;
   cursor: pointer;

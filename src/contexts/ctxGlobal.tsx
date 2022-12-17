@@ -2,8 +2,8 @@ import React, {
   useState, createContext, ReactNode, Dispatch, SetStateAction
 } from 'react'
 import { ThemeProvider } from 'styled-components'
+import GlobalStyle from '../styles/GlobalStyle'
 import theme from '../styles/theme'
-
 interface IAppCtx {
   ctx_Test: string
   setCtx_Test: Dispatch<SetStateAction<string>>
