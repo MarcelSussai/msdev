@@ -17,43 +17,45 @@ export const ContainerButtonMenu = styled.div`
   ${GlassEffect_03}
   // --
   position: fixed;
-  width: fit-content;
-  height: 72px;
-  right: 0;
-  bottom: 16px;
+  width: 88px;
+  height: 88px;
+  right: 12px;
+  bottom: 12px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   opacity: 0;
   z-index: 900;
-  padding: 4px 16px 0px 20px;
-  transform: translate3d(0, 100%, 0);
+  padding: 4px 8px 0 8px;
+  transform: scale(0);
   animation: ${animation_05} 2s 1.2s ease-in-out forwards;
-  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }00;
+  /* border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }00;
   border-right: none;
   border-top-left-radius: var(--size-radius-01);
-  border-bottom-left-radius: var(--size-radius-01);
+  border-bottom-left-radius: var(--size-radius-01); */
+  border-radius: 80px;
   // --
   // --
 `
 
 export const ButtonMenu = styled.button`
   // --
-  --size-01: 32px;
+  --size-01: 48px;
   --radius-01: 4px;
   ${fncTransition({})}
   ${GlassEffect_02}
   ${ShadowEffect_02}
   // --
   outline: 0;
-  width: 48px;
-  /* width: var(--size-01); */
+  /* width: 48px; */
+  width: var(--size-01);
   height: var(--size-01);
   align-self: center;
   border-radius: var(--radius-01);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 80px;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c200 }96;
   animation: ${animation_05} 2s 1.8s ease-in-out forwards;
   cursor: pointer;
@@ -64,7 +66,7 @@ export const ButtonMenu = styled.button`
 export const DrawItemButton = styled.div<IDrawItemButton>`
   // --
   --size-height: 3px;
-  --size-width: 20px;
+  --size-width: 16px;
   --border-radius: 8px;
   ${fncTransition({})}
   // --

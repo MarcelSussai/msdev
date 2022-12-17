@@ -33,7 +33,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   width: 240px;
   overflow-y: auto;
   scroll-behavior: smooth;
-  height: 64%;
+  height: 52%;
   margin-top: 136px;
   z-index: 800;
   position: fixed;

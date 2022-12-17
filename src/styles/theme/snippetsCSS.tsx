@@ -200,11 +200,11 @@ export const animation_04 = S.keyframes`
 export const animation_05 = S.keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: scale(0);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: scale(1);
   }
 `
 

@@ -15,7 +15,7 @@ export const ContainerAll = styled.div`
   // --
   padding: 24px;
   margin: 16px;
-  border-radius: 8px;
+  border-radius: 80px;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c150 }80;
   position: fixed;
   width: calc(100% - 32px);
