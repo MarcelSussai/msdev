@@ -26,11 +26,12 @@ export const ContainerButtonMenu = styled.div`
   align-items: center;
   opacity: 0;
   z-index: 900;
-  padding: 4px 8px 0 8px;
+  /* padding: 8px; */
+  padding: 12px 8px 8px 10px;
   transform: scale(0);
   animation: ${animation_05} 2s 1.2s ease-in-out forwards;
-  /* border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }00;
-  border-right: none;
+  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;
+  /* border-right: none;
   border-top-left-radius: var(--size-radius-01);
   border-bottom-left-radius: var(--size-radius-01); */
   border-radius: 80px;
