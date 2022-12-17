@@ -115,22 +115,22 @@ export const GlassEffect_08 = S.css`
 `
 
 export const ShadowEffect_01 = S.css`
-  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }64;
-  box-shadow: 2px 2px 8px 8px var(--shadow-color-01), -2px -2px 8px 8px #FFFFFF72;
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }00;
+  box-shadow: 2px 2px 8px 8px var(--shadow-color-01), -2px -2px 8px 8px #FFFFFF00;
 `
 
 export const ShadowEffect_02 = S.css`
-  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c500 }64;
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c500 }00;
   box-shadow:
     2px 4px 4px 4px var(--shadow-color-01),
-    -2px -4px 4px 4px #FFFFFFA0,
-    inset -0px -0px 8px 2px ${ ({theme}) => theme.colors.greyPurple.c400 }A0
+    -2px -4px 4px 4px #FFFFFF00,
+    inset -0px -0px 8px 2px ${ ({theme}) => theme.colors.greyPurple.c400 }80
   ;
   &:hover {
     box-shadow:
       2px 4px 4px 4px var(--shadow-color-01),
-      -2px -4px 4px 4px #FFFFFFA0,
-      inset -0px -0px 8px 2px ${ ({theme}) => theme.colors.cream.c800 }A0
+      -2px -4px 4px 4px #FFFFFF00,
+      inset -0px -0px 8px 2px ${ ({theme}) => theme.colors.cream.c800 }80
     ;
   }
 `
