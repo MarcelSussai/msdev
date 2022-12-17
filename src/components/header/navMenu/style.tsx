@@ -33,7 +33,8 @@ export const Nav = styled.nav<INav>`
 
 export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
-  ${fncTransition({duration: '1s'})}
+  ${fncTransition({duration: '.4s'})}
+  ${({isOpen}) => !isOpen ? fncTransition({duration: '.4s'}) : fncTransition({duration: '1s'})}
   ${ScrollStyle_01}
   // --
   width: 288px;
@@ -55,7 +56,7 @@ export const ContainerAll = styled.div<IContainerAll>`
   // --
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
-  ${fncTransition({duration: '1s'})}
+  ${fncTransition({duration: '.6s'})}
   // --
   height: 100%;
   width: 216px;
@@ -75,7 +76,7 @@ export const ContainerAll = styled.div<IContainerAll>`
 
 export const GlassBehind = styled.div<IGlassBehind>`
   // --
-  ${fncTransition({duration: '1s'})}
+  ${fncTransition({duration: '.3s'})}
   ${GlassEffect_04}
   // --
   height: 100%;
