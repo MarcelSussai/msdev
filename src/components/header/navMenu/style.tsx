@@ -77,7 +77,7 @@ export const ContainerAll = styled.div<IContainerAll>`
 
 export const GlassBehind = styled.div<IGlassBehind>`
   // --
-  ${fncTransition({duration: '.8s'})}
+  ${fncTransition({duration: '1s'})}
   ${GlassEffect_04}
   // --
   height: 100%;
@@ -99,7 +99,7 @@ export const GlassBehind = styled.div<IGlassBehind>`
 export const Alink = styled.a`
   // --
   --border-radius: 80px;
-  ${fncTransition({duration: '.2s'})}
+  ${fncTransition({duration: '.3s'})}
   ${GlassEffect_08}
   // --
   width: calc(100% - 8px);
