@@ -1,6 +1,10 @@
 import AbilityIcon from "../../icons/abilityIcon";
+import ContactIcon from "../../icons/contactIcon";
 import HomeIcon from "../../icons/homeIcon";
 import PeopleIcon from "../../icons/peopleIcon";
+import PortfolioIcon from "../../icons/portfolioIcon";
+import PostsIcon from "../../icons/postsIcon";
+import WhatIDoIcon from "../../icons/whatIDoIcon";
 
 export const menuItemsArray = [
   {
@@ -11,7 +15,7 @@ export const menuItemsArray = [
   },
   {
     link: '#',
-    name: 'Quem Sou',
+    name: 'Quem sou',
     Icon: PeopleIcon,
     pageIndex: 2,
   },
@@ -20,5 +24,35 @@ export const menuItemsArray = [
     name: 'Habilidades',
     Icon: AbilityIcon,
     pageIndex: 3,
+  },
+  {
+    link: '#',
+    name: 'O que faço',
+    Icon: WhatIDoIcon,
+    pageIndex: 4,
+  },
+  {
+    link: '#',
+    name: 'Portifólio',
+    Icon: PortfolioIcon,
+    pageIndex: 4,
+  },
+  {
+    link: '#',
+    name: 'Artigos',
+    Icon: PostsIcon,
+    pageIndex: 4,
+  },
+  {
+    link: '#',
+    name: 'Contato',
+    Icon: ContactIcon,
+    pageIndex: 4,
+  },
+  {
+    link: '#',
+    name: 'Área do cliente',
+    Icon: ContactIcon,
+    pageIndex: 4,
   },
 ]

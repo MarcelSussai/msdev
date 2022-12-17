@@ -39,7 +39,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   width: 288px;
   overflow-y: auto;
   scroll-behavior: smooth;
-  height: 52%;
+  height: 64%;
   margin-top: 136px;
   z-index: 800;
   display: flex;
@@ -59,7 +59,7 @@ export const ContainerAll = styled.div<IContainerAll>`
   ${fncTransition({duration: '.8s',})}
   // --
   height: 100%;
-  width: 232px;
+  width: 216px;
   position: fixed;
   left: 0;
   z-index: 2;
@@ -172,7 +172,7 @@ export const SpanText = styled.span`
   // --
   --border-radius: 64px;
   // --
-  width: calc(100% - 60px);
+  width: calc(100% - 76px);
   display: flex;
   justify-content: flex-end;
   align-items: center;

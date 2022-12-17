@@ -14,6 +14,8 @@ const AreaOfClientIcon = () => {
       viewBox="0 0 20 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
     >
     <path
       d="M9.52379 6.91728C9.62404 6.66665 9.87467
@@ -56,7 +58,7 @@ const AreaOfClientIcon = () => {
         4.36089 6.61653 4.51127 6.66666 4.46114L7.11779 4.06014L7.56891
         4.51127L7.16791 4.91227C7.11778 4.9624 7.26816 5.3634
         7.36841 5.3634H7.91979V5.9649Z"
-      fill={theme.colors.paleGoldenRod.c200}
+      fill={theme.colors?.paleGoldenRod?.c200}
     />
     <path
       d="M17.9949 12.3311C18.0451 12.1306 18.2957
@@ -97,7 +99,7 @@ const AreaOfClientIcon = () => {
         15.3884 10.276 15.4385 10.2258L15.7894 9.87496L16.1904
         10.2258L15.8395 10.5767C15.7894 10.6268 15.9398 10.9777
         16.04 10.9777H16.5413L16.5914 11.479Z"
-      fill={theme.colors.paleGoldenRod.c500}
+      fill={theme.colors?.paleGoldenRod?.c500}
     />
     </Svg>
   )
