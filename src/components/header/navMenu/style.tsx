@@ -45,7 +45,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   display: flex;
   flex-direction: column;
   position: fixed;
-  gap: 4px;
+  gap: 6px;
   transform: translate3D(calc(-100% - 32px), 0, 0);
   transform: ${ ({isOpen}) => !isOpen ? `translate3D(calc(-100% - 32px), 0, 0)` : `translate3D(0, 0, 0)` };
   // --
@@ -63,8 +63,8 @@ export const ContainerAll = styled.div<IContainerAll>`
   position: fixed;
   left: 0;
   z-index: 2;
-  transform: translate3D(calc(-100% - 32px), 0, 0);
   background: ${ ({theme}) => theme.colors.riverBed.c900 };
+  transform: translate3D(calc(-100% - 32px), 0, 0);
   transform: ${ ({isOpen}) => !isOpen ? `translate3D(calc(-100% - 32px), 0, 0)` : `translate3D(0, 0, 0)` };
   border-right: solid 4px;
   border-image-source: linear-gradient(0deg, var(--bg-color-02), var(--bg-color-03));

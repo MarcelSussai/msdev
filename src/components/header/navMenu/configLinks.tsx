@@ -16,20 +16,20 @@ export const menuItemsArray = [
   },
   {
     link: '#',
+    name: 'O que faço',
+    Icon: WhatIDoIcon,
+    pageIndex: 2,
+  },
+  {
+    link: '#',
     name: 'Quem sou',
     Icon: PeopleIcon,
-    pageIndex: 2,
+    pageIndex: 3,
   },
   {
     link: '#',
     name: 'Habilidades',
     Icon: AbilityIcon,
-    pageIndex: 3,
-  },
-  {
-    link: '#',
-    name: 'O que faço',
-    Icon: WhatIDoIcon,
     pageIndex: 4,
   },
   {
