@@ -44,7 +44,7 @@ export const ContainerToolTitle = styled.h1`
   text-align: center;
   color: var(--color);
   font-weight: 800;
-  text-shadow: 2px 2px 2px ${ ({theme}) => theme.colors.riverBed.c400 }FF;
+  /* text-shadow: 2px 2px 2px ${ ({theme}) => theme.colors.riverBed.c400 }FF; */
   width: 100%;
   padding: 8px ;
   background: var(--bg-color-01);
