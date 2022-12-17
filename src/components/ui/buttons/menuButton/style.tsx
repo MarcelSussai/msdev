@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {
   animation_05,
-  fncTransition, GlassEffect_02, GlassEffect_03, GlassEffect_06, ShadowEffect_02
+  fncTransition, GlassEffect_02, GlassEffect_03, GlassEffect_06, mediaQueryMinW, ShadowEffect_02
 } from '../../../../styles/theme/snippetsCSS'
 
 // --------
@@ -36,6 +36,11 @@ export const ContainerButtonMenu = styled.div`
   border-bottom-left-radius: var(--size-radius-01); */
   border-radius: 80px;
   // --
+  // --
+  ${mediaQueryMinW('408')} {
+    bottom: unset;
+    top: 24px;
+  }
   // --
 `
 
