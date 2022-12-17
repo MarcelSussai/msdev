@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {
   animation_05,
-  fncTransition, GlassEffect_02, GlassEffect_03, ShadowEffect_02
+  fncTransition, GlassEffect_02, GlassEffect_03, GlassEffect_06, ShadowEffect_02
 } from '../../../../styles/theme/snippetsCSS'
 
 // --------
@@ -14,7 +14,7 @@ export const ContainerButtonMenu = styled.div`
   // --
   --size-radius-01: 8px;
   ${fncTransition({})}
-  ${GlassEffect_03}
+  ${GlassEffect_06}
   // --
   position: fixed;
   width: 88px;
