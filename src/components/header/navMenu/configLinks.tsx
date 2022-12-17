@@ -1,4 +1,5 @@
 import AbilityIcon from "../../icons/abilityIcon";
+import AreaOfClientIcon from "../../icons/areaOfClientIcon";
 import ContactIcon from "../../icons/contactIcon";
 import HomeIcon from "../../icons/homeIcon";
 import PeopleIcon from "../../icons/peopleIcon";
@@ -35,24 +36,24 @@ export const menuItemsArray = [
     link: '#',
     name: 'Portifólio',
     Icon: PortfolioIcon,
-    pageIndex: 4,
+    pageIndex: 5,
   },
   {
     link: '#',
     name: 'Artigos',
     Icon: PostsIcon,
-    pageIndex: 4,
+    pageIndex: 6,
   },
   {
     link: '#',
     name: 'Contato',
     Icon: ContactIcon,
-    pageIndex: 4,
+    pageIndex: 7,
   },
   {
     link: '#',
     name: 'Área do cliente',
-    Icon: ContactIcon,
-    pageIndex: 4,
+    Icon: AreaOfClientIcon,
+    pageIndex: 8,
   },
 ]
