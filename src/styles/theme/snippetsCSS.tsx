@@ -22,6 +22,15 @@ export const fncTransition = (props: fncTransitionProps) => {
       ${ delay    || ''};
   `
 }
+export const fncTransitionPart = (props: fncTransitionProps) => {
+  const { duration, easing, target, delay} = props
+  return `
+      ${ target   || ' all ' }
+      ${ duration || ' .3s ' }
+      ${ easing   || ' ease-in-out '}
+      ${ delay    || ''}
+  `
+}
 
 export const ScrollStyle_01 = S.css`
   &::-webkit-scrollbar {

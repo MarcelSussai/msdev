@@ -66,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     font-family: 'Georama', sans-serif;
     background: white;
-    background: ${colors.riverBed.c250};
+    background: ${colors.riverBed.c200};
   }
 
   ul[class], ol[class] {

@@ -6,8 +6,16 @@ import PeopleIcon from "../../icons/peopleIcon";
 import PortfolioIcon from "../../icons/portfolioIcon";
 import PostsIcon from "../../icons/postsIcon";
 import WhatIDoIcon from "../../icons/whatIDoIcon";
+import { ReactNode } from 'react';
 
-export const menuItemsArray = [
+interface IItem {
+  Icon: () => JSX.Element
+  name: string
+  link: string
+  pageIndex: number
+}
+
+export const menuItemsArray: IItem[] = [
   {
     link: '/',
     name: 'Home',

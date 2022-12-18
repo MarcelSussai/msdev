@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {
   fncTransition,
+  fncTransitionPart,
   GlassEffect_04,
   GlassEffect_08,
   ScrollStyle_01
@@ -9,12 +10,10 @@ import { IIsOpen } from '../../ui/buttons/menuButton/style'
 // --------
 
 interface INav extends IIsOpen {}
-interface IContainerLinksMenu extends IIsOpen {
-  delay?: string
-}
+interface IContainerLinksMenu extends IIsOpen {}
 interface IContainerAll extends IIsOpen {}
 interface IGlassBehind extends IIsOpen {}
-interface IAlink extends IIsOpen {}
+interface IAlink extends IIsOpen { delay: string}
 // --------
 export const Nav = styled.nav<INav>`
   // --
@@ -122,11 +121,11 @@ export const GlassBehind = styled.div<IGlassBehind>`
 export const Alink = styled.a<IAlink>`
   // --
   --border-radius: 80px;
-  ${({isOpen}) => !isOpen ?
-    fncTransition({duration: '.4s'}) :
-    fncTransition({duration: '1.2s'})
-  }
   ${GlassEffect_08}
+  transition: ${({isOpen, delay}) => !isOpen ?
+    fncTransitionPart({duration: '.4s',}) :
+    fncTransitionPart({duration: '1.2s', delay: delay})
+  }, background .4s ease-in-out;
   // --
   width: calc(100% - 8px);
   height: 44px;

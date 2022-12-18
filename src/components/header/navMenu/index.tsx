@@ -20,7 +20,7 @@ export default () => {
         menuItemsArray.map((item, i) => {
           return (
             <Link href={item.link} passHref>
-              <S.Alink onClick={handleToggleMenuOpen} isOpen={isMenuOpen}>
+              <S.Alink delay={`.${item.pageIndex}s`} onClick={handleToggleMenuOpen} isOpen={isMenuOpen}>
                 <S.SpanText>{item.name}</S.SpanText>
                 <S.ContainerIcon>
                   <item.Icon />
