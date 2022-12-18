@@ -222,10 +222,10 @@ export const ContainerIcon = styled.div`
   align-items: center;
 
   border-radius: var(--border-radius);
-  border-top: solid 2px ${ ({theme}) => theme.colors.celery.c300 }FF;
-  border-left: solid 2px ${ ({theme}) => theme.colors.celery.c300 }FF;
-  border-right: solid 2px ${ ({theme}) => theme.colors.pictonBlue.c300 }FF;
-  border-bottom: solid 2px ${ ({theme}) => theme.colors.pictonBlue.c300 }FF;
+  border-top: solid 2px ${ ({theme}) => theme.colors.celery.c400 }FF;
+  border-left: solid 2px ${ ({theme}) => theme.colors.celery.c400 }FF;
+  border-right: solid 2px ${ ({theme}) => theme.colors.pictonBlue.c400 }FF;
+  border-bottom: solid 2px ${ ({theme}) => theme.colors.pictonBlue.c400 }FF;
 
   box-shadow: -4px 0 8px ${ ({theme}) => theme.colors.riverBed.c750 }80;
   // --
