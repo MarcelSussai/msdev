@@ -36,7 +36,6 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   ${ScrollStyle_01}
   // --
   overflow-y: auto;
-  scroll-behavior: smooth;
 
   width: 240px;
   height: 64%;
