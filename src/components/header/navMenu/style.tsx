@@ -163,8 +163,8 @@ export const Alink = styled.a<IAlink>`
   }, background .2s ease-in-out;
   // --
   width: calc(100% - 8px);
-  min-height: 42px;
-  max-height: 42px;
+  min-height: 44px;
+  max-height: 44px;
 
   position: relative;
 
