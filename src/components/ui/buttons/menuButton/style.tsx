@@ -31,7 +31,7 @@ export const ContainerButtonMenu = styled.div`
 
   padding: 12px 8px 8px 6px;
 
-  backdrop-filter: blur(1.4px);
+  backdrop-filter: blur(1.6px);
   background:
     linear-gradient(-160deg, var(--color-01), var(--color-02), var(--color-01))
   ;
