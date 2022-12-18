@@ -15,7 +15,7 @@ interface IButtonMenu extends IIsOpen {}
 export const ContainerButtonMenu = styled.div`
   // --
   --size-radius-01: 0px;
-  --color-01: ${ ({theme}) => theme.colors.riverBed.c500 }64;
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c500 }80;
   --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }00;
   // --
   ${fncTransition({})}
@@ -29,11 +29,11 @@ export const ContainerButtonMenu = styled.div`
   z-index: 900;
   opacity: 0;
 
-  padding: 12px 8px 8px 6px;
+  padding: 12px 8px 8px 12px;
 
   backdrop-filter: blur(1.6px);
   background:
-    linear-gradient(-160deg, var(--color-01), var(--color-02), var(--color-01))
+    linear-gradient(160deg, var(--color-01), var(--color-02), var(--color-01))
   ;
   
   display: flex;
@@ -42,7 +42,7 @@ export const ContainerButtonMenu = styled.div`
 
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;
   border-right: none;
-  border-radius: 80px;
+  border-radius: 88px;
   border-top-right-radius: var(--size-radius-01);
   border-bottom-right-radius: var(--size-radius-01);
 
