@@ -51,12 +51,12 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   flex-direction: column;
   gap: 8px;
 
-  transform: translate3D(-100%, 0, 0);
   ${ ({isOpen}) => !isOpen ?
     `
+      transform: translate3D(-100%, 0, 0);
     ` :
     `
-      animation: ${animation_07} .1s ease-in-out forwards;
+      transform: translate3D(0, 0, 0);
     `
   };
   // --
