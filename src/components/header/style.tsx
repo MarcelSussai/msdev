@@ -188,9 +188,17 @@ export const AestheticsNav = styled.div`
   z-index: 1;
   animation: ${animation_04} .8s ease-in-out forwards;
   box-shadow: 0 2px 12px 4px ${ ({theme}) => theme.colors.riverBed.c850 }D0;
-  border-bottom: solid 4px;
-  border-image-source: linear-gradient(-90deg, var(--bg-color-02), var(--bg-color-03));
-  border-image-slice: 1;
+  // --
+  &:after {
+    content: '';
+    z-index: 3;
+    position: absolute;
+    background: linear-gradient(-90deg, var(--bg-color-02), var(--bg-color-03));
+    height: 6px;
+    width: 100%;
+    bottom: 0;
+    left: 0px;
+  }
   // --
   // --
 `
