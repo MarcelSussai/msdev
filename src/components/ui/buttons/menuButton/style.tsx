@@ -70,8 +70,8 @@ export const ButtonMenu = styled.button<IButtonMenu>`
   --radius-01: 4px;
   --color-01: ${
     ({theme, isOpen}) => !isOpen ?
-      theme.colors.grape.c100 :
-      theme.colors.wine.c100
+      theme.colors.grape.c050 :
+      theme.colors.wine.c050
   }F0;
   // --
   ${fncTransition({})}
