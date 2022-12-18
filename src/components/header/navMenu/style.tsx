@@ -105,7 +105,7 @@ export const DivStyle_02 = styled.div<IDivStyle_02>`
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 }EA;
   ${({isOpen}) => isOpen ?
     fncTransition({duration: '.6s'}) :
-    fncTransition({duration: '.6s', delay: '.1s'})
+    fncTransition({duration: '.8s', delay: '.1s'})
   }
   // --
   background: linear-gradient(160deg, var(--bg-color-02), var(--bg-color-03));
