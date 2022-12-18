@@ -49,7 +49,7 @@ export const ContainerButtonMenu = styled.div`
   box-shadow: 2px 2px 8px ${ ({theme}) => theme.colors.riverBed.c850 }48;
 
   transform: translate3d(100%, 0, 0);
-  animation: ${animation_05} 2s 1.2s ease-in-out forwards;
+  animation: ${animation_05} .8s .8s ease-in-out forwards;
   // --
   // --
   ${mediaQueryMinW('400')} {
@@ -94,7 +94,7 @@ export const ButtonMenu = styled.button<IButtonMenu>`
     2px 4px 4px 4px var(--shadow-color-01),
     inset -0px -0px 8px 2px var(--shadow-color-02)
   ;
-  animation: ${animation_05} 2s 1.8s ease-in-out forwards;
+  animation: ${animation_05} 1s 1s ease-in-out forwards;
   cursor: pointer;
   // --
   &:hover {

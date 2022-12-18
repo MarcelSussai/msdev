@@ -36,6 +36,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
   // --
   ${ScrollStyle_01}
+  ${fncTransition({duration: '.6s'})}
   // --
   overflow-y: auto;
 
@@ -135,7 +136,7 @@ export const DivStyle_02 = styled.div<IDivStyle_02>`
   // --
   // --
   ${mediaQueryMinW('600')} {
-    ${fncTransition({duration: '.6s'})}
+    /* ${fncTransition({duration: '.6s'})} */
     transform: translate3D(calc(-100% - 32px), 0, 0);
     animation: ${animation_08} 1s .4s ease-in-out forwards;
   }
@@ -176,7 +177,7 @@ export const GlassBehind = styled.div<IGlassBehind>`
   // --
   // --
   ${mediaQueryMinW('600')} {
-    transform: translate3D(-100%, 0, 0);
+    /* transform: translate3D(-100%, 0, 0); */
     animation: ${animation_07} 1s .4s ease-in-out forwards;
   }
   // --
@@ -237,12 +238,14 @@ export const Alink = styled.a<IAlink>`
   }
   // --
   ${mediaQueryMinW('600')} {
-    transition: ${() => fncTransitionPart({duration: '.4s'}) },
+    /* transition: ${() => fncTransitionPart({duration: '.4s'}) },
       background .2s ease-in-out, box-shadow .4s ease-in-out
-    ;
+    ; */
     opacity: 0;
     transform: translate3D(calc(-100% - 32px), 0, 0);
-    animation: ${animation_09} 1s ${({delay}) => `calc(.4s + ${delay})`} ease-in-out forwards;
+    animation: ${animation_09} 1s ${
+      ({delay}) => `calc(.4s + ${delay})`}
+    ease-in-out forwards;
   }
   // --
 `
