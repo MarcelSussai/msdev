@@ -2,8 +2,6 @@ import { useContext } from 'react'
 import Link from 'next/link'
 import * as S from './style'
 import { HeaderCtx } from '../../../contexts/ctxHeader'
-import HomeIcon from '../../icons/homeIcon'
-import PeopleIcon from '../../icons/peopleIcon'
 import { menuItemsArray } from './configLinks'
 
 
@@ -23,11 +21,7 @@ export default () => {
               <S.Alink delay={`.${item.pageIndex}s`} onClick={handleToggleMenuOpen} isOpen={isMenuOpen}>
                 <S.SpanText>{item.name}</S.SpanText>
                 <S.ContainerIcon>
-                  {
-                    item.image !== '' ?
-                    <S.Img src={item.image} /> :
-                    <item.Icon />
-                  }
+                  { <S.Img src={item.image} /> }
                 </S.ContainerIcon>
               </S.Alink>
             </Link>
