@@ -4,6 +4,7 @@ import {
   fncTransitionPart,
   GlassEffect_04,
   GlassEffect_08,
+  mediaQueryMinW,
   ScrollStyle_01
 } from '../../../styles/theme/snippetsCSS'
 import { IIsOpen } from '../../ui/buttons/menuButton/style'
@@ -11,9 +12,11 @@ import { IIsOpen } from '../../ui/buttons/menuButton/style'
 
 interface INav extends IIsOpen {}
 interface IContainerLinksMenu extends IIsOpen {}
-interface IContainerAll extends IIsOpen {}
+interface IDivStyle_01 extends IIsOpen {}
+interface IDivStyle_02 extends IIsOpen {}
 interface IGlassBehind extends IIsOpen {}
 interface IAlink extends IIsOpen { delay: string}
+
 // --------
 export const Nav = styled.nav<INav>`
   // --
@@ -37,12 +40,13 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   overflow-y: auto;
 
   width: 240px;
-  height: 64%;
+  height: 60%;
 
   position: fixed;
   z-index: 800;
 
   margin-top: 136px;
+  padding: 0 6px 0 0;
 
   display: flex;
   flex-direction: column;
@@ -50,9 +54,12 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
 
   // --
   // --
+  @media (min-height: 592px) { height: 64%; }
+  @media (min-height: 664px) { height: 408px; }
+  // --
 `
 
-export const ContainerAll = styled.div<IContainerAll>`
+export const DivStyle_01 = styled.div<IDivStyle_01>`
   // --
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
@@ -63,7 +70,7 @@ export const ContainerAll = styled.div<IContainerAll>`
 
   position: fixed;
   left: 0;
-  z-index: 2;
+  z-index: 300;
 
   background: ${ ({theme}) => theme.colors.riverBed.c850 };
 
@@ -76,21 +83,50 @@ export const ContainerAll = styled.div<IContainerAll>`
     `
   };
 
-  box-shadow: 4px 0 16px 4px ${ ({theme}) => theme.colors.riverBed.c750 }80;
+  box-shadow: 4px 0 4px ${ ({theme}) => theme.colors.riverBed.c850 }96;
   // --
-  &:after {
+  /* &:after {
     content: '';
-    z-index: 3;
     position: absolute;
     background: linear-gradient(0deg, var(--bg-color-02), var(--bg-color-03));
-    width: 6px;
+    width: 40px;
     height: 100%;
     top: 0;
-    right: -3px;
-  }
+    right: -24px;
+    z-index: -3;
+  } */
   // --
   // --
 `
+
+export const DivStyle_02 = styled.div<IDivStyle_02>`
+  // --
+  --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 }EA;
+  --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 }EA;
+  ${({isOpen}) => isOpen ?
+    fncTransition({duration: '.6s'}) :
+    fncTransition({duration: '.6s', delay: '.1s'})
+  }
+  // --
+  background: linear-gradient(160deg, var(--bg-color-02), var(--bg-color-03));
+  width: 180px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  ${ ({isOpen}) => !isOpen ?
+    `
+      transform: translate3D(calc(-100% - 32px), 0, 0);
+    ` :
+    `
+      transform: translate3D(0, 0, 0);
+    `
+  };
+  // --
+  // --
+`
+
 
 export const GlassBehind = styled.div<IGlassBehind>`
   // --
@@ -98,7 +134,7 @@ export const GlassBehind = styled.div<IGlassBehind>`
   ${GlassEffect_04}
   // --
   height: 100%;
-  width: 220px;
+  width: 208px;
 
   position: fixed;
   left: 0px;
@@ -175,7 +211,7 @@ export const ContainerIcon = styled.div`
   height: var(--size-01);
 
   position: absolute;
-  right: -1px;
+  right: 2px;
 
   padding: 0px 8px 0px 8px;
   
@@ -202,16 +238,16 @@ export const SpanText = styled.span`
   --border-radius: 64px;
   ${fncTransition({duration: '.4s'})}
   // --
-  width: calc(100% - 77px);
+  width: calc(100% - 68px);
   height: 100%;
 
   padding: 8px 12px 8px 0;
 
-  background: ${ ({theme}) => theme.colors.riverBed.c950 }D0;
-  color: ${ ({theme}) => theme.colors.riverBed.c150 };
+  background: ${ ({theme}) => theme.colors.riverBed.c950 }EA;
+  color: ${ ({theme}) => theme.colors.riverBed.c050 };
 
   line-height: 1;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
 
   display: flex;

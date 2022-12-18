@@ -11,24 +11,22 @@ export default () => {
   
   return (
   <S.Nav isOpen={isMenuOpen}>
-    <S.ContainerAll isOpen={isMenuOpen} />
+    <S.DivStyle_01 isOpen={isMenuOpen} />
+    <S.DivStyle_02 isOpen={isMenuOpen} />
     <S.GlassBehind isOpen={isMenuOpen} />
     <S.ContainerLinksMenu isOpen={isMenuOpen}>
-      {
-        menuItemsArray.map((item, i) => {
-          return (
-            <Link href={item.link} passHref>
-              <S.Alink delay={`.${item.pageIndex}s`} onClick={handleToggleMenuOpen} isOpen={isMenuOpen}>
-                <S.SpanText>{item.name}</S.SpanText>
-                <S.ContainerIcon>
-                  { <S.Img src={item.image} /> }
-                </S.ContainerIcon>
-              </S.Alink>
-            </Link>
-          )
-        })
-      }
-      
+      {menuItemsArray.map((item, i) => {
+        return (
+          <Link href={item.link} passHref>
+            <S.Alink delay={`.${item.pageIndex}s`} onClick={handleToggleMenuOpen} isOpen={isMenuOpen}>
+              <S.SpanText>{item.name}</S.SpanText>
+              <S.ContainerIcon>
+                { <S.Img src={item.image} /> }
+              </S.ContainerIcon>
+            </S.Alink>
+          </Link>
+        )
+      })}
     </S.ContainerLinksMenu>
   </S.Nav>
 )}
