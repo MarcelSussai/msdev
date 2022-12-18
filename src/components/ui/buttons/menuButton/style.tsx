@@ -28,7 +28,7 @@ export const ContainerButtonMenu = styled.div`
   opacity: 0;
   z-index: 900;
   /* padding: 8px; */
-  padding: 12px 8px 8px 10px;
+  padding: 12px 8px 8px 6px;
   transform: translate3d(100%, 0, 0);
   animation: ${animation_05} 2s 1.2s ease-in-out forwards;
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;

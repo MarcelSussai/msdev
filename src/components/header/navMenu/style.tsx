@@ -171,7 +171,7 @@ export const Alink = styled.a<IAlink>`
   margin-left: 8px;
   padding: 2px 2px 2px 3px;
   
-  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }24;
+  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }00;
   border-left: none;
   border-top-right-radius: 80px;
   border-bottom-right-radius: 80px;

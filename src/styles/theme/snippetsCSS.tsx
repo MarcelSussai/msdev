@@ -96,10 +96,10 @@ export const GlassEffect_05 = S.css`
 `
 
 export const GlassEffect_06 = S.css`
-  --color-01: ${ ({theme}) => theme.colors.riverBed.c450 }B0;
-  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }56;
-  backdrop-filter: blur(2px);
-  background: linear-gradient(160deg, var(--color-01), var(--color-02), var(--color-01));
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c500 }64;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }00;
+  backdrop-filter: blur(1.4px);
+  background: linear-gradient(-160deg, var(--color-01), var(--color-02), var(--color-01));
   box-shadow: 2px 2px 8px ${ ({theme}) => theme.colors.riverBed.c850 }48;
 `
 
@@ -117,7 +117,7 @@ export const GlassEffect_08 = S.css`
   background: var(--color-01) ;
   box-shadow: inset 0 0 16px 2px ${ ({theme}) => theme.colors.riverBed.c500 }64;
   &:hover {
-    box-shadow: inset 0 0 16px 8px ${ ({theme}) => theme.colors.cream.c700 }A0;
+    box-shadow: inset 0 0 16px 8px ${ ({theme}) => theme.colors.cream.c500 }EA;
     --color-01: ${ ({theme}) => theme.colors.cream.c500 }D0;
   }
 `
