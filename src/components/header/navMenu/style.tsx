@@ -125,7 +125,7 @@ export const Alink = styled.a<IAlink>`
   transition: ${({isOpen, delay}) => !isOpen ?
     fncTransitionPart({duration: '.4s',}) :
     fncTransitionPart({duration: '1.2s', delay: delay})
-  }, background .4s ease-in-out;
+  }, background .2s ease-in-out;
   // --
   width: calc(100% - 8px);
   height: 44px;
