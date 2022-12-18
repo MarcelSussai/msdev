@@ -59,7 +59,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
 export const DivStyle_01 = styled.div<IDivStyle_01>`
   // --
   --bg-color-01: ${ ({theme}) => theme.colors.riverBed.c850 };
-  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c850 }96;
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }96;
   // --
   ${fncTransition({duration: '.6s'})}
   // --
@@ -82,7 +82,7 @@ export const DivStyle_01 = styled.div<IDivStyle_01>`
     `
   };
 
-  box-shadow: 4px 0 4px var(--shadow-color-01);
+  box-shadow: 0 0 8px var(--shadow-color-01);
   // --
   // --
   // --
