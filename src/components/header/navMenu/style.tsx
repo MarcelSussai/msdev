@@ -14,6 +14,7 @@ interface IContainerLinksMenu extends IIsOpen {
 }
 interface IContainerAll extends IIsOpen {}
 interface IGlassBehind extends IIsOpen {}
+interface IAlink extends IIsOpen {}
 // --------
 export const Nav = styled.nav<INav>`
   // --
@@ -28,10 +29,10 @@ export const Nav = styled.nav<INav>`
 
 export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
-  ${({isOpen}) => !isOpen ?
+  /* ${({isOpen}) => !isOpen ?
     fncTransition({duration: '.4s'}) :
     fncTransition({duration: '1.2s'})
-  }
+  } */
   ${ScrollStyle_01}
   // --
   overflow-y: auto;
@@ -49,16 +50,6 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   flex-direction: column;
   gap: 8px;
 
-  ${({isOpen}) => !isOpen ?
-    `
-      transform: translate3D(calc(-100% - 32px), 0, 0);
-      opacity: 0;
-    ` :
-    `
-      transform: translate3D(0, 0, 0);
-      opacity: 1;
-    `
-  };
   // --
   // --
 `
@@ -129,10 +120,13 @@ export const GlassBehind = styled.div<IGlassBehind>`
   // --
 `
 
-export const Alink = styled.a`
+export const Alink = styled.a<IAlink>`
   // --
   --border-radius: 80px;
-  ${fncTransition({duration: '.4s'})}
+  ${({isOpen}) => !isOpen ?
+    fncTransition({duration: '.4s'}) :
+    fncTransition({duration: '1.2s'})
+  }
   ${GlassEffect_08}
   // --
   width: calc(100% - 8px);
@@ -156,6 +150,17 @@ export const Alink = styled.a`
   flex-wrap: nowrap;
   justify-content: space-between;
   gap: 8px;
+  
+  ${({isOpen}) => !isOpen ?
+    `
+      transform: translate3D(calc(-100% - 32px), 0, 0);
+      opacity: 0;
+    ` :
+    `
+      transform: translate3D(0, 0, 0);
+      opacity: 1;
+    `
+  };
   // --
   // --
   // --

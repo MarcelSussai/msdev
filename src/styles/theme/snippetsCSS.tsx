@@ -102,7 +102,6 @@ export const GlassEffect_07 = S.css`
 `
 
 export const GlassEffect_08 = S.css`
-  ${fncTransition({})}
   --color-01: ${ ({theme}) => theme.colors.riverBed.c050 }20;
   --color-02: ${ ({theme}) => theme.colors.riverBed.c050 };
   backdrop-filter: blur(2px);
