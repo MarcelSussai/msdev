@@ -22,8 +22,6 @@ export const Nav = styled.nav<INav>`
   // --
   ${fncTransition({duration: '.2s',})}
   // --
-  width: 0;
-  ${ ({isOpen}) => !isOpen ? `width: 0;` : `width: 288px;` }
   height: 100%;
   z-index: 0;
   position: fixed;
