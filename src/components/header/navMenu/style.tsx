@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {
   animation_07,
   animation_08,
+  animation_09,
   fncTransition,
   fncTransitionPart,
   mediaQueryMinW,
@@ -236,13 +237,12 @@ export const Alink = styled.a<IAlink>`
   }
   // --
   ${mediaQueryMinW('600')} {
-    transition: unset;
-    transition: ${({ delay}) =>
-      fncTransitionPart({duration: '1.2s', delay: delay})
-    }, background .2s ease-in-out, box-shadow .4s ease-in-out;
-    opacity: 1;
+    transition: ${() => fncTransitionPart({duration: '.4s'}) },
+      background .2s ease-in-out, box-shadow .4s ease-in-out
+    ;
+    opacity: 0;
     transform: translate3D(calc(-100% - 32px), 0, 0);
-    animation: ${animation_08} 1s ${({delay}) => `calc(.4s + ${delay})`} ease-in-out forwards;
+    animation: ${animation_09} 1s ${({delay}) => `calc(.4s + ${delay})`} ease-in-out forwards;
   }
   // --
 `

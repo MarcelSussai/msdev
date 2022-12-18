@@ -145,3 +145,14 @@ export const animation_08 = S.keyframes`
     transform: translate3d(0, 0, 0);
   }
 `
+
+export const animation_09 = S.keyframes`
+  from {
+    transform: translate3d(calc(-100% - 32px), 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+`
