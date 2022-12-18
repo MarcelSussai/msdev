@@ -66,7 +66,7 @@ export const DivStyle_01 = styled.div<IDivStyle_01>`
   ${fncTransition({duration: '.6s'})}
   // --
   height: 100%;
-  width: 168px;
+  width: 170px;
 
   position: fixed;
   left: 0;
