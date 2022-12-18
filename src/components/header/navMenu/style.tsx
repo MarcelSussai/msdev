@@ -30,7 +30,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
   ${({isOpen}) => !isOpen ?
     fncTransition({duration: '.4s'}) :
-    fncTransition({duration: '1.6s'})
+    fncTransition({duration: '1.2s'})
   }
   ${ScrollStyle_01}
   // --
@@ -50,8 +50,14 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   gap: 8px;
 
   ${({isOpen}) => !isOpen ?
-    `transform: translate3D(calc(-100% - 32px), 0, 0);` :
-    `transform: translate3D(0, 0, 0);`
+    `
+      transform: translate3D(calc(-100% - 32px), 0, 0);
+      opacity: 0;
+    ` :
+    `
+      transform: translate3D(0, 0, 0);
+      opacity: 1;
+    `
   };
   // --
   // --
@@ -73,8 +79,12 @@ export const ContainerAll = styled.div<IContainerAll>`
   background: ${ ({theme}) => theme.colors.riverBed.c850 };
 
   ${ ({isOpen}) => !isOpen ?
-    `transform: translate3D(calc(-100% - 32px), 0, 0);` :
-    `transform: translate3D(0, 0, 0);`
+    `
+      transform: translate3D(calc(-100% - 32px), 0, 0);
+    ` :
+    `
+      transform: translate3D(0, 0, 0);
+    `
   };
 
   box-shadow: 4px 0 16px 4px ${ ({theme}) => theme.colors.riverBed.c750 }80;
