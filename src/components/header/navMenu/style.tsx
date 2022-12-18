@@ -39,8 +39,8 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
   overflow-y: auto;
 
-  width: 240px;
-  height: 60%;
+  width: 264px;
+  height: 70%;
 
   position: fixed;
   z-index: 800;
@@ -54,7 +54,7 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
 
   // --
   // --
-  @media (min-height: 592px) { height: 64%; }
+  @media (min-height: 592px) { height: 72%; }
   @media (min-height: 664px) { height: 408px; }
   // --
 `
@@ -66,7 +66,7 @@ export const DivStyle_01 = styled.div<IDivStyle_01>`
   ${fncTransition({duration: '.6s'})}
   // --
   height: 100%;
-  width: 164px;
+  width: 168px;
 
   position: fixed;
   left: 0;
@@ -109,7 +109,7 @@ export const DivStyle_02 = styled.div<IDivStyle_02>`
   }
   // --
   background: linear-gradient(160deg, var(--bg-color-02), var(--bg-color-03));
-  width: 180px;
+  width: 184px;
   height: 100%;
   position: fixed;
   top: 0;
@@ -127,14 +127,13 @@ export const DivStyle_02 = styled.div<IDivStyle_02>`
   // --
 `
 
-
 export const GlassBehind = styled.div<IGlassBehind>`
   // --
   ${fncTransition({duration: '.6s'})}
   ${GlassEffect_04}
   // --
   height: 100%;
-  width: 208px;
+  width: 238px;
 
   position: fixed;
   left: 0px;
@@ -164,14 +163,15 @@ export const Alink = styled.a<IAlink>`
   }, background .2s ease-in-out;
   // --
   width: calc(100% - 8px);
-  height: 44px;
+  min-height: 42px;
+  max-height: 42px;
 
   position: relative;
 
   margin-left: 8px;
   padding: 2px 2px 2px 3px;
   
-  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }00;
+  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }24;
   border-left: none;
   border-top-right-radius: 80px;
   border-bottom-right-radius: 80px;
@@ -238,17 +238,18 @@ export const SpanText = styled.span`
   --border-radius: 64px;
   ${fncTransition({duration: '.4s'})}
   // --
-  width: calc(100% - 68px);
+  width: calc(100% - 86px);
   height: 100%;
 
-  padding: 8px 12px 8px 0;
+  padding: 10px 6px 8px 0;
 
   background: ${ ({theme}) => theme.colors.riverBed.c950 }EA;
   color: ${ ({theme}) => theme.colors.riverBed.c050 };
 
   line-height: 1;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
+  letter-spacing: 2px;
 
   display: flex;
   justify-content: flex-end;
