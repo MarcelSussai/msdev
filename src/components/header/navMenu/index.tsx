@@ -23,7 +23,11 @@ export default () => {
               <S.Alink delay={`.${item.pageIndex}s`} onClick={handleToggleMenuOpen} isOpen={isMenuOpen}>
                 <S.SpanText>{item.name}</S.SpanText>
                 <S.ContainerIcon>
-                  <item.Icon />
+                  {
+                    item.image !== '' ?
+                    <S.Img src={item.image} /> :
+                    <item.Icon />
+                  }
                 </S.ContainerIcon>
               </S.Alink>
             </Link>

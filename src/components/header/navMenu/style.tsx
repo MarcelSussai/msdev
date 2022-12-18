@@ -224,3 +224,7 @@ export const SpanText = styled.span`
   // --
   // --
 `
+
+export const Img = styled.img`
+  
+`
