@@ -6,8 +6,6 @@ import {
   animation_02,
   animation_03,
   animation_04,
-  GlassEffect_01,
-  ShadowEffect_01,
 } from '../../styles/theme/snippetsCSS'
 // --------
 
@@ -24,8 +22,10 @@ export const Header = styled.header`
 export const GlassBehindLogotype = styled.div`
   // --
   --size-radius-01: 4px;
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c550 }40;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
+  // --
   ${fncTransition({})}
-  ${GlassEffect_01}
   // --
   height: 104px;
   position: fixed;
@@ -39,6 +39,9 @@ export const GlassBehindLogotype = styled.div`
   border-left: none;
   border-top-right-radius: var(--size-radius-01);
   border-bottom-right-radius: var(--size-radius-01);
+  backdrop-filter: blur(1.6px);
+  background: linear-gradient(160deg, var(--color-01), var(--color-02));
+  box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
   // --
   // --
 `
@@ -46,6 +49,7 @@ export const GlassBehindLogotype = styled.div`
 export const ContainerLogo = styled.div`
   // --
   --size: 72px;
+  // --
   ${fncTransition({})}
   // --
   width: var(--size);
@@ -64,36 +68,45 @@ export const ContainerAllLogo = styled.div`
   --bg-color-01: ${ ({theme}) => theme.colors.riverBed.c900 };
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
-  ${fncTransition({})}
-  ${ShadowEffect_01}
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }64;
   // --
-  position: relative;
-  background: var(--bg-color-01);
+  ${fncTransition({})}
+  // --
+  width: 0%;
+  max-width: 264px;
   height: 56px;
+  opacity: 0;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 900;
+
   margin-top: 22px;
   padding: 0px;
+
+  background: var(--bg-color-01);
+
+  border-right: solid 4px ${ ({theme}) => theme.colors.paleGoldenRod.c500 };
+
   display: flex;
-  width: 0%;
-  opacity: 0;
-  max-width: 264px;
   align-items: center;
-  border: solid 2px;
-  border-image-source: linear-gradient(90deg, var(--bg-color-02), var(--bg-color-03));
-  border-image-slice: 1;
-  border-left: none;
-  border-right: none;
-  overflow: hidden;
+
+  box-shadow: 4px 4px 6px var(--shadow-color-01);
+
   animation: ${animation_01} 1s .6s ease-in-out forwards;
-  z-index: 900;
   // --
-  &:after {
+  &:after, &:before {
     content: '';
     position: absolute;
     right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--bg-color-02), var(--bg-color-03));
+  }
+  &:after {
     top: 0;
-    width: 4px;
-    height: 100%;
-    background:${ ({theme}) => theme.colors.paleGoldenRod.c500 };
+    background: linear-gradient(-90deg, var(--bg-color-02), var(--bg-color-03));
   }
   // --
   // --

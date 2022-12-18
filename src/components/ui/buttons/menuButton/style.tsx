@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import {
   animation_05,
-  fncTransition, GlassEffect_02, GlassEffect_03, GlassEffect_06, mediaQueryMinW, ShadowEffect_02
+  fncTransition,
+  mediaQueryMinW,
 } from '../../../../styles/theme/snippetsCSS'
 
 // --------
@@ -14,28 +15,41 @@ interface IButtonMenu extends IIsOpen {}
 export const ContainerButtonMenu = styled.div`
   // --
   --size-radius-01: 0px;
-  ${fncTransition({})}
-  ${GlassEffect_06}
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c500 }64;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }00;
   // --
-  position: fixed;
+  ${fncTransition({})}
+  // --
   width: 88px;
   height: 88px;
+  
+  position: fixed;
   right: 0px;
   bottom: 12px;
+  z-index: 900;
+  opacity: 0;
+
+  padding: 12px 8px 8px 6px;
+
+  backdrop-filter: blur(1.4px);
+  background:
+    linear-gradient(-160deg, var(--color-01), var(--color-02), var(--color-01))
+  ;
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  z-index: 900;
-  /* padding: 8px; */
-  padding: 12px 8px 8px 6px;
-  transform: translate3d(100%, 0, 0);
-  animation: ${animation_05} 2s 1.2s ease-in-out forwards;
+
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;
   border-right: none;
   border-radius: 80px;
   border-top-right-radius: var(--size-radius-01);
   border-bottom-right-radius: var(--size-radius-01);
+
+  box-shadow: 2px 2px 8px ${ ({theme}) => theme.colors.riverBed.c850 }48;
+
+  transform: translate3d(100%, 0, 0);
+  animation: ${animation_05} 2s 1.2s ease-in-out forwards;
   // --
   // --
   ${mediaQueryMinW('400')} {
@@ -47,6 +61,8 @@ export const ContainerButtonMenu = styled.div`
 
 export const ButtonMenu = styled.button<IButtonMenu>`
   // --
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c500 }00;
+  --shadow-color-02: ${ ({theme}) => theme.colors.riverBed.c400 }80;
   --size-01: 48px;
   --radius-01: 4px;
   --color-01: ${
@@ -54,8 +70,8 @@ export const ButtonMenu = styled.button<IButtonMenu>`
       theme.colors.grape.c100 :
       theme.colors.wine.c100
   }F0;
+  // --
   ${fncTransition({})}
-  ${ShadowEffect_02}
   // --
   outline: 0;
   /* width: 48px; */
@@ -71,11 +87,16 @@ export const ButtonMenu = styled.button<IButtonMenu>`
   border-radius: 80px;
   transform: translate3d(100%, 0, 0);
   border: solid 1px ${ ({theme}) => theme.colors.riverBed.c200 }96;
+  box-shadow:
+    2px 4px 4px 4px var(--shadow-color-01),
+    inset -0px -0px 8px 2px var(--shadow-color-02)
+  ;
   animation: ${animation_05} 2s 1.8s ease-in-out forwards;
   cursor: pointer;
   // --
   &:hover {
     --color-01: ${ ({theme}) => theme.colors.cream.c300 }FF;
+    --shadow-color-02: ${ ({theme}) => theme.colors.cream.c800 }80;
   }
   // --
   // --

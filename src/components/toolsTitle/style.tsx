@@ -1,34 +1,45 @@
 import styled from 'styled-components'
 import {
   fncTransition,
-  GlassEffect_06,
   mediaQueryMinW,
-  ShadowEffect_03
 } from '../../styles/theme/snippetsCSS'
 
 // --------
+
+
 // --------
 export const ContainerAll = styled.div`
   // --
-  ${fncTransition({})}
-  ${GlassEffect_06}
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c500 }64;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }00;
+  --border-color: ${ ({theme}) => theme.colors.riverBed.c150 }80;
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c850 }48;
   // --
+  ${fncTransition({})}
+  // --
+  width: calc(100% - 32px);
+
   padding: 16px 20px;
   margin: 16px;
-  border-radius: 80px;
-  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c150 }80;
+
   position: fixed;
-  width: calc(100% - 32px);
   z-index: 900;
+
+  background:
+    linear-gradient( -160deg, var(--color-01), var(--color-02), var(--color-01) )
+  ;
+  backdrop-filter: blur(1.4px);
+
+  border-radius: 80px;
+  border: solid 1px var(--border-color);
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  // --
-  // --
-  ${mediaQueryMinW('496')} {
-    /* max-width: 480px; */
-  }
 
+  box-shadow: 2px 2px 8px var(--shadow-color-01);
+  // --
+  // --
   // --
 `
 
@@ -40,8 +51,8 @@ export const ContainerToolTitle = styled.h1`
   --border-color-01: ${ ({theme}) => theme.colors.riverBed.c100 };
   --border-color-02: ${ ({theme}) => theme.colors.riverBed.c150 };
   --bg-color-01: ${ ({theme}) => theme.colors.white }F0;
+  // --
   ${fncTransition({})}
-  /* ${ShadowEffect_03} */
   // --
   line-height: 1;
   text-align: center;

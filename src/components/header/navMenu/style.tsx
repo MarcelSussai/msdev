@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import {
   fncTransition,
   fncTransitionPart,
-  GlassEffect_04,
-  GlassEffect_08,
   mediaQueryMinW,
   ScrollStyle_01
 } from '../../../styles/theme/snippetsCSS'
@@ -20,6 +18,7 @@ interface IAlink extends IIsOpen { delay: string}
 // --------
 export const Nav = styled.nav<INav>`
   // --
+  // --
   ${fncTransition({duration: '.2s',})}
   // --
   height: 100%;
@@ -27,14 +26,12 @@ export const Nav = styled.nav<INav>`
   z-index: 0;
   // --
   // --
+  // --
 `
 
 export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   // --
-  /* ${({isOpen}) => !isOpen ?
-    fncTransition({duration: '.4s'}) :
-    fncTransition({duration: '1.2s'})
-  } */
+  // --
   ${ScrollStyle_01}
   // --
   overflow-y: auto;
@@ -61,8 +58,9 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
 
 export const DivStyle_01 = styled.div<IDivStyle_01>`
   // --
-  --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
-  --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
+  --bg-color-01: ${ ({theme}) => theme.colors.riverBed.c850 };
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c850 }96;
+  // --
   ${fncTransition({duration: '.6s'})}
   // --
   height: 100%;
@@ -72,7 +70,8 @@ export const DivStyle_01 = styled.div<IDivStyle_01>`
   left: 0;
   z-index: 300;
 
-  background: ${ ({theme}) => theme.colors.riverBed.c850 };
+  background: var(--bg-color-01);
+  
 
   ${ ({isOpen}) => !isOpen ?
     `
@@ -83,18 +82,8 @@ export const DivStyle_01 = styled.div<IDivStyle_01>`
     `
   };
 
-  box-shadow: 4px 0 4px ${ ({theme}) => theme.colors.riverBed.c850 }96;
+  box-shadow: 4px 0 4px var(--shadow-color-01);
   // --
-  /* &:after {
-    content: '';
-    position: absolute;
-    background: linear-gradient(0deg, var(--bg-color-02), var(--bg-color-03));
-    width: 40px;
-    height: 100%;
-    top: 0;
-    right: -24px;
-    z-index: -3;
-  } */
   // --
   // --
 `
@@ -103,6 +92,7 @@ export const DivStyle_02 = styled.div<IDivStyle_02>`
   // --
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 }EA;
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 }EA;
+  // --
   ${({isOpen}) => isOpen ?
     fncTransition({duration: '.6s'}) :
     fncTransition({duration: '.8s', delay: '.1s'})
@@ -129,8 +119,12 @@ export const DivStyle_02 = styled.div<IDivStyle_02>`
 
 export const GlassBehind = styled.div<IGlassBehind>`
   // --
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c350 }64;
+  --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
+  --border-color: ${ ({theme}) => theme.colors.riverBed.c050 }48;
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c850 }32;
+  // --
   ${fncTransition({duration: '.6s'})}
-  ${GlassEffect_04}
   // --
   height: 100%;
   width: 238px;
@@ -140,10 +134,15 @@ export const GlassBehind = styled.div<IGlassBehind>`
   top: 0px;
   z-index: 1;
 
-  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }48;
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(45deg, var(--color-01), var(--color-02));
+  
+  border: solid 1px var(--border-color);
+  border-left: unset;
+  border-top: unset;
+  border-bottom: unset;
+
+  box-shadow: 0 0 8px var(--shadow-color-01);
 
   ${({isOpen}) => !isOpen ?
     `transform: translate3D(-100%, 0, 0);` :
@@ -155,8 +154,12 @@ export const GlassBehind = styled.div<IGlassBehind>`
 
 export const Alink = styled.a<IAlink>`
   // --
-  --border-radius: 80px;
-  ${GlassEffect_08}
+  --color-01: ${ ({theme}) => theme.colors.riverBed.c050 }20;
+  --color-02: ${ ({theme}) => theme.colors.cream.c500 }D0;
+  --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c500 }64;
+  --shadow-color-02: ${ ({theme}) => theme.colors.cream.c500 }EA;
+  --border-color: ${ ({theme}) => theme.colors.riverBed.c050 }24;
+  // --
   transition: ${({isOpen, delay}) => !isOpen ?
     fncTransitionPart({duration: '.4s',}) :
     fncTransitionPart({duration: '1.2s', delay: delay})
@@ -170,13 +173,13 @@ export const Alink = styled.a<IAlink>`
 
   margin-left: 8px;
   padding: 2px 2px 2px 3px;
-  
-  border: solid 1px ${ ({theme}) => theme.colors.riverBed.c050 }24;
+
+  background: var(--color-01);
+  backdrop-filter: blur(2px);
+
+  border: solid 1px var(--border-color);
   border-left: none;
-  border-top-right-radius: 80px;
-  border-bottom-right-radius: 80px;
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
+  border-radius: 80px;
   
   display: flex;
   align-items: center;
@@ -184,7 +187,9 @@ export const Alink = styled.a<IAlink>`
   flex-wrap: nowrap;
   justify-content: space-between;
   gap: 8px;
-  
+
+  box-shadow: inset 0 0 16px 2px var(--shadow-color-01);
+
   ${({isOpen}) => !isOpen ?
     `
       transform: translate3D(calc(-100% - 32px), 0, 0);
@@ -196,6 +201,10 @@ export const Alink = styled.a<IAlink>`
     `
   };
   // --
+  &:hover {
+    box-shadow: inset 0 0 16px 8px var(--shadow-color-02);
+    background: var(--color-02);
+  }
   // --
   // --
 `
@@ -204,6 +213,7 @@ export const ContainerIcon = styled.div`
   // --
   --size-01: 40px;
   --border-radius: 64px;
+  // --
   ${fncTransition({duration: '.4s'})}
 
   // --
@@ -236,6 +246,7 @@ export const ContainerIcon = styled.div`
 export const SpanText = styled.span`
   // --
   --border-radius: 64px;
+  // --
   ${fncTransition({duration: '.4s'})}
   // --
   width: calc(100% - 86px);
