@@ -10,6 +10,8 @@ interface fncTransitionProps {
   delay?: string | undefined
 }
 // --------
+export const fontMuseo = `font-family: 'MuseoModerno', cursive;`
+export const fontGeorama = `font-family: 'Georama', sans-serif;`
 export const mediaQueryMinW = (size: string) => `@media (min-width: ${size}px)`
 
 export const fncTransition = (props: fncTransitionProps) => {
@@ -32,7 +34,7 @@ export const fncTransitionPart = (props: fncTransitionProps) => {
       ${ delay    || ''}
   `
 }
-// .
+
 export const ScrollStyle_01 = S.css`
   &::-webkit-scrollbar {
     width: 8px;
@@ -55,12 +57,6 @@ export const ScrollStyle_01 = S.css`
 `
 
 
-export const fontMuseo = `
-  font-family: 'MuseoModerno', cursive;
-`
-export const fontGeorama = `
-  font-family: 'Georama', sans-serif;
-`
 
 export const animation_01 = S.keyframes`
   from {
@@ -128,6 +124,24 @@ export const animation_06 = S.keyframes`
   }
   to {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`
+
+export const animation_07 = S.keyframes`
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+`
+
+export const animation_08 = S.keyframes`
+  from {
+    transform: translate3d(calc(-100% - 32px), 0, 0);
+  }
+  to {
     transform: translate3d(0, 0, 0);
   }
 `

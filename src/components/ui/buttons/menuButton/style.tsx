@@ -56,6 +56,9 @@ export const ContainerButtonMenu = styled.div`
     bottom: unset;
     top: 24px;
   }
+  ${mediaQueryMinW('600')} {
+    display: none;
+  }
   // --
 `
 

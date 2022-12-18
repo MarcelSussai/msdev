@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import {
+  animation_07,
+  animation_08,
   fncTransition,
   fncTransitionPart,
   mediaQueryMinW,
@@ -49,10 +51,22 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   flex-direction: column;
   gap: 8px;
 
+  transform: translate3D(-100%, 0, 0);
+  ${ ({isOpen}) => !isOpen ?
+    `
+    ` :
+    `
+      animation: ${animation_07} .1s ease-in-out forwards;
+    `
+  };
   // --
   // --
   @media (min-height: 592px) { height: 72%; }
   @media (min-height: 664px) { height: 408px; }
+  ${mediaQueryMinW('600')} {
+    transform: translate3d(-100%, 0, 0);
+    animation: ${animation_07} .1s ease-in-out forwards;
+  }
   // --
 `
 
@@ -85,6 +99,10 @@ export const DivStyle_01 = styled.div<IDivStyle_01>`
   box-shadow: 0 0 8px var(--shadow-color-01);
   // --
   // --
+  ${mediaQueryMinW('600')} {
+    transform: translate3D(calc(-100% - 32px), 0, 0);
+    animation: ${animation_08} 1s .4s ease-in-out forwards;
+  }
   // --
 `
 
@@ -114,6 +132,12 @@ export const DivStyle_02 = styled.div<IDivStyle_02>`
     `
   };
   // --
+  // --
+  ${mediaQueryMinW('600')} {
+    ${fncTransition({duration: '.6s'})}
+    transform: translate3D(calc(-100% - 32px), 0, 0);
+    animation: ${animation_08} 1s .4s ease-in-out forwards;
+  }
   // --
 `
 
@@ -150,20 +174,25 @@ export const GlassBehind = styled.div<IGlassBehind>`
   }
   // --
   // --
+  ${mediaQueryMinW('600')} {
+    transform: translate3D(-100%, 0, 0);
+    animation: ${animation_07} 1s .4s ease-in-out forwards;
+  }
+  // --
 `
 
 export const Alink = styled.a<IAlink>`
   // --
   --color-01: ${ ({theme}) => theme.colors.riverBed.c050 }20;
-  --color-02: ${ ({theme}) => theme.colors.cream.c500 }D0;
+  --color-02: ${ ({theme}) => theme.colors.cream.c500 }EB;
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c500 }64;
-  --shadow-color-02: ${ ({theme}) => theme.colors.cream.c500 }EA;
-  --border-color: ${ ({theme}) => theme.colors.riverBed.c050 }24;
+  --shadow-color-02: ${ ({theme}) => theme.colors.cream.c300 }FA;
+  --border-color: ${ ({theme}) => theme.colors.white }32;
   // --
   transition: ${({isOpen, delay}) => !isOpen ?
     fncTransitionPart({duration: '.4s',}) :
     fncTransitionPart({duration: '1.2s', delay: delay})
-  }, background .2s ease-in-out;
+  }, background .2s ease-in-out, box-shadow .4s ease-in-out;
   // --
   width: calc(100% - 8px);
   min-height: 44px;
@@ -172,13 +201,13 @@ export const Alink = styled.a<IAlink>`
   position: relative;
 
   margin-left: 8px;
-  padding: 2px 2px 2px 3px;
+  padding: 2px 2px 2px 2px;
 
   background: var(--color-01);
   backdrop-filter: blur(2px);
 
   border: solid 1px var(--border-color);
-  border-left: none;
+  /* border-left: none; */
   border-radius: 80px;
   
   display: flex;
@@ -206,6 +235,15 @@ export const Alink = styled.a<IAlink>`
     background: var(--color-02);
   }
   // --
+  ${mediaQueryMinW('600')} {
+    transition: unset;
+    transition: ${({ delay}) =>
+      fncTransitionPart({duration: '1.2s', delay: delay})
+    }, background .2s ease-in-out, box-shadow .4s ease-in-out;
+    opacity: 1;
+    transform: translate3D(calc(-100% - 32px), 0, 0);
+    animation: ${animation_08} 1s ${({delay}) => `calc(.4s + ${delay})`} ease-in-out forwards;
+  }
   // --
 `
 
