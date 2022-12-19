@@ -74,16 +74,10 @@ export const ButtonMenu = styled.button<IButtonMenu>`
   justify-content: center;
   transform: translate3d(100%, 0, 0);
   box-shadow:
-    2px 4px 4px 4px var(--shadow-color-01),
-    inset -0px -0px 8px 2px var(--shadow-color-02)
+    2px 4px 4px 4px var(--shadow-color-01)
   ;
   animation: ${animation_05} 1s 1s ease-in-out forwards;
   cursor: pointer;
-
-  &:hover {
-    --color-01: ${ ({theme}) => theme.colors.cream.c300 }FF;
-    --shadow-color-02: ${ ({theme}) => theme.colors.cream.c800 }00;
-  }
 `
 
 export const DrawItemButton = styled.div<IDrawItemButton>`
