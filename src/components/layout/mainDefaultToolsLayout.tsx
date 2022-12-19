@@ -8,9 +8,8 @@ const StyledMain = styled(Main)`
   // --
   padding: 112px 0px 0px 0px;
   gap: 32px;
-  opacity: 0;
+  opacity: 1;
   animation: unset;
-  animation: ${animation_10} .8s .4s ease-in-out forwards;
 
   ${mediaQueryMinW('336')} {
     padding: 116px 0px 0px 0px;
