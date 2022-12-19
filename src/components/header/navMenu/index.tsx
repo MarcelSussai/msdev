@@ -17,7 +17,7 @@ export default () => {
     <S.ContainerLinksMenu isOpen={isMenuOpen}>
       {menuItemsArray.map((item, i) => {
         return (
-          <Link href={item.link} passHref>
+          <Link key={i} href={item.link} passHref>
             <S.Alink delay={`.${item.pageIndex}s`} onClick={handleToggleMenuOpen} isOpen={isMenuOpen}>
               <S.SpanText>{item.name}</S.SpanText>
               <S.ContainerIcon>

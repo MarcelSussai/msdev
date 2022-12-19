@@ -14,6 +14,8 @@ export const fontMuseo = `font-family: 'MuseoModerno', cursive;`
 export const fontGeorama = `font-family: 'Georama', sans-serif;`
 export const mediaQueryMinW = (size: string) => `@media (min-width: ${size}px)`
 
+export const minWidthForAdjustMenu = '960'
+
 export const fncTransition = (props: fncTransitionProps) => {
   const { duration, easing, target, delay} = props
   return `

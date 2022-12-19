@@ -1,6 +1,6 @@
 
 import styled from 'styled-components'
-import { fncTransition, mediaQueryMinW } from './theme/snippetsCSS'
+import { fncTransition, mediaQueryMinW, minWidthForAdjustMenu } from './theme/snippetsCSS'
 
 
 export const Main = styled.main`
@@ -10,11 +10,11 @@ export const Main = styled.main`
   // --
   display: flex;
   flex-direction: column;
-  padding: 128px 8px 8px 8px;
+  padding: 136px 8px 8px 8px;
   // --
   // --
-  ${mediaQueryMinW('600')} {
-    padding: 128px 8px 8px 280px;
+  ${mediaQueryMinW(minWidthForAdjustMenu)} {
+    padding: 136px 8px 8px 280px;
 
   }
   // --

@@ -12,11 +12,8 @@ import {
 // --------
 export const Header = styled.header`
   // --
-  // --
   position: relative;
   width: 100%;
-  // --
-  // --
 `
 
 export const GlassBehindLogotype = styled.div`
@@ -24,9 +21,8 @@ export const GlassBehindLogotype = styled.div`
   --size-radius-01: 4px;
   --color-01: ${ ({theme}) => theme.colors.riverBed.c550 }40;
   --color-02: ${ ({theme}) => theme.colors.riverBed.c050 }40;
-  // --
+
   ${fncTransition({})}
-  // --
   height: 104px;
   position: fixed;
   top: 16px;
@@ -42,16 +38,13 @@ export const GlassBehindLogotype = styled.div`
   backdrop-filter: blur(1.6px);
   background: linear-gradient(160deg, var(--color-01), var(--color-02));
   box-shadow: 0 0 8px ${ ({theme}) => theme.colors.riverBed.c850 }32;
-  // --
-  // --
 `
 
 export const ContainerLogo = styled.div`
   // --
   --size: 72px;
-  // --
+
   ${fncTransition({})}
-  // --
   width: var(--size);
   height: var(--size);
   position: absolute;
@@ -59,8 +52,6 @@ export const ContainerLogo = styled.div`
   z-index: 600;
   transform: scale(0);
   animation: ${animation_02} 1s .8s ease-in-out forwards;
-  // --
-  // --
 `
 
 export const ContainerAllLogo = styled.div`
@@ -69,32 +60,26 @@ export const ContainerAllLogo = styled.div`
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
   --shadow-color-01: ${ ({theme}) => theme.colors.riverBed.c950 }64;
-  // --
+
   ${fncTransition({})}
-  // --
   width: 0%;
   max-width: 264px;
   height: 56px;
   opacity: 0;
-
   position: relative;
   overflow: hidden;
   z-index: 900;
-
   margin-top: 22px;
   padding: 0px;
-
   background: var(--bg-color-01);
-
-  border-right: solid 4px ${ ({theme}) => theme.colors.paleGoldenRod.c500 };
-
+  border-image-source: linear-gradient(-180deg, var(--bg-color-02), var(--bg-color-03));
+  border-image-slice: 1;
+  border-right: solid 8px;
   display: flex;
   align-items: center;
-
   box-shadow: 4px 4px 6px var(--shadow-color-01);
-
   animation: ${animation_01} 1s .6s ease-in-out forwards;
-  // --
+
   &:after, &:before {
     content: '';
     position: absolute;
@@ -108,15 +93,13 @@ export const ContainerAllLogo = styled.div`
     top: 0;
     background: linear-gradient(-90deg, var(--bg-color-02), var(--bg-color-03));
   }
-  // --
-  // --
 `
 
 export const ContainerLogotype = styled.h1`
   // --
   --margin-left: 76px;
+
   ${fncTransition({})}
-  // --
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -124,55 +107,47 @@ export const ContainerLogotype = styled.h1`
   transform-origin: left center;
   transform: scale(0);
   animation: ${animation_02} 1s 1s ease-in-out forwards;
-  // --
-  // --
 `
 
 export const ContainerMarcelSussai = styled.div`
   // --
   --font-size: 24px;
+
   ${fncTransition({})}
-  // --
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 4px;
-  // --
-  // --
 `
 
 export const Marcel = styled.div`
   // --
   --color-text: ${ ({theme}) => theme.colors.pictonBlue.c500 };
+
   ${fncTransition({})}
   ${fontMuseo}
-  // --
   color: var(--color-text);
   margin-left: var(--margin-left);
   line-height: 1;
   font-size: var(--font-size);
-  // --
-  // --
 `
 
 export const Sussai = styled.div`
   // --
   --color-text: ${ ({theme}) => theme.colors.celery.c500 };
+
   ${fncTransition({})}
   ${fontMuseo}
-  // --
   color: var(--color-text);
   line-height: 1;
   font-size: var(--font-size);
-  // --
-  // --
 `
 
 export const DescriptionJob = styled.div`
   // --
   --color-text: ${ ({theme}) => theme.colors.paleGoldenRod.c500 };
+
   ${fncTransition({})}
-  // --
   color: var(--color-text);
   font-size: 16px;
   font-weight: 400;
@@ -183,16 +158,14 @@ export const DescriptionJob = styled.div`
   flex-wrap: nowrap;
   text-align: end;
   justify-content: flex-end;
-  // --
-  // --
 `
 
 export const AestheticsNav = styled.div`
   // --
   --bg-color-02: ${ ({theme}) => theme.colors.pictonBlue.c500 };
   --bg-color-03: ${ ({theme}) => theme.colors.celery.c500 };
+
   ${fncTransition({})}
-  // --
   position: fixed;
   transform: translate3d(0, -100%, 0);
   width: 100%;
@@ -201,7 +174,7 @@ export const AestheticsNav = styled.div`
   z-index: 1;
   animation: ${animation_04} .8s ease-in-out forwards;
   box-shadow: 0 2px 8px 2px ${ ({theme}) => theme.colors.riverBed.c600 }D0;
-  // --
+
   &:after {
     content: '';
     z-index: 3;
@@ -212,7 +185,5 @@ export const AestheticsNav = styled.div`
     bottom: 0;
     left: 0px;
   }
-  // --
-  // --
 `
 
