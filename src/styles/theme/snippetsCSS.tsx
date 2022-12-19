@@ -158,3 +158,12 @@ export const animation_09 = S.keyframes`
     opacity: 1;
   }
 `
+
+export const animation_10 = S.keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`

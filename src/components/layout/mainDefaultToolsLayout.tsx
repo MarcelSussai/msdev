@@ -1,16 +1,17 @@
 import styled from 'styled-components'
 import { Main } from '../../styles/MainStyled'
-import { mediaQueryMinW } from '../../styles/theme/snippetsCSS'
+import { animation_10, mediaQueryMinW } from '../../styles/theme/snippetsCSS'
 import ToolsTitle from '../toolsTitle'
 import Head from './../head'
 
 const StyledMain = styled(Main)`
   // --
-  // --
   padding: 112px 0px 0px 0px;
   gap: 32px;
-  // --
-  // --
+  opacity: 0;
+  animation: unset;
+  animation: ${animation_10} .8s .4s ease-in-out forwards;
+
   ${mediaQueryMinW('336')} {
     padding: 116px 0px 0px 0px;
   }
@@ -20,7 +21,6 @@ const StyledMain = styled(Main)`
   ${mediaQueryMinW('496')} {
     padding: 132px 0px 0px 0px;
   }
-  // --
 `
 
 const MainDefaultToolsLayout = (props: any) => {

@@ -14,6 +14,7 @@ export const Header = styled.header`
   // --
   position: relative;
   width: 100%;
+  z-index: 900;
 `
 
 export const GlassBehindLogotype = styled.div`
