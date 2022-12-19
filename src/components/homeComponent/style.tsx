@@ -50,7 +50,7 @@ export const OrnamentDiv_01 = styled.div`
 export const TitleHome = styled.h1`
   // --
   ${fncTransition({})}
-  padding: 32px 8px;
+  padding: 20px 8px;
   color: ${ ({theme}) => theme.colors.riverBed.c600 };
   text-align: center;
   font-weight: 400;

@@ -10,7 +10,7 @@ export default () => {
       <S.ContainerTitleHome>
         <S.OrnamentDiv_01 />
         <S.TitleHome>
-          {'Olá, seja '} <span className='bold'>{`bem vind@`}</span> <br />
+          {'Olá, seja '} <span className='bold'>{`bem-vind@`}</span> <br />
           {'Sou desenvolvedor web '} <span className='pictonBlue'>{`fullstack`}</span>
           {' e especialista '} <span className='celery'>{`front-end`}</span>
         </S.TitleHome>
