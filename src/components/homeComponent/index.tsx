@@ -15,10 +15,11 @@ export default () => {
           {' e especialista '} <span className='celery'>{`front-end`}</span>
         </S.TitleHome>
       </S.ContainerTitleHome>
-      <TestScrollComponent />
-      <TestScrollComponent />
-      <TestScrollComponent />
-      <TestScrollComponent />
+      <S.CanvasContainer>
+        <S.ContainerOrnament>
+          <img src='test_01.svg' alt='' />
+        </S.ContainerOrnament>
+      </S.CanvasContainer>
     </S.ContainerAll>
   )
 }

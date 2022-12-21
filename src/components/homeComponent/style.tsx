@@ -12,7 +12,7 @@ export const ContainerAll = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  /* gap: 16px; */
   z-index: -1;
 `
 
@@ -50,9 +50,8 @@ export const OrnamentDiv_01 = styled.div`
 export const TitleHome = styled.h1`
   // --
   ${fncTransition({})}
-  padding: 20px 8px;
+  padding: 20px 0px 20px 8px;
   color: ${ ({theme}) => theme.colors.riverBed.c600 };
-  text-align: center;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 1px;
@@ -75,5 +74,26 @@ export const TitleHome = styled.h1`
   }
   ${mediaQueryMinW('1076')} {
     font-size: 28px;
+  }
+  ${mediaQueryMinW(minWidthForAdjustMenu)} {
+    padding: 20px 0px 20px 0px;
+  }
+`
+
+export const CanvasContainer = styled.div`
+  // --
+  width: 100%;
+  position: relative;
+  opacity: .4;
+`
+export const ContainerOrnament = styled.div`
+  // --
+  width: calc(100% + 8px);
+  position: absolute;
+  left: -8px;
+  ${mediaQueryMinW(minWidthForAdjustMenu)} {
+    left: -280px;
+    width: calc(100% + 280px);
+
   }
 `
