@@ -64,7 +64,7 @@ export const TitleHome = styled.h1`
   padding: 20px 0px 20px 8px;
   color: ${ ({theme}) => theme.colors.riverBed.c600 };
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 1px;
 
   .bold { font-weight: 800; }
@@ -81,10 +81,10 @@ export const TitleHome = styled.h1`
     font-size: 20px;
   }
   ${mediaQueryMinW('480')} {
-    font-size: 22px;
+    font-size: 20px;
   }
   ${mediaQueryMinW('1076')} {
-    font-size: 28px;
+    font-size: 24px;
   }
   ${mediaQueryMinW(minWidthForAdjustMenu)} {
     padding: 20px 0px 20px 0px;
