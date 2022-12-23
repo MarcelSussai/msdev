@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import {
   animation_10,
+  animation_11,
+  animation_12,
+  animation_13,
   fncTransition,
   mediaQueryMinW,
   minWidthForAdjustMenu,
@@ -12,8 +15,11 @@ export const ContainerAll = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* gap: 16px; */
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   z-index: -1;
+  position: relative;
 `
 
 export const ContainerTitleHome = styled.article`
@@ -77,23 +83,5 @@ export const TitleHome = styled.h1`
   }
   ${mediaQueryMinW(minWidthForAdjustMenu)} {
     padding: 20px 0px 20px 0px;
-  }
-`
-
-export const CanvasContainer = styled.div`
-  // --
-  width: 100%;
-  position: relative;
-  opacity: .4;
-`
-export const ContainerOrnament = styled.div`
-  // --
-  width: calc(100% + 8px);
-  position: absolute;
-  left: -8px;
-  ${mediaQueryMinW(minWidthForAdjustMenu)} {
-    left: -280px;
-    width: calc(100% + 280px);
-
   }
 `

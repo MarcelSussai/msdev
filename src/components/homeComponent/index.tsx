@@ -1,5 +1,6 @@
 import * as S from './style'
 import TestScrollComponent from '../../components/ui/utils/testScrollComponent'
+import Globe from './globe'
 
 
 
@@ -15,11 +16,7 @@ export default () => {
           {' e especialista '} <span className='celery'>{`front-end`}</span>
         </S.TitleHome>
       </S.ContainerTitleHome>
-      <S.CanvasContainer>
-        <S.ContainerOrnament>
-          <img src='test_01.svg' alt='' />
-        </S.ContainerOrnament>
-      </S.CanvasContainer>
+      <Globe />
     </S.ContainerAll>
   )
 }

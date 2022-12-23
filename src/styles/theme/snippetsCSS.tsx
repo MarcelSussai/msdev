@@ -58,8 +58,6 @@ export const ScrollStyle_01 = S.css`
   
 `
 
-
-
 export const animation_01 = S.keyframes`
   from {
     width: 0;
@@ -164,6 +162,38 @@ export const animation_10 = S.keyframes`
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+`
+
+export const animation_11 = S.keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`
+
+export const animation_12 = S.keyframes`
+  0% {
+    transform: translate3d(0, -12px, 0);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0);
+  }
+  100% {
+    transform: translate3d(0, -12px, 0);
+  }
+`
+
+export const animation_13 = S.keyframes`
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 `
