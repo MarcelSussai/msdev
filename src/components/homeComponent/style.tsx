@@ -61,7 +61,7 @@ export const OrnamentDiv_01 = styled.div`
 export const TitleHome = styled.h1`
   // --
   ${fncTransition({})}
-  padding: 20px 0px 20px 8px;
+  padding: 12px 0px 12px 8px;
   color: ${ ({theme}) => theme.colors.riverBed.c600 };
   font-weight: 400;
   font-size: 14px;
@@ -87,6 +87,6 @@ export const TitleHome = styled.h1`
     font-size: 24px;
   }
   ${mediaQueryMinW(minWidthForAdjustMenu)} {
-    padding: 20px 0px 20px 0px;
+    padding: 12px 0px 12px 0px;
   }
 `
