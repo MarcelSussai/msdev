@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {
+  animation_10,
   animation_11,
   animation_12,
   fncTransition,
@@ -19,6 +20,8 @@ export const ContainerAll = styled.section`
   align-items: center;
   gap: 8px;
   padding: 8px;
+  opacity: 0;
+  animation: ${animation_10} 1s 1s ease-in-out forwards;
   
   ${mediaQueryMinW(minWidthForAdjustMenu)} {
     padding: 0px;
@@ -32,9 +35,6 @@ export const ContainerText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  ${mediaQueryMinW('600')} {
-  }
 `
 
 export const Text = styled.h2`
@@ -44,55 +44,23 @@ export const Text = styled.h2`
   font-size: 16px;
   line-height: 1.3;
   text-align: start;
-  .pictonBlue {
-    font-weight: 800;
-    color: ${ ({theme}) => theme.colors.pictonBlue.c600 };
-  }
-  .celery {
-    font-weight: 800;
-    color: ${ ({theme}) => theme.colors.celery.c700 };
-  }
-  .paleGoldenRod {
-    font-weight: 800;
-    color: ${ ({theme}) => theme.colors.paleGoldenRod.c650 };
-  }
+  .pictonBlue, .celery, .paleGoldenRod { font-weight: 800; }
+  .pictonBlue    { color: ${ ({theme}) => theme.colors.pictonBlue.c600 }; }
+  .celery        { color: ${ ({theme}) => theme.colors.celery.c650 }; }
+  .paleGoldenRod { color: ${ ({theme}) => theme.colors.paleGoldenRod.c650 }; }
   
-  ${mediaQueryMinW('372')} {
-    font-size: 20px;
-  }
-  ${mediaQueryMinW('400')} {
-    font-size: 22px;
-  }
-  ${mediaQueryMinW('480')} {
-    font-size: 24px;
-  }
-  ${mediaQueryMinW('600')} {
-    font-size: 30px;
-  }
-  ${mediaQueryMinW('720')} {
-    font-size: 40px;
-  }
-  ${mediaQueryMinW('920')} {
-    font-size: 40px;
-  }
-  ${mediaQueryMinW('1216')} {
-    font-size: 48px;
-  }
-  ${mediaQueryMinW('1360')} {
-    font-size: 52px;
-  }
-  ${mediaQueryMinW('1600')} {
-    font-size: 56px;
-  }
-  ${mediaQueryMinW('1712')} {
-    font-size: 64px;
-  }
-  ${mediaQueryMinW('1800')} {
-    font-size: 72px;
-  }
-  ${mediaQueryMinW('2160')} {
-    font-size: 80px;
-  }
+  ${mediaQueryMinW('372')}  { font-size: 20px; }
+  ${mediaQueryMinW('400')}  { font-size: 22px; }
+  ${mediaQueryMinW('480')}  { font-size: 24px; }
+  ${mediaQueryMinW('600')}  { font-size: 30px; }
+  ${mediaQueryMinW('720')}  { font-size: 40px; }
+  ${mediaQueryMinW('920')}  { font-size: 40px; }
+  ${mediaQueryMinW('1216')} { font-size: 48px; }
+  ${mediaQueryMinW('1360')} { font-size: 52px; }
+  ${mediaQueryMinW('1600')} { font-size: 56px; }
+  ${mediaQueryMinW('1712')} { font-size: 64px; }
+  ${mediaQueryMinW('1800')} { font-size: 72px; }
+  ${mediaQueryMinW('2160')} { font-size: 80px; }
 `
 
 export const ContainerGlobeAndCircles = styled.div`
@@ -113,22 +81,11 @@ export const ContainerGlobe = styled.div`
   transform: translate3d(0, 0, 0);
   animation: ${animation_12} 4s ease-in-out infinite;
   
-  ${mediaQueryMinW('372')} {
-    width: 100px;
-  }
-  ${mediaQueryMinW('400')} {
-    width: 120px;
-  }
-  ${mediaQueryMinW('480')} {
-    width: 160px;
-  }
-  ${mediaQueryMinW('720')} {
-    width: 240px;
-  }
-  ${mediaQueryMinW('1216')} {
-    width: 320px;
-  }
-
+  ${mediaQueryMinW('372')}  { width: 100px; }
+  ${mediaQueryMinW('400')}  { width: 120px; }
+  ${mediaQueryMinW('480')}  { width: 160px; }
+  ${mediaQueryMinW('720')}  { width: 240px; }
+  ${mediaQueryMinW('1216')} { width: 320px; }
 `
 
 export const ContainerCircles = styled.div`
@@ -140,21 +97,11 @@ export const ContainerCircles = styled.div`
   transform: rotate(360deg);
   animation: ${animation_11} 16s linear infinite;
   
-  ${mediaQueryMinW('372')} {
-    --size: 160px;
-  }
-  ${mediaQueryMinW('400')} {
-    --size: 192px;
-  }
-  ${mediaQueryMinW('480')} {
-    --size: 240px;
-  }
-  ${mediaQueryMinW('720')} {
-    --size: 320px;
-  }
-  ${mediaQueryMinW('1216')} {
-    --size: 480px;
-  }
+  ${mediaQueryMinW('372')}  { --size: 160px; }
+  ${mediaQueryMinW('400')}  { --size: 192px; }
+  ${mediaQueryMinW('480')}  { --size: 240px; }
+  ${mediaQueryMinW('720')}  { --size: 320px; }
+  ${mediaQueryMinW('1216')} { --size: 480px; }
 `
 
 export const Ornament_01 = styled.div`

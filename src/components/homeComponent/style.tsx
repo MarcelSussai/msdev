@@ -17,9 +17,14 @@ export const ContainerAll = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
   z-index: -1;
   position: relative;
+  
+  ${mediaQueryMinW(minWidthForAdjustMenu)} {
+    gap: 40px;
+
+  }
 `
 
 export const ContainerTitleHome = styled.article`

@@ -44,12 +44,8 @@ export const ContainerLinksMenu = styled.div<IContainerLinksMenu>`
   flex-direction: column;
   gap: 8px;
   ${ ({isOpen}) => !isOpen ?
-    `
-      transform: translate3D(-100%, 0, 0);
-    ` :
-    `
-      transform: translate3D(0, 0, 0);
-    `
+    `transform: translate3D(-100%, 0, 0);` :
+    `transform: translate3D(0, 0, 0);`
   };
 
   @media (min-height: 592px) { height: 72%; }
@@ -73,12 +69,8 @@ export const DivStyle_01 = styled.div<IDivStyle_01>`
   z-index: 300;
   background: var(--bg-color-01);
   ${ ({isOpen}) => !isOpen ?
-    `
-      transform: translate3D(calc(-100% - 32px), 0, 0);
-    ` :
-    `
-      transform: translate3D(0, 0, 0);
-    `
+    `transform: translate3D(calc(-100% - 32px), 0, 0);` :
+    `transform: translate3D(0, 0, 0);`
   };
   box-shadow: 0 0 8px var(--shadow-color-01);
 
@@ -105,12 +97,8 @@ export const DivStyle_02 = styled.div<IDivStyle_02>`
   left: 0;
   z-index: 200;
   ${ ({isOpen}) => !isOpen ?
-    `
-      transform: translate3D(calc(-100% - 32px), 0, 0);
-    ` :
-    `
-      transform: translate3D(0, 0, 0);
-    `
+    `transform: translate3D(calc(-100% - 32px), 0, 0);` :
+    `transform: translate3D(0, 0, 0);`
   };
 
   ${mediaQueryMinW(minWidthForAdjustMenu)} {
@@ -198,14 +186,11 @@ export const Alink = styled.a<IAlink>`
   }
 
   ${mediaQueryMinW(minWidthForAdjustMenu)} {
-    /* transition: ${() => fncTransitionPart({duration: '.4s'}) },
-      background .2s ease-in-out, box-shadow .4s ease-in-out
-    ; */
     opacity: 0;
     transform: translate3D(calc(-100% - 32px), 0, 0);
-    animation: ${animation_09} .8s ${
-      ({delay}) => `calc(.4s + ${delay})`}
-    ease-in-out forwards;
+    animation:
+      ${animation_09} .8s ${({delay}) => `calc(.4s + ${delay})`} ease-in-out forwards
+    ;
   }
 `
 
@@ -253,4 +238,6 @@ export const SpanText = styled.span`
   border-bottom-left-radius: var(--border-radius);
 `
 
-export const Img = styled.img``
+export const Img = styled.img`
+  width: 100%;
+`
