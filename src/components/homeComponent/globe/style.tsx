@@ -21,7 +21,7 @@ export const ContainerAll = styled.section`
   gap: 8px;
   padding: 8px;
   opacity: 0;
-  animation: ${animation_10} 1s 1s ease-in-out forwards;
+  animation: ${animation_10} 1s 1.4s ease-in-out forwards;
   
   ${mediaQueryMinW(minWidthForAdjustMenu)} {
     padding: 0px;

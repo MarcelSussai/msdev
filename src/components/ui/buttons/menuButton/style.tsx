@@ -78,6 +78,9 @@ export const ButtonMenu = styled.button<IButtonMenu>`
   ;
   animation: ${animation_05} 1s 1s ease-in-out forwards;
   cursor: pointer;
+  &:hover {
+    --color-01: ${({theme, isOpen}) => isOpen ? theme.colors.grape.c100 : theme.colors.wine.c100}F8;
+  }
 `
 
 export const DrawItemButton = styled.div<IDrawItemButton>`
