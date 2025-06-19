@@ -1,0 +1,13 @@
+@function v($var, $alt: '') {
+    @if $alt == '' {
+        @return var(--#{$var});
+    } @else {
+        @return var(--#{$var}, #{$alt});
+    }
+}
+
+@function v_hs($name: 'default') { @return var(--hs-#{$name}); }
+
+@function clr($name: 'default', $l: 'r-000', $a: 1) {
+    @return hsla(#{v_hs($name)}, var(--l-#{$l}), $a);
+}

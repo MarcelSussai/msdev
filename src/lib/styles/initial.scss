@@ -1,0 +1,29 @@
+@use '_s' as *;
+@use 'reset.scss';
+@use 'colors.scss';
+// ----------------------------------------------------------------
+
+:root {
+    --thumb-w: 8px;
+    --clr-track: clr('surface', 'x22');
+    --clr-thumb: clr('surface', 'y22');
+}
+
+@supports not selector(*::-webkit-scrollbar) { * {
+    scrollbar-color: v('clr-thumb') v('clr-track');
+    scrollbar-width: v('thumb-w');
+}}
+
+*::-webkit-scrollbar { width: v('thumb-w'); height: v('thumb-w'); }
+*::-webkit-scrollbar-track-piece { background: v('clr-track'); }
+*::-webkit-scrollbar-thumb { background: v('clr-thumb'); }
+
+*::-webkit-scrollbar-corner {}
+*::-webkit-scrollbar-button {}
+*::-webkit-scrollbar-track {}
+
+body {
+    background: clr('main', 'y11');
+    color: clr('main', 'x11');
+    
+}

@@ -1,0 +1,10 @@
+/* Fonts */
+@import '@fontsource-variable/source-code-pro'; /* Supports weights 200-900 */
+@import '@fontsource-variable/alexandria';      /* Supports weights 100-900 */
+@import '@fontsource-variable/museomoderno';    /* Supports weights 100-900 */
+
+:root {
+    --font-main: 'Alexandria Variable',       sans-serif;
+    --font-mono: 'Source Code Pro Variable',  sans-serif;
+    --font-logo: 'MuseoModerno Variable',     sans-serif;
+}
