@@ -1,10 +1,15 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+    import ClrsView from '_components/_dev_utils/clrs_view.svelte'
+</script>
+
+<!-- ---------------------------------------------------------------- -->
+
+<h1>PÁGINA 01</h1>
+<ClrsView />
+
+<!-- ---------------------------------------------------------------- -->
 
 <style lang="scss">
     @use '_s' as *;
-    
-    p {
-        color: clr('main');
-    }
+
 </style>

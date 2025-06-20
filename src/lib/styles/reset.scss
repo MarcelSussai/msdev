@@ -6,14 +6,6 @@
     scroll-behavior: smooth;
 }
 
-html {
-    overflow-x: clip;
-}
-
-body {
-    min-height: 100dvh;
-    line-height: 1;
-}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,9 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-ol, ul {
-	list-style: none;
-}
+ol, ul { list-style: none; }
 
 a { text-decoration: none; display: block; }
 
@@ -47,11 +37,23 @@ p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 
 input, button, textarea, select { font: inherit; }
 
+
+html {
+    overflow-x: clip;
+}
+
+body {
+    line-height: 1;
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     html {
         interpolate-size: allow-keywords;
     }
 }
+
 
 @media (prefers-reduced-motion: reduce) {
     * {

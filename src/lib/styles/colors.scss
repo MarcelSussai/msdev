@@ -1,20 +1,25 @@
 :root {
-    --hs-surface: 240deg, 40%;
+    --hs-default: 0deg,   0%;
+
+    --hs-error:   8deg,   96%;
+    --hs-warning: 28deg,  96%;
+    --hs-detail:  44deg,  100%;
+    --hs-alert:   56deg,  88%;
+    --hs-success: 80deg,  80%;
+
+    --hs-comment: 144deg, 32%;
+    --hs-effect:  184deg, 80%;
+    --hs-active:  208deg, 32%;
+
+    --hs-surface: 220deg, 48%;
+
+    --hs-info:    232deg, 96%;
     --hs-aux:     240deg, 16%;
     --hs-mark:    280deg, 80%;
-    --hs-comment: 144deg, 32%;
-    --hs-active:  208deg, 32%;
-    --hs-effect:  184deg, 80%;
-    --hs-info:    232deg, 96%;
-    --hs-success: 80deg,  80%;
-    --hs-warning: 28deg,  96%;
-    --hs-error:   8deg,   96%;
-    --hs-alert:   56deg,  88%;
     --hs-focus:   320deg, 96%;
-    --hs-main:    208deg, 80%;
-    --hs-second:  144deg, 80%;
-    --hs-detail:  44deg,  100%;
-    --hs-default: 0deg,   0%;
+    
+    --hs-main:    208deg, 100%;
+    --hs-second:  144deg, 96%;
 
     // luminosidade
     --l-r-x00: 0%;  --l-r-x01: 2%;  --l-r-x02: 4%;  --l-r-x03: 6%;  --l-r-x04: 8%;
