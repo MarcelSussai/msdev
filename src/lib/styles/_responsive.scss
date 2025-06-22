@@ -1,0 +1,18 @@
+
+$md_00: 320px;  $md_01: 360px;  $md_02: 400px;  $md_03: 440px;  $md_04: 480px;
+$md_05: 520px;  $md_06: 560px;  $md_07: 600px;  $md_08: 640px;  $md_09: 680px;
+$md_10: 720px;  $md_11: 760px;  $md_12: 800px;  $md_13: 840px;  $md_14: 880px;
+$md_15: 920px;  $md_16: 968px;  $md_17: 1080px; $md_18: 1120px; $md_19: 1160px;
+$md_20: 1200px; $md_21: 1240px; $md_22: 1280px; $md_23: 1320px; $md_24: 1360px;
+$md_25: 1400px; $md_26: 1440px; $md_27: 1480px; $md_28: 1520px; $md_29: 1560px;
+$md_30: 1600px; $md_31: 1640px; $md_32: 1680px; $md_33: 1720px; $md_34: 1760px;
+$md_35: 1800px; $md_36: 1840px; $md_37: 1880px; $md_38: 1920px; $md_39: 1960px;
+$md_40: 2000px; $md_41: 2040px; $md_42: 2080px; $md_43: 2120px; $md_44: 2160px;
+$md_45: 2200px; $md_46: 2240px; $md_47: 2280px; $md_48: 2320px; $md_49: 2360px;
+$md_50: 2400px; $md_51: 2440px; $md_52: 2480px; $md_53: 2520px; $md_54: 2560px;
+$md_55: 2600px; $md_56: 2640px; $md_57: 2680px; $md_58: 2720px; $md_59: 2760px;
+$md_60: 2800px; $md_61: 2840px; $md_62: 2880px; $md_63: 2920px; $md_64: 2960px;
+
+@mixin md($min: #{$md_01}, $type: screen) {
+    @media #{$type} and (min-width: #{$min}) { @content; }
+}

@@ -1,0 +1,5 @@
+@mixin pseudo($display: flex, $position: absolute, $content: '') {
+    content: #{$content};
+    display: $display;
+    position: $position;
+}

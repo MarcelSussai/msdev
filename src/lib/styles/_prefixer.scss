@@ -1,0 +1,24 @@
+$pref-webkit: true !default;
+$pref-moz:    true !default;
+$pref-ms:     true !default;
+$pref-o:      true !default;
+$pref-spec:   true !default;
+
+@mixin prefix($prop, $val, $prefs) {
+    @each $pref in $prefs {
+        @if $pref == webkit    { @if $pref-webkit { -webkit-#{$prop}: $val; } }
+        @else if $pref == moz  { @if $pref-moz    { -moz-#{$prop}: $val; } }
+        @else if $pref == ms   { @if $pref-ms     { -ms-#{$prop}: $val; } }
+        @else if $pref == o    { @if $pref-o      { -o-#{$prop}: $val; } }
+        @else if $pref == spec { @if $pref-spec   { #{$prop}: $val; } }
+        @else { @warn 'Unrecognized prefix: #{$pref}'; }
+    }
+}
+
+@mixin disable-prefs-for-all() {
+    $pref-webkit: false;
+    $pref-moz:    false;
+    $pref-ms:     false;
+    $pref-o:      false;
+    $pref-spec:   false;
+}

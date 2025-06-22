@@ -1,13 +1,20 @@
+@use './prefixer.scss' as *;      @forward './prefixer.scss';
+@use './responsive.scss' as *;    @forward './responsive.scss';
+@use './text_ellipsis.scss' as *; @forward './text_ellipsis.scss';
+@use './pseudo.scss' as *;        @forward './pseudo.scss';
+@use './eases.scss' as *;         @forward './eases.scss';
+
+
+
+//  Utilitários para variáveis, e variáveis de cores
+// ----------------------------------------------------------------
 @function v($var, $alt: '') {
-    @if $alt == '' {
-        @return var(--#{$var});
-    } @else {
-        @return var(--#{$var}, #{$alt});
-    }
+    @if $alt == '' { @return var(--#{$var}); }
+    @else { @return var(--#{$var}, #{$alt}); }
 }
-
 @function v_hs($name: 'default') { @return var(--hs-#{$name}); }
-
 @function clr($name: 'default', $l: 'r-000', $a: 1) {
     @return hsla(#{v_hs($name)}, var(--l-#{$l}), $a);
 }
+// ----------------------------------------------------------------
+

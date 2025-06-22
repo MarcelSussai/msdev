@@ -9,9 +9,8 @@
     onMount(() => {
         name_clrs = root_css_clear_names('hs')
         tones_clr = root_css_clear_names('l-r')
-
-        console.log(`-------- DEBUG - { name_clrs } = ${name_clrs}`);
-        console.log(`-------- DEBUG - { tones_clr } = ${tones_clr}`);
+        // console.log(`-------- DEBUG - { name_clrs } = ${name_clrs}`);
+        // console.log(`-------- DEBUG - { tones_clr } = ${tones_clr}`);
     })
 
     const make_var_clr = (name: string = 'default', tone: string = '000') => `
@@ -33,7 +32,9 @@
 
     <div class="all-clrs-names">
         {#each name_clrs as name}
-            <div class="clr-name" style="--clr: var(--hs-{name})"></div>
+            <button aria-label="cor {name}" class="clr-box-name" style="--clr: var(--hs-{name})">
+                
+            </button>
         {/each}
     </div>
 
@@ -50,11 +51,14 @@
     .all-clrs-view {
         --pad: 6px;
 
-        border: solid 2px clr('surface', 'x12');
-        border-radius: 8px;
+        border: solid 1px clr('surface', 'x20');
+        border-radius: 3px;
 
         display: flex;
         flex-flow: column;
+
+        min-width: calc(100% - v('pad') * 2);
+        margin-inline: v('pad');
     }
 
     h2 {
@@ -62,25 +66,28 @@
         font-weight: 300;
         color: clr('surface', 'x06');
         padding: v('pad');
-        border-bottom: solid 1px clr('surface', 'x12');
+        border-bottom: solid 1px clr('surface', 'x20');
     }
 
     .all-clrs-names {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        padding: 4px;
-        gap: 4px;
+        padding: v('pad');
+        gap: v('pad');
     }
 
-    .clr-name {
+    .clr-box-name {
         width: 100%;
         aspect-ratio: 1;
         background: hsl(v('clr'), v('l-000'));
     }
 
     .btns {
+        display: flex;
+        flex-flow: row wrap;
+
         padding: 4px;
-        border-top: solid 1px clr('surface', 'x12');
+        border-top: solid 1px clr('surface', 'x20');
     }
 
 </style>
