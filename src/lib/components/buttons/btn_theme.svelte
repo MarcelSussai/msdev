@@ -14,10 +14,10 @@
     @use '_s' as *;
 
     button {
-        padding: v('pad', 4px);
-        background: clr('surface', 'x12');
-        color: clr('surface', 'y06');
-        font-weight: 300;
+        padding:       v('pad', 4px);
+        background:    clr('surface', 'x12');
+        color:         clr('surface', 'y06');
+        font-weight:   300;
         border-radius: 3px;
     }
 

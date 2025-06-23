@@ -28,10 +28,10 @@
     @use '_s' as *;
 
     main {
-        display: flex;
+        display:        flex;
         flex-direction: column;
-        align-items: center;
-        gap: 8px;
+        align-items:    center;
+        gap:            8px;
 
         padding-bottom: 2000px;
     }
