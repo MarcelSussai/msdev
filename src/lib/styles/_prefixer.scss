@@ -22,3 +22,7 @@ $pref-spec:   true !default;
     $pref-o:      false;
     $pref-spec:   false;
 }
+
+@mixin user-select($val) {
+    @include prefix(user-select, #{$val}, webkit moz ms spec);
+}

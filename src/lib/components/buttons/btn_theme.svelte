@@ -1,12 +1,26 @@
 <script lang="ts">
+    import { IconMoon, IconSun } from '_components';
     import { current_theme, set_theme } from '_stores/theme'
+
+
 
     const toggle_theme = () => set_theme( $current_theme === 'light' ? 'dark' : 'light' )
 </script>
 
 <!-- ---------------------------------------------------------------- -->
 
-<button onclick={toggle_theme}> {$current_theme} </button>
+<button
+    onclick={toggle_theme}
+    class="btn-00"
+>
+    <span class="ico">
+        {#if $current_theme === 'light'}
+            <IconSun />
+        {:else}
+            <IconMoon />
+        {/if}
+    </span>
+</button>
 
 <!-- ---------------------------------------------------------------- -->
 
@@ -14,11 +28,17 @@
     @use '_s' as *;
 
     button {
-        padding:       v('pad', 4px);
-        background:    clr('surface', 'x12');
-        color:         clr('surface', 'y06');
-        font-weight:   300;
-        border-radius: 3px;
+        width:           40px;
+        aspect-ratio:    1;
+        position:        relative;
+        overflow:        hidden;
+    }
+    
+    .ico {
+        width:    calc(100% - 12px);
+        height:   auto;
+        display:  block;
+        position: absolute;
     }
 
 </style>

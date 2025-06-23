@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { fade } from 'svelte/transition'
+    import { fade, fly } from 'svelte/transition'
 
     let props = $props()
 
@@ -9,7 +9,8 @@
 
 <svg
     { ...props }
-    transition:fade={{ duration: 200 }}
+    in:fly={{ y: 200 }}
+    out:fade={{duration: 100}}
     width="204px"
     height="204px"
     viewBox="0 0 204 204"
@@ -38,7 +39,7 @@
         transition: all .3s $ease_in_out_sine;
     }
     .config {
-        fill:       v('clr-icon', #{clr('surface', 'x16')});
+        fill:       v('clr-icon', #{clr('surface', 'y06')});
         transition: all .3s $ease_in_out_sine;
     }
 </style>

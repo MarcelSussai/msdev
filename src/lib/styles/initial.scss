@@ -17,8 +17,29 @@
 // ----------------------------------------------------------------
 
 body {
-    background: clr('surface', 'y11');
+    background: clr('surface', 'y09');
     color: clr('surface', 'x06');
     font-family: v('font-main');
 }
 
+.btn-00 {
+    background:      clr('surface', 'x14');
+    color:           clr('surface', 'y06');
+    border-radius:   50%;
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    transition:      all .3s $ease_in_out_sine;
+    cursor:          pointer;
+    border:          solid 2px transparent;
+    box-shadow:      inset 0 0 12px -2px clr('surface', 'y24');
+
+    &:hover, &.sel_hover {
+        background: clr('surface', 'x12');
+        border:     solid 2px clr('surface', 'y06');
+        box-shadow:
+            inset 0 0 12px -6px clr('surface', 'y24'),
+            0 0 32px -2px clr('surface', 'r-000', .88)
+        ;
+    }
+}

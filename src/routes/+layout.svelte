@@ -2,8 +2,9 @@
     import type { LayoutProps } from './$types'
     import { onMount } from 'svelte'
     import { fade } from 'svelte/transition'
-    import { hand_is_active_link } from '_stores/nav_store';
+    import { hand_is_active_link } from '_stores/nav_store'
     import { config_theme } from '_stores/theme'
+    import { Header } from '_components'
 
     let { data, children }: LayoutProps = $props()
 
@@ -15,6 +16,7 @@
 
 <!-- ---------------------------------------------------------------- -->
 
+<Header />
 {#key data.url}
     <main
         in:fade={{ duration: 200, delay: 200 }}
