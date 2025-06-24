@@ -16,7 +16,7 @@
 
 <!-- ---------------------------------------------------------------- -->
 
-<section class="welcome">seja bem vind@</section>
+<section class="hero">seja bem vind@</section>
 <Header />
 {#key data.url}
     <main
@@ -37,13 +37,21 @@
         gap:            8px;
         padding:        8px 0 2000px 0;
     }
-    .welcome {
-        display:         flex;
-        justify-content: center;
-        align-items:     center;
-
-        font-size:       1.2rem;
-        font-weight:     400;
-        padding:         8px;
+    .hero {
+        display:          flex;
+        justify-content:  center;
+        align-items:      center;
+        font-size:        1.2rem;
+        font-weight:      900;
+        padding:           6px 12px 4px 12px;
+        width:            100%;
+        // background-color: clr('surface', 'y16', .8);
+        background:
+            linear-gradient(to bottom,
+                clr('surface', 'y18', .8),
+                clr('surface', 'y10', .8),
+            )
+        ;
+        margin-bottom:    6px;
     }
 </style>

@@ -1,7 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { root_css_clear_names, get_value_of_css_var } from '$lib/utils/vars_css_in_js'
+    import { root_css_clear_names, get_value_of_css_var} from '$lib/utils/vars_css_in_js'
     import { BtnTheme } from '_components'
+
+
 
     let name_clrs = $state([''])
     let tones_clr = $state([''])
@@ -11,9 +13,15 @@
 
     let is_locked_tone = $state(false)
     
-    let value_of_name = $derived(get_value_of_css_var('hs-' + clr_name))
-    let value_of_tone = $derived(get_value_of_css_var('l-' + clr_tone))
-
+    let value_of_name = $state('')
+    let value_of_tone = $state('')
+    $effect(() => {
+        value_of_name = get_value_of_css_var('hs-' + clr_name)
+        value_of_tone = get_value_of_css_var('l-' + clr_tone)
+    })
+    // let value_of_name = $derived(get_value_of_css_var('hs-' + clr_name))
+    // let value_of_tone = $derived(get_value_of_css_var('l-' + clr_tone))
+    
     onMount(() => {
         name_clrs = root_css_clear_names('hs')
         tones_clr = root_css_clear_names('l-r')
@@ -31,6 +39,7 @@
     
     <div class="infos">
         <BtnTheme />
+        |
         <button
             class="btn-00 {is_locked_tone ? 'sel_hover' : ''}"
             style="
@@ -116,8 +125,9 @@
         flex-flow:     column;
         // min-width:     calc(100% - v('pad') * 2);
         // margin-inline: v('pad');
-        width:         fit-content;
         width:         298px;
+
+        @include md($md_16) { width: fit-content; }
     }
 
     h2 {
@@ -138,6 +148,8 @@
         border-bottom:         solid 1px clr('surface', 'x20');
         width: fit-content;
         margin-inline: auto;
+
+        @include md($md_16) { grid-template-columns: repeat(16, 1fr); }
     }
 
     .all-clrs-tones {
@@ -147,6 +159,8 @@
         gap:                   v('pad');
         width:                 fit-content;
         margin-inline:         auto;
+        
+        @include md($md_16) { grid-template-columns: repeat(24, 1fr); }
     }
 
     .clr-btn {
