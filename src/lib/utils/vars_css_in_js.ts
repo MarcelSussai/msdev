@@ -9,3 +9,7 @@ export const root_css_vars = (prefix = '') => Array.from(document.styleSheets)
 
 export const root_css_clear_names = (prefix = '') => root_css_vars(prefix)
   .map(item => item.replace(`--${prefix}-`, ''))
+
+export const get_value_of_css_var = (name: string) => {
+  return getComputedStyle(document.documentElement).getPropertyValue(`--${name}`).trim()
+}

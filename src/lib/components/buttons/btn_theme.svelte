@@ -36,7 +36,6 @@
     
     .ico {
         width:    calc(100% - 12px);
-        height:   auto;
         display:  block;
         position: absolute;
     }

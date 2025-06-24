@@ -16,6 +16,7 @@
 
 <!-- ---------------------------------------------------------------- -->
 
+<section class="welcome">seja bem vind@</section>
 <Header />
 {#key data.url}
     <main
@@ -34,7 +35,15 @@
         flex-direction: column;
         align-items:    center;
         gap:            8px;
+        padding:        8px 0 2000px 0;
+    }
+    .welcome {
+        display:         flex;
+        justify-content: center;
+        align-items:     center;
 
-        padding-bottom: 2000px;
+        font-size:       1.2rem;
+        font-weight:     400;
+        padding:         8px;
     }
 </style>

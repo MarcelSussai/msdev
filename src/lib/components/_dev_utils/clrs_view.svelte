@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
-    import { root_css_clear_names } from '$lib/utils/vars_css_in_js'
+    import { root_css_clear_names, get_value_of_css_var } from '$lib/utils/vars_css_in_js'
     import { BtnTheme } from '_components'
 
     let name_clrs = $state([''])
@@ -10,24 +10,18 @@
     let clr_tone = $state('000')
 
     let is_locked_tone = $state(false)
-
-    $inspect(clr_name)
+    
+    let value_of_name = $derived(get_value_of_css_var('hs-' + clr_name))
+    let value_of_tone = $derived(get_value_of_css_var('l-' + clr_tone))
 
     onMount(() => {
         name_clrs = root_css_clear_names('hs')
         tones_clr = root_css_clear_names('l-r')
     })
 
-    const make_var_clr = (name: string = 'default', tone: string = '000') => `
-        --clr: hsl( var(--hs-${name}), var(--l-${tone}) );
-    `
-
     const check_tone = (tone: string) => tone === '000' || tone === 'x00' || tone === 'y00' ?
         'grid-column: 1 / -1; --w: 100%;' : ''
 
-    const group_style = (name: string, tone: string) => `
-        ${make_var_clr(name, tone)} ${check_tone(tone)}
-    `
 </script>
 
 <!-- ---------------------------------------------------------------- -->
@@ -39,26 +33,44 @@
         <BtnTheme />
         <button
             class="btn-00 {is_locked_tone ? 'sel_hover' : ''}"
-            style="border-radius: 4px; padding: 8px;"
+            style="
+                border-radius: 999px;
+                gap: 8px;
+                padding: 0px 16px;
+                font-family: var(--font-main);
+                min-width: 168px;
+                justify-content: space-between;
+            "
             onclick={() => is_locked_tone = !is_locked_tone}
         >
-            Travar tema
+            <span style="font-size: small;">tons:</span> {is_locked_tone ? 'travado' : 'destravado'}
         </button>
     </div>
 
+    <div class="infos"> cor selecionada: <span>{clr_name}</span> </div>
+
+    <div class="infos"> tom selecionado: <span>{is_locked_tone ? 'r-' : ''}{clr_tone}</span> </div>
+    <div class="infos"> <span>{value_of_name},</span> <span>{value_of_tone}</span> </div>
+
     <div class="infos">
-        cor selecionada: <span>{clr_name}</span>
+        css:
+        <span style="width: 100%;">hsl( <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var(--hs-{clr_name}), <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var(--l-{is_locked_tone ? 'r-' : ''}{clr_tone}) <br>
+        )</span>
     </div>
+
     <div class="infos">
-        tom selecionado: <span>{is_locked_tone ? 'r-' : ''}{clr_tone}</span>
+        scss (sass) com os utilitários: <span>clr('{clr_name}', '{is_locked_tone ? 'r-' : ''}{clr_tone}')</span>
+        
     </div>
-    <div class="infos" style="font-family: var(--font-mono); font-weight: 500; font-size: .76rem;">
-        <span style="width: 100%">css</span>
-        hsl(var(--hs-{clr_name}), var(--l-{is_locked_tone ? 'r-' : ''}{clr_tone}))
-    </div>
-    <div class="infos" style="font-family: var(--font-mono); font-weight: 500; font-size: .76rem;">
-        <span style="width: 100%">scss com os utilitários</span>
-        clr('{clr_name}', '{is_locked_tone ? 'r-' : ''}{clr_tone}')
+
+    <div class="infos">
+        <div style="
+            height: 32px;
+            width: 100%;
+            background: hsl(var(--hs-{clr_name}), var(--l-{is_locked_tone ? 'r-' : ''}{clr_tone}));
+        "></div>
     </div>
 
     <div class="all-clrs-names">
@@ -102,20 +114,20 @@
         border-radius: 4px;
         display:       flex;
         flex-flow:     column;
-        width:         fit-content;
         // min-width:     calc(100% - v('pad') * 2);
-        margin-inline: v('pad');
-        @include user-select(none);
+        // margin-inline: v('pad');
+        width:         fit-content;
+        width:         298px;
     }
 
     h2 {
-        font-size:     1.20rem;
-        font-weight:   300;
+        font-size:     1.12rem;
+        font-weight:   800;
         line-height:   1.36;
-        color:         clr('surface', 'x06');
         padding:       v('pad');
         border-bottom: solid 1px clr('surface', 'x20');
-        text-align: center;
+        text-align:    center;
+        @include user-select(none);
     }
 
     .all-clrs-names {
@@ -139,9 +151,8 @@
 
     .clr-btn {
         --size: 30px;
-        min-width:         v('w', #{v('size')});
-        height:            v('size');
-        // aspect-ratio:  1;
+        min-width:     v('w', #{v('size')});
+        height:        v('size');
         background:    hsl(v('clr'), v('l-clr', #{v('l-000')}));
         border:        solid 2px hsl(v('clr'), v('l-x20'));
         border-radius: 4px;
@@ -150,7 +161,7 @@
         
         &:hover, &.selected {
             border:     solid 2px hsl(v('clr'), v('l-y08'));
-            background: hsl(v('clr'), v('l-clr', #{v('l-y16')}));
+            background: hsl(v('clr'), v('l-clr', #{v('l-000')}));
         }
         &.selected {
             border:     solid 2px hsl(v('clr'), v('l-y02'));
@@ -162,17 +173,15 @@
         display:       flex;
         flex-flow:     row wrap;
         align-items:   center;
-        justify-content: center;
         gap:           8px;
         padding:       8px;
         border-bottom: solid 1px clr('surface', 'x20');
-        font-size:     .80rem;
+        font-size:     .88rem;
+        font-family:   v('font-mono');
         
         span {
-            font-size:   1.12rem;
-            font-family: v('font-mono');
+            font-size:   1rem;
             font-weight: 800;
-            text-align:  center;
         }
     }
 </style>
