@@ -7,9 +7,9 @@
 <!-- ---------------------------------------------------------------- -->
 
 <svg
-    {...props}
-    width="96px" height="96px"
-    viewBox="-4 -4 96 96"
+{...props}
+    width="92px" height="92px"
+    viewBox="-2 -2 92 92"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMidYMax meet"
 >
@@ -28,33 +28,29 @@
     @use '_s' as *;
 
     svg {
+        // background: red;
         width: 100%;
         height: 100%;
         fill: none;
         // filter:
-        //     drop-shadow(0px   4px   6px clr('surface'), var(--l-raw-025), .64))
-        //     drop-shadow(6px   0px   8px hsla(var(--hs-surface), var(--l-raw-025), .24))
-        //     drop-shadow(-4px  -4px  4px hsla(var(--hs-surface), var(--l-raw-975), .16))
-        //;
-        filter:
-            drop-shadow(4px 6px 8px clr('surface', 'r-x02', .32)),
-        ;
+        //     drop-shadow(4px 4px 4px clr('surface', 'r-x02', .32)),
+        // ;
     }
     circle {
-        fill: clr('surface', 'r-x04');
-        stroke: clr('surface', 'r-x12');
-        stroke-width: 1px;
+        fill: clr('surface', 'r-x00');
+        // stroke: clr('detail', 'r-x24');
+        // stroke-width: .2px;
     }
     .m {
         fill: clr('main');
         filter:
-            drop-shadow(0 0px 8px clr('main', 'r-000', .40)),
+            drop-shadow(0 0px 8px clr('main', 'r-000', .64)),
         ;
     }
     .s {
         fill: clr('second');
         filter:
-            drop-shadow(0 0px 8px clr('second', 'r-000', .32)),
+            drop-shadow(0 0px 8px clr('second', 'r-000', .48)),
         ;
     }
 

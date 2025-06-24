@@ -19,7 +19,7 @@
 
     .test-icon {
         // width: 400px;
-        width:  64px;
+        width:  96px;
         // border: solid 2px red;
     }
 </style>

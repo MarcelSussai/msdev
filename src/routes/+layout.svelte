@@ -41,7 +41,7 @@
         display:          flex;
         justify-content:  center;
         align-items:      center;
-        font-size:        1.2rem;
+        font-size:        1.36rem;
         font-weight:      900;
         padding:           6px 12px 4px 12px;
         width:            100%;

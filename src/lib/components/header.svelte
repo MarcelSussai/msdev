@@ -7,6 +7,7 @@
 
 <header>
     <Logotype />
+    <div class="test"></div>
 </header>
 
 <!-- ---------------------------------------------------------------- -->
@@ -18,18 +19,20 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        justify-content: space-between;
 
         position: sticky;
         align-self: start;
         top: 6px;
         z-index: 800;
+        gap: 8px;
 
 
         width: calc(100% - 12px);
         height: v('header-height', 64px);
         margin: auto;
         margin-bottom: 16px;
-        padding: 0 4px 0 4px;
+        padding: 0 6px 0 3px;
 
         background:
             linear-gradient(
@@ -42,11 +45,16 @@
         ;
         backdrop-filter: blur(4px);
         border: solid 1px clr('surface', 'r-x12');
-        border-radius: 8px;
-
+        border-radius: 16px;
         box-shadow:
             inset 0 0 24px clr('surface', 'r-000', .40),
             0px 8px 12px -2px clr('surface', 'r-x06', .64)
         ;
+    }
+    .test {
+        width: 42px;
+        aspect-ratio: 1;
+        background: clr('surface');
+        border-radius: 120px;
     }
 </style>

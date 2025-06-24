@@ -44,7 +44,13 @@ span { display: inline; }
 
 p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+
+p, li, figcaption { max-width: 64ch; text-wrap: pretty; }
+
 input, button, textarea, select { font: inherit; }
+
+header, footer, main, section, article { container-type: inline-size; }
 
 
 html {
