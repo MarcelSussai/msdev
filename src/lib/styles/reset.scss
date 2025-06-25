@@ -50,9 +50,6 @@ p, li, figcaption { max-width: 64ch; text-wrap: pretty; }
 
 input, button, textarea, select { font: inherit; }
 
-header, footer, main, section, article { container-type: inline-size; }
-
-
 html {
     overflow-x: clip;
 }

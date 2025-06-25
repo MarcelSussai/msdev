@@ -32,10 +32,11 @@
         flex-flow: wrap nowrap;
         align-items: center;
         gap: 4px;
-        background: clr('surface', 'r-x06');
+        background: clr('surface', 'r-x07');
         // background: red;
-        padding: 2px 6px 2px 4px;
-        border-radius: 14px 6px 6px 14px;
+        padding: 2px 8px 2px 4px;
+        border-radius: 14px 12px 12px 14px;
+        // box-shadow: 0px 4px 8px 2px clr('surface', 'r-x04', .48);
         // border: solid 1px clr('surface', 'r-x00');
         // border-image: linear-gradient(ro right, clr('main'), clr('second'));
         // border-left: none;

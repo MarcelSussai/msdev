@@ -32,7 +32,7 @@
         height: v('header-height', 64px);
         margin: auto;
         margin-bottom: 16px;
-        padding: 0 6px 0 3px;
+        padding: 0 8px 0 3px;
 
         background:
             linear-gradient(
