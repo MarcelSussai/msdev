@@ -27,6 +27,8 @@
 <style lang="scss">
     @use '_s' as *;
 
+    $bp_00: $md_02;
+
     .all-logotype {
         display: flex;
         flex-flow: wrap nowrap;
@@ -37,7 +39,7 @@
         border-radius: 14px;
         height: 100%;
         
-        @include md($md_02) { padding: 2px 10px 2px 4px; }
+        @include md($bp_00) { padding: 2px 10px 2px 4px; }
     }
 
     .logo {
@@ -46,7 +48,7 @@
         align-items: center;
         height: 46px;
         
-        @include md($md_02) { height: 64px; }
+        @include md($bp_00) { height: 64px; }
     }
 
     .all-types {
@@ -66,7 +68,7 @@
         font-weight: 900;
         gap: 2px;
 
-        @include md($md_02) { font-size: 2.16rem; }
+        @include md($bp_00) { font-size: 2.16rem; }
     }
     .m { color: clr('main'); }
     .s { color: clr('second'); }
@@ -77,17 +79,7 @@
         font-weight: 300;
         color: clr('detail', 'r-y16');
 
-        @include md($md_02)  { font-size: 1.52rem; }
-    }
-
-    @include md($md_02) {
-        .types {
-            
-        }
-        .desc {
-            
-
-        }
+        @include md($bp_00)  { font-size: 1.52rem; }
     }
 
 </style>
