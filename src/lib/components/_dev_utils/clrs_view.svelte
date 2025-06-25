@@ -123,8 +123,6 @@
         border-radius: 4px;
         display:       flex;
         flex-flow:     column;
-        // min-width:     calc(100% - v('pad') * 2);
-        // margin-inline: v('pad');
         width:         298px;
 
         @include md($md_16) { width: fit-content; }

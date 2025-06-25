@@ -27,12 +27,11 @@
         z-index: 800;
         gap: 8px;
 
-
         width: calc(100% - 12px);
         height: v('header-height', 64px);
         margin: auto;
         margin-bottom: 16px;
-        padding: 0 8px 0 3px;
+        padding: 3px 8px 3px 3px;
 
         background:
             linear-gradient(
@@ -50,6 +49,10 @@
             inset 0 0 24px clr('surface', 'r-000', .40),
             0px 8px 12px -2px clr('surface', 'r-x06', .64)
         ;
+
+        @include md($md_02) {
+            height: v('header-height', 80px);
+        }
     }
     .test {
         width: 42px;
