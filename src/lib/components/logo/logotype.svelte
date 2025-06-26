@@ -16,7 +16,7 @@
             <div class="s">Sussai</div>
         </div>
 
-        <div class="desc">full-stack developer</div>
+        <div class="desc">full-stack web developer</div>
 
     </div>
 
@@ -33,37 +33,56 @@
         display: flex;
         flex-flow: wrap nowrap;
         align-items: center;
+        justify-content: center;
         gap: 4px;
-        background: clr('surface', 'r-x08');
-        padding: 2px 8px 2px 4px;
-        border-radius: 14px;
-        height: 100%;
+        background:
+            linear-gradient(
+                45deg,
+                clr('surface', 'r-x08', .48),
+                clr('surface', 'r-x08', 1) 24%,
+                clr('surface', 'r-x04', .8) ,
+                clr('surface', 'r-x08', .32) 76%,
+                clr('surface', 'r-x08', .48) ,
+            )
+        ;
+        padding: 0px 4px;
+        border-radius: 64px 16px 16px 64px;
+        height: 46px;
+        border: solid 1px clr('surface', 'r-x08');
+        box-shadow: 0px 0px 8px 2px clr('surface', 'r-x04', .8);
         
-        @include md($bp_00) { padding: 2px 10px 2px 4px; }
+        @include md($bp_00) {
+            padding: 2px 10px 2px 4px;
+            height: 64px;
+        }
     }
 
     .logo {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 46px;
+        height: 40px;
         
-        @include md($bp_00) { height: 64px; }
+        @include md($bp_00) { height: 56px; }
     }
 
     .all-types {
-        padding: 4px 0;
+        // padding: 4px 0;
         display: flex;
         flex-flow: column;
-        align-content: center;
+        align-items: center;
+        justify-content: center;
+
         height: 100%;
         @include user-select(none);
+
+        text-shadow: 2px 2px 2px clr('surface', 'r-x00', .96);
     }
 
     .types {
         display: flex;
         flex-flow: row nowrap;
-        font-size: 1.68rem;
+        font-size: 1.6rem;
         font-family: v('font-logo');
         font-weight: 900;
         gap: 2px;
@@ -74,12 +93,14 @@
     .s { color: clr('second'); }
     
     .desc {
-        font-size: 1.19rem;
+        width: 100%;
+        text-align: center;
+        font-size: .92rem;
         line-height: .88;
-        font-weight: 300;
-        color: clr('detail', 'r-y16');
+        font-weight: 200;
+        color: clr('detail', 'r-y14');
 
-        @include md($bp_00)  { font-size: 1.52rem; }
+        @include md($bp_00)  { font-size: 1.26rem; }
     }
 
 </style>
