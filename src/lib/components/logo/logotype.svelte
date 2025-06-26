@@ -45,14 +45,14 @@
                 clr('surface', 'r-x08', .48) ,
             )
         ;
-        padding: 0px 4px;
+        padding: 0px 4px 0px 2px;
         border-radius: 64px 16px 16px 64px;
         height: 46px;
         border: solid 1px clr('surface', 'r-x08');
         box-shadow: 0px 0px 8px 2px clr('surface', 'r-x04', .8);
         
         @include md($bp_00) {
-            padding: 2px 10px 2px 4px;
+            padding: 0px 6px 0px 4px;
             height: 64px;
         }
     }

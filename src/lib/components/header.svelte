@@ -57,7 +57,7 @@
         }
     }
     .test {
-        width: 42px;
+        width: 40px;
         aspect-ratio: 1;
         background: clr('surface');
         border-radius: 120px;
