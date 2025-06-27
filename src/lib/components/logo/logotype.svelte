@@ -37,23 +37,25 @@
         gap: 4px;
         background:
             linear-gradient(
-                45deg,
+                -45deg,
                 clr('surface', 'r-x08', .48),
                 clr('surface', 'r-x08', 1) 24%,
-                clr('surface', 'r-x04', .8) ,
+                clr('surface', 'r-x06', .88) ,
                 clr('surface', 'r-x08', .32) 76%,
                 clr('surface', 'r-x08', .48) ,
             )
         ;
-        padding: 0px 4px 0px 2px;
-        border-radius: 64px 16px 16px 64px;
-        height: 46px;
-        border: solid 1px clr('surface', 'r-x08');
+        // backdrop-filter: opacity(100%);
+        padding: 0px 8px 0px 6px;
+        // border-radius: 64px 16px 16px 64px;
+        border-radius: 12px;
+        height: 52px;
+        border: solid 1px clr('surface', 'r-x10');
         box-shadow: 0px 0px 8px 2px clr('surface', 'r-x04', .8);
         
         @include md($bp_00) {
-            padding: 0px 6px 0px 4px;
-            height: 64px;
+            padding: 0px 10px 0px 4px;
+            height: 68px;
         }
     }
 
