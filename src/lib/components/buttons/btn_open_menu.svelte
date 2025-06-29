@@ -54,9 +54,9 @@
         }
         &.open{
             box-shadow:
-                inset 4px 4px 24px 2px clr('effect', 'r-y24', .64),
-                inset -4px -4px 24px 1px clr('effect', 'r-x16', .32),
-                0px 0px 12px 2px clr('effect', 'r-y18', .32)
+                inset 4px 4px 24px 2px clr('aux', 'r-y24', .64),
+                inset -4px -4px 24px 1px clr('aux', 'r-x16', .32),
+                0px 0px 12px 2px clr('aux', 'r-y18', .32)
             ;
             border: solid 2px clr('error', 'r-y12');
         }
@@ -76,7 +76,7 @@
         $clr-hs-bars: 'aux';
         --w: 24px;
         --h: 4px;
-        --bg: #{clr(#{$clr-hs-bars}, 'r-y12')};
+        --bg: #{clr(#{$clr-hs-bars}, 'r-y08')};
         --border-rad: 32px;
         --box-shad: 0px 0px 0px 1px #{clr(#{$clr-hs}, 'r-x06', .32)};
         --spacing: 8px;

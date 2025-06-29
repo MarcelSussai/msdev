@@ -43,15 +43,15 @@
                 -45deg,
                 clr('surface', 'r-x08', .48),
                 clr('surface', 'r-x08', 1) 24%,
-                clr('surface', 'r-x06', .88) ,
-                clr('surface', 'r-x08', .32) 76%,
-                clr('surface', 'r-x08', .48) ,
+                clr('surface', 'r-x06', .96) ,
+                clr('surface', 'r-x08', .40) 76%,
+                clr('surface', 'r-x08', .64) ,
             )
         ;
         padding: 0px 8px 0px 6px;
         border-radius: 12px;
         height: v('all-h');
-        // border: solid 1px clr('surface', 'r-x10');
+        border: solid 1px clr('surface', 'r-x16');
         box-shadow: 0px 0px 8px 2px clr('surface', 'r-x04', .8);
         overflow: hidden;
         transition: $transition_00;

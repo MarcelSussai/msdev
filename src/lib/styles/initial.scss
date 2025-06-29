@@ -17,14 +17,14 @@
 // ----------------------------------------------------------------
 
 body {
-    background: clr('surface', 'y10');
+    background: clr('surface', 'y08');
     color: clr('surface', 'x08');
     font-family: v('font-main');
 }
 
 .btn-00 {
     $clr-hs: 'aux';
-    background:      clr(#{$clr-hs}, 'x17');
+    background:      clr(#{$clr-hs}, 'x12');
     color:           clr(#{$clr-hs}, 'y04');
     border-radius:   50%;
     min-height:      40px;
@@ -34,18 +34,20 @@ body {
     transition:      all .3s $ease_in_out_sine;
     font-size:       1rem;
     cursor:          pointer;
-    border:          solid 2px clr(#{$clr-hs}, 'x08');
+    border:          solid 1px clr(#{$clr-hs}, 'x08');
     box-shadow:
-        inset 0 0 12px 2px clr(#{$clr-hs}, 'y24', .8),
-            0 0 16px -2px clr(#{$clr-hs}, 'y00', .8)
+        inset 4px 4px 8px 2px clr(#{$clr-hs}, 'r-y24', .8),
+        inset -4px -4px 8px 2px clr(#{$clr-hs}, 'r-x08', .4),
+        0 0 16px -2px clr(#{$clr-hs}, 'y00', .8)
     ;
     text-shadow: 0px 0px 2px clr(#{$clr-hs}, 'x02');
 
     &:hover, &.sel_hover {
         background: clr(#{$clr-hs}, 'x06');
-        border:     solid 2px clr(#{$clr-hs}, 'y06');
+        border:     solid 1px clr(#{$clr-hs}, 'y06');
         box-shadow:
-            inset 0 0 12px -2px clr(#{$clr-hs}, 'y16', .8),
+            inset 4px 4px 8px 2px clr(#{$clr-hs}, 'y24', .24),
+            inset -4px -4px 8px 2px clr(#{$clr-hs}, 'x04', .32),
             0 0 32px -2px clr(#{$clr-hs}, 'r-000', .8)
         ;
     }
