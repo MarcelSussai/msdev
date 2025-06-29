@@ -51,10 +51,11 @@
         padding: 0px 8px 0px 6px;
         border-radius: 12px;
         height: v('all-h');
-        border: solid 1px clr('surface', 'r-x10');
+        // border: solid 1px clr('surface', 'r-x10');
         box-shadow: 0px 0px 8px 2px clr('surface', 'r-x04', .8);
         overflow: hidden;
         transition: $transition_00;
+        z-index: 999;
 
         @include mix-ani-appear-001();
 
@@ -72,6 +73,7 @@
         align-items: center;
         height: 40px;
         width: fit-content;
+        transition: $transition_00;
         // opacity: 0;
         
         @include md($bp_00) { height: 56px; }
@@ -83,6 +85,7 @@
         flex-flow: column;
         align-items: center;
         justify-content: center;
+        transition: $transition_00;
         // opacity: 0;
 
         height: 100%;
@@ -100,6 +103,7 @@
         font-family: v('font-logo');
         font-weight: 900;
         gap: 2px;
+        transition: $transition_00;
 
         @include md($bp_00) { font-size: 2.16rem; }
     }
@@ -112,12 +116,13 @@
         justify-content: center;
         width: 100%;
         text-align: center;
-        font-size: .92rem;
+        font-size: .90rem;
         line-height: .88;
-        font-weight: 200;
-        color: clr('detail', 'r-y14');
+        font-weight: 300;
+        color: clr('detail', 'r-y12');
+        transition: $transition_00;
 
-        @include md($bp_00)  { font-size: 1.26rem; }
+        @include md($bp_00)  { font-size: 1.22rem; }
     }
 
 </style>

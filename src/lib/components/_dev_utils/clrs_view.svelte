@@ -119,7 +119,7 @@
     .all-clrs-view {
         --pad: 6px;
 
-        border:        solid 1px clr('surface', 'x20');
+        border:        solid 2px clr('surface', 'x20');
         border-radius: 4px;
         display:       flex;
         flex-flow:     column;

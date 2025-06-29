@@ -16,22 +16,22 @@
 
     $bp_00: $md_02;
 
+    $clr-hs: 'surface';
     button {
-        $clr-hs: 'aux';
         --size: 44px;
-
         width: v('size');
         height: v('size');
-        border-radius: 50%;
         position: relative;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         border: solid 2px clr(#{$clr-hs}, 'r-x22');
+        border-radius: 50%;
+        // border-radius: 12px;
         transition: $transition_00;
+        cursor: pointer;
         background:
-            radial-gradient(
-                farthest-corner at 48% 32% in hsl shorter hue,
+            radial-gradient( farthest-corner at 48% 32% in hsl shorter hue,
                 clr(#{$clr-hs}, 'r-y20'), clr(#{$clr-hs}, 'r-x08')
             )
         ;
@@ -40,34 +40,46 @@
             inset -4px -4px 8px 0px clr(#{$clr-hs}, 'r-x08', .64),
             3px 3px 12px 2px clr(#{$clr-hs}, 'r-x02', .64)
         ;
-        cursor: pointer;
-
+        // transform: translateY(-4px);
         &:hover {
             box-shadow:
                 inset 4px 4px 24px 2px clr(#{$clr-hs}, 'r-x14', .64),
                 inset -4px -4px 24px 1px clr(#{$clr-hs}, 'r-y00', .32),
                 0px 0px 12px 2px clr(#{$clr-hs}, 'r-y18', .32)
             ;
-            border: solid 2px clr('detail', 'r-y22');
+            border: solid 2px clr(#{$clr-hs}, 'r-000');
+            & > .bars {
+                --bg: #{clr('detail', 'r-000')};
+            }
         }
-
         &.open{
-            background: red;
+            box-shadow:
+                inset 4px 4px 24px 2px clr('effect', 'r-y24', .64),
+                inset -4px -4px 24px 1px clr('effect', 'r-x16', .32),
+                0px 0px 12px 2px clr('effect', 'r-y18', .32)
+            ;
+            border: solid 2px clr('error', 'r-y12');
         }
-
-        @include md($bp_00) {
-            --size: 48px;
-        }
+        // &::after {
+        //     content: 'menu';
+        //     position: absolute;
+        //     bottom: -16px;
+        //     color: clr('surface', 'r-x22');
+        //     text-shadow: 1px 1px 1px clr('surface', 'r-x12');
+        //     font-size: .72rem;
+        //     opacity: .48;
+        // }
+        @include md($bp_00) { --size: 48px; }
     }
 
     .bars {
-        $clr-hs: 'detail';
+        $clr-hs-bars: 'aux';
         --w: 24px;
-        --h: 3px;
-        --bg: #{clr(#{$clr-hs}, 'r-y16')};
+        --h: 4px;
+        --bg: #{clr(#{$clr-hs-bars}, 'r-y12')};
         --border-rad: 32px;
-        --box-shad: 0px 0px 1px 2px #{clr(#{$clr-hs}, 'r-x08', .48)};
-        --spacing: 7px;
+        --box-shad: 0px 0px 0px 1px #{clr(#{$clr-hs}, 'r-x06', .32)};
+        --spacing: 8px;
 
         position: absolute;
         width: v('w');
@@ -75,6 +87,7 @@
         border-radius: v('border-rad');
         background: v('bg');
         box-shadow: v('box-shad');
+        transition: $transition_00;
 
         &::after, &::before {
             content: '';
@@ -85,13 +98,33 @@
             background: v('bg');
             left: 0;
             box-shadow: v('box-shad');
+            transition: $transition_00;
         }
         &::before { bottom: v('spacing'); }
         &::after { top: v('spacing'); }
+
+        &.open {
+            --bg: #{clr('error', 'r-y12')};
+            background: transparent;
+            box-shadow: none;
+
+        }
+        &.open::after, &.open::before {
+            --box-shad: 0px 0px 0px 1px #{clr('error', 'r-x00', .32)};
+            transform-origin: center;
+        }
+        &.open::after {
+            top: 0px;
+            transform: rotate(-45deg);
+        }
+        &.open::before {
+            bottom: 0px;
+            transform: rotate(45deg);
+        }
         
         @include md($bp_00) {
             --w: 28px;
-            --h: 4px;
+            --h: 5px;
             --spacing: 9px;
         }
     }

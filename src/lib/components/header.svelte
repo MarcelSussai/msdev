@@ -24,7 +24,7 @@
         position: sticky;
         align-self: start;
         top: 6px;
-        z-index: 800;
+        z-index: 900;
         gap: 8px;
 
         width: calc(100% - 12px);
@@ -37,8 +37,8 @@
             linear-gradient(
                 45deg,
                 clr('surface', 'r-x06', .72),
-                clr('surface', 'r-x02', .96) 32%,
-                clr('surface', 'r-x02', .88) 68%,
+                clr('surface', 'r-x02', .88) 32%,
+                clr('surface', 'r-x02', .80) 68%,
                 clr('surface', 'r-x06', .72),
             )
         ;
@@ -54,7 +54,7 @@
             height: v('header-height', 80px);
             width: calc(100% - 16px);
             top: 8px;
-            padding: 0px 14px 0px 5px;
+            padding: 0px 10px 0px 5px;
         }
     }
 </style>

@@ -39,8 +39,8 @@
         transition: all .3s $ease_in_out_sine;
     }
     .config {
-        fill:       v('clr-icon', #{clr('detail', 'y10')});
-        filter: drop-shadow(0px 0px 2px clr('detail', 'x02'));
+        fill:       v('clr-icon', #{clr('surface', 'y04')});
+        filter: drop-shadow(0px 0px 4px clr('surface', 'x04'));
         transition: all .3s $ease_in_out_sine;
     }
 </style>

@@ -5,6 +5,8 @@ import IconMoon from './icons/icon_moon.svelte'
 import IconSun from './icons/icon_sun.svelte'
 import LogoSymbol from './logo/logo_symbol.svelte'
 import Logotype from './logo/logotype.svelte'
+import NavMenu from './menu/nav_menu.svelte'
+
 
 export {
     BtnOpenMenu,
@@ -14,4 +16,5 @@ export {
     IconSun,
     LogoSymbol,
     Logotype,
+    NavMenu,
 }
