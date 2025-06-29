@@ -35,7 +35,8 @@
     .config {
         fill-rule:  evenodd;
         clip-rule:  evenodd;
-        fill:       v('clr-icon', #{clr('surface', 'y06')});
+        fill:       v('clr-icon', #{clr('aux', 'y10')});
+        // filter: drop-shadow(0px 0px 1px clr('aux', 'y04'));
         transition: all .3s $ease_in_out_sine;
     }
 </style>

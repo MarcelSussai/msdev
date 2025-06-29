@@ -16,8 +16,8 @@
 
 <!-- ---------------------------------------------------------------- -->
 
-<section class="hero">seja bem vind@</section>
 <Header />
+<section class="hero">seja bem vind@</section>
 {#key data.url}
     <main
         in:fade={{ duration: 200, delay: 200 }}
@@ -41,19 +41,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.68rem;
+        font-size: 1.36rem;
         font-weight: 300;
         padding: 6px 12px 4px 12px;
         width: 100%;
         font-family: v('font-logo');
         // background-color: clr('surface', 'y16', .8);
-        background:
-            linear-gradient(to bottom,
-                clr('surface', 'y18', .8),
-                clr('surface', 'y10', .8),
-            )
-        ;
+        // background:
+        //     linear-gradient(to bottom,
+        //         clr('surface', 'y18', .8),
+        //         clr('surface', 'y10', .8),
+        //     )
+        // ;
         margin-bottom: 6px;
-        text-shadow: 1px 2px 6px clr('surface', 'r-x04', .56);
+        text-shadow: 1px 2px 6px clr('surface', 'r-x02', .64);
+
+        @include md($md_02) {
+            font-size: 1.68rem;
+        }
     }
 </style>

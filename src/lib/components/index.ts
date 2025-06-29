@@ -1,3 +1,4 @@
+import BtnOpenMenu from './buttons/btn_open_menu.svelte'
 import BtnTheme from './buttons/btn_theme.svelte'
 import Header from './header.svelte'
 import IconMoon from './icons/icon_moon.svelte'
@@ -6,6 +7,7 @@ import LogoSymbol from './logo/logo_symbol.svelte'
 import Logotype from './logo/logotype.svelte'
 
 export {
+    BtnOpenMenu,
     BtnTheme,
     Header,
     IconMoon,

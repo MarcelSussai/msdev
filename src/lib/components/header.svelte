@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Logotype } from '_components'
+    import { Logotype, BtnOpenMenu } from '_components'
 
 </script>
 
@@ -7,7 +7,7 @@
 
 <header>
     <Logotype />
-    <div class="test"></div>
+    <BtnOpenMenu />
 </header>
 
 <!-- ---------------------------------------------------------------- -->
@@ -31,18 +31,18 @@
         height: v('header-height', 64px);
         margin: auto;
         margin-bottom: 16px;
-        padding: 0px 12px 0px 5px;
+        padding: 0px 8px 0px 5px;
 
         background:
             linear-gradient(
                 45deg,
                 clr('surface', 'r-x06', .72),
                 clr('surface', 'r-x02', .96) 32%,
-                clr('surface', 'r-x02', .96) 68%,
+                clr('surface', 'r-x02', .88) 68%,
                 clr('surface', 'r-x06', .72),
             )
         ;
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(6px);
         border: solid 1px clr('surface', 'r-x12');
         border-radius: 16px;
         box-shadow:
@@ -54,12 +54,7 @@
             height: v('header-height', 80px);
             width: calc(100% - 16px);
             top: 8px;
+            padding: 0px 14px 0px 5px;
         }
-    }
-    .test {
-        width: 40px;
-        aspect-ratio: 1;
-        background: clr('surface');
-        border-radius: 120px;
     }
 </style>
