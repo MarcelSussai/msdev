@@ -16,7 +16,7 @@
 
     $bp_00: $md_02;
 
-    $clr-hs: 'surface';
+    $clr-hs: 'aux';
     button {
         --size: 44px;
         width: v('size');
@@ -73,7 +73,7 @@
     }
 
     .bars {
-        $clr-hs-bars: 'aux';
+        $clr-hs-bars: 'surface';
         --w: 24px;
         --h: 4px;
         --bg: #{clr(#{$clr-hs-bars}, 'r-y08')};
