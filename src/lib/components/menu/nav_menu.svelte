@@ -1,34 +1,23 @@
 <script lang="ts">
-    import { sineInOut } from 'svelte/easing'
     import { is_open } from '_stores/nav_store'
     import { onMount } from 'svelte';
 
     function handle_match_media(e: any) {
-        if(e.matches) { is_open.set(true) } else { is_open.set(false) }
+        if(e.matches) {
+            is_open.set(true)
+        } else {
+            is_open.set(false)
+        }
     }
     onMount(() => {
-        // window.matchMedia('(min-width: 968px)').addListener(handle_match_media)
-        // handle_match_media(window.matchMedia('(min-width: 968px)'))
         window.matchMedia('(min-width: 968px)').addEventListener('change', handle_match_media)
     })
-
-    // function appear_nav(node: HTMLElement) {
-    //     return { delay: 0, duration: 400, easing: sineInOut, css: (t: number, u: number) => {
-    //         // console.log(t)
-    //         let test_u = (u * 100).toFixed(2)
-    //         // let test_t = (window.innerWidth >= 968 ? 1 : t).toFixed(2)
-    //         return `
-    //             transform: translate3d(-${test_u}%, 0, 0);
-    //             opacity: ${t};
-    //         `
-    //     }
-    // } }
 </script>
 
 <!-- ---------------------------------------------------------------- -->
-<!-- {$is_open ? 'open' : ''} -->
+
     <div
-        class="all-nav-backdrop {$is_open ? 'open' : 'close'}"
+        class="all-nav-backdrop {$is_open ? 'open' : ''}"
     >
         <nav>
 
@@ -72,18 +61,8 @@
         &.open {
             animation: ani-all-nav-backdrop-01 .4s ease-in-out forwards;
         }
-        &.close {
-            transform: translate3d(-100%, 0, 0);
-            opacity: 0;
-            // animation: ani-all-nav-backdrop-01 .4s ease-in-out reverse forwards;
-        }
 
-        @include md($md_16) {
-            // transform: none !important;
-            // opacity: 1;
-            display: contents;
-
-        }
+        @include md($md_16) { display: contents; }
     }
 
     nav {
