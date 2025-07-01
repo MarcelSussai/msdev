@@ -25,3 +25,4 @@ $ease_in_out_circ:  cubic-bezier(0.785, 0.135, 0.15, 0.86);
 $ease_in_out_back:  cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 $transition_00: all .3s #{$ease_in_out_sine};
+$transition_01: all .4s #{$ease_in_out_sine};

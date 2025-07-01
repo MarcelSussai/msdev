@@ -33,15 +33,13 @@
         margin-bottom: 16px;
         padding: 0px 8px 0px 5px;
 
-        background:
-            linear-gradient(
-                45deg,
-                clr('surface', 'r-x06', .72),
-                clr('surface', 'r-x04', .88) 32%,
-                clr('surface', 'r-x04', .80) 68%,
-                clr('surface', 'r-x06', .72),
-            )
-        ;
+        background: linear-gradient(
+            45deg,
+            clr('surface', 'r-x08', .88),
+            clr('surface', 'r-x04', .88) 32%,
+            clr('surface', 'r-x04', .88) 68%,
+            clr('surface', 'r-x08', .88),
+        );
         backdrop-filter: blur(8px);
         border: solid 1px clr('surface', 'r-x12');
         border-radius: 16px;
