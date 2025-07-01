@@ -4,7 +4,7 @@
     import { fade } from 'svelte/transition'
     import { hand_is_active_link } from '_stores/nav_store'
     import { config_theme } from '_stores/theme'
-    import { Header } from '_components'
+    import { Header, NavMenu } from '_components'
 
     let { data, children }: LayoutProps = $props()
 
@@ -17,6 +17,7 @@
 <!-- ---------------------------------------------------------------- -->
 
 <Header />
+<NavMenu />
 <section class="hero">seja bem vind@</section>
 {#key data.url}
     <main

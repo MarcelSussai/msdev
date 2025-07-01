@@ -14,8 +14,6 @@
 <style lang="scss">
     @use '_s' as *;
 
-    $bp_00: $md_02;
-
     $clr-hs: 'aux';
     button {
         --size: 44px;
@@ -69,7 +67,7 @@
         //     font-size: .72rem;
         //     opacity: .48;
         // }
-        @include md($bp_00) { --size: 48px; }
+        @include md($md_02) { --size: 48px; }
     }
 
     .bars {
@@ -122,7 +120,7 @@
             transform: rotate(45deg);
         }
         
-        @include md($bp_00) {
+        @include md($md_02) {
             --w: 28px;
             --h: 5px;
             --spacing: 9px;
