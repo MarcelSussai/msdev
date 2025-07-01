@@ -2,6 +2,7 @@
 @use 'reset.scss';
 @use 'colors.scss';
 
+
 // ----------------------------------------------------------------
 // scrollbars
 :root {
@@ -15,6 +16,13 @@
 }
 
 // ----------------------------------------------------------------
+
+// html {
+//     animation:
+//         ani-hue-surface 10s linear infinite,
+//         ani-hue-aux     6s linear infinite
+//     ;
+// }
 
 body {
     background: clr('surface', 'y08');

@@ -41,18 +41,22 @@
         background:
             linear-gradient(
                 -45deg,
-                clr('surface', 'r-x08', .48),
+                clr('surface', 'r-x14', 1),
                 clr('surface', 'r-x08', 1) 24%,
-                clr('surface', 'r-x06', .96) ,
-                clr('surface', 'r-x08', .40) 76%,
-                clr('surface', 'r-x08', .64) ,
+                clr('surface', 'r-x06', 1) ,
+                clr('surface', 'r-x08', 1) 76%,
+                clr('surface', 'r-x14', 1) ,
             )
         ;
         padding: 0px 8px 0px 6px;
         border-radius: 12px;
         height: v('all-h');
-        border: solid 1px clr('surface', 'r-x16');
-        box-shadow: 0px 0px 8px 2px clr('surface', 'r-x04', .8);
+        border: solid 1px clr('surface', 'r-000', .40);
+        box-shadow:
+            inset 4px 4px 4px 1px clr('surface', 'r-x20', .24), 
+            inset -4px -4px 4px 1px clr('surface', 'r-x08', .64), 
+            0px 0px 16px 4px clr('surface', 'r-x00', .32),
+        ;
         overflow: hidden;
         transition: $transition_00;
         z-index: 999;
@@ -99,16 +103,16 @@
         flex-flow: row nowrap;
         align-items: center;
         justify-content: center;
-        font-size: 1.6rem;
+        font-size: 1.56rem;
         font-family: v('font-logo');
         font-weight: 900;
         gap: 2px;
         transition: $transition_00;
 
-        @include md($bp_00) { font-size: 2.16rem; }
+        @include md($bp_00) { font-size: 2.08rem; }
     }
-    .m { color: clr('main'); }
-    .s { color: clr('second'); }
+    .m { color: clr('main'); transition: $transition_00; }
+    .s { color: clr('second'); transition: $transition_00; }
     
     .desc {
         display: flex;
@@ -116,13 +120,13 @@
         justify-content: center;
         width: 100%;
         text-align: center;
-        font-size: .90rem;
+        font-size: .88rem;
         line-height: .88;
         font-weight: 300;
         color: clr('detail', 'r-y12');
         transition: $transition_00;
 
-        @include md($bp_00)  { font-size: 1.22rem; }
+        @include md($bp_00)  { font-size: 1.18rem; }
     }
 
 </style>

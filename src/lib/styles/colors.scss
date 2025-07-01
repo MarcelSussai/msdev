@@ -1,4 +1,33 @@
+
+    @property --hue-surface { syntax: "<angle>"; inherits: false; initial-value: 208deg; }
+    @keyframes ani-hue-surface {
+        0%   { --hue-surface: calc(0deg); }
+        100% { --hue-surface: calc( 0deg + 360deg); }
+    }
+
+    @property --hue-aux { syntax: "<angle>"; inherits: false; initial-value: 144deg; }
+    @keyframes ani-hue-aux {
+        0%   { --hue-aux: calc(32deg); }
+        100% { --hue-aux: calc(24deg + 360deg); }
+    }
+
+    @property --hue-main { syntax: "<angle>"; inherits: false; initial-value: 208deg; }
+    @keyframes ani-hue-main {
+        0%   { --hue-main: calc(64deg); }
+        100% { --hue-main: calc(64deg + 360deg); }
+    }
+
+    @property --hue-second { syntax: "<angle>"; inherits: false; initial-value: 144deg; }
+    @keyframes ani-hue-second {
+        0%   { --hue-second: calc(120deg); }
+        100% { --hue-second: calc(120deg + 360deg); }
+    }
+
 :root {
+    // --hue-surface: 208deg;
+    // --hue-main: 208deg;
+    // --hue-second: 144deg;
+
     --hs-default: 0deg,   0%;
 
     --hs-error:   8deg,   96%;
@@ -16,11 +45,11 @@
     --hs-mark:    288deg, 80%;
     --hs-focus:   320deg, 96%;
     
-    --hs-surface: 208deg, 40%;
-    --hs-aux:     144deg, 24%;
+    --hs-surface: var(--hue-surface), 40%;
+    --hs-aux:     var(--hue-aux), 24%;
     
-    --hs-main:    208deg, 100%;
-    --hs-second:  144deg, 72%;
+    --hs-main:    var(--hue-main), 100%;
+    --hs-second:  var(--hue-second), 72%;
 
     // luminosidade
     --l-r-x00: 0%;  --l-r-x01: 2%;  --l-r-x02: 4%;  --l-r-x03: 6%;  --l-r-x04: 8%;

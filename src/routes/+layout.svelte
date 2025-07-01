@@ -42,7 +42,7 @@
         justify-content: center;
         align-items: center;
         font-size: 1.36rem;
-        font-weight: 800;
+        font-weight: 900;
         padding: 6px 12px 4px 12px;
         width: 100%;
         font-family: v('font-logo');
@@ -54,7 +54,7 @@
         //     )
         // ;
         margin-bottom: 6px;
-        text-shadow: 1px 2px 6px clr('surface', 'y00', .8);
+        // text-shadow: 1px 2px 6px clr('surface', 'y00', .8);
         color: clr('surface', 'x18');
 
         @include md($md_02) {
