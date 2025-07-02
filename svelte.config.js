@@ -1,6 +1,6 @@
-import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-auto';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { mdsvex } from 'mdsvex'
+import adapter from '@sveltejs/adapter-auto'
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 const config = {
 	preprocess: [vitePreprocess(), mdsvex()],
@@ -14,7 +14,12 @@ const config = {
 			'_utils': 'src/lib/utils',
 		}
 	},
-	extensions: ['.svelte', '.svx']
-};
+	extensions: ['.svelte', '.svx'],
+	plugins: [
+		mdsvex({
+			
+		}),
+	],
+}
 
-export default config;
+export default config

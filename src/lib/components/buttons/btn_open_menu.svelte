@@ -1,6 +1,8 @@
 <script lang="ts">
     import { hand_is_open_tog, is_open } from '_stores/nav_store'
 
+    
+
 </script>
 
 <!-- ---------------------------------------------------------------- -->
