@@ -12,12 +12,20 @@
     onMount(() => {
         window.matchMedia('(min-width: 968px)').addEventListener('change', handle_match_media)
     })
+
+    let test_close = $state(false)
+    let test_open = $derived($is_open && !test_close)
+
+    // $inspect(test_close)
+    $effect(() => {
+        test_close = !$is_open ? true : false
+    })
 </script>
 
 <!-- ---------------------------------------------------------------- -->
-
+<!-- {$is_open ? 'open' : ''} -->
     <div
-        class="all-nav-backdrop {$is_open ? 'open' : ''}"
+        class="all-nav-backdrop {test_open ? 'open' : test_close ? 'close': ''}"
     >
         <nav>
 
@@ -60,6 +68,9 @@
         
         &.open {
             animation: ani-all-nav-backdrop-01 .4s ease-in-out forwards;
+        }
+        &.close {
+            opacity: 0;
         }
 
         @include md($md_16) { display: contents; }
