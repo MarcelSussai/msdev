@@ -14,11 +14,15 @@
 
 <!-- ---------------------------------------------------------------- -->
 
-<button onclick={() => mudar = !mudar}>Mudar</button>
+<button class="btn-00" onclick={() => mudar = !mudar}>modo rgb</button>
 
 <!-- ---------------------------------------------------------------- -->
 
 <style lang="scss">
     @use '_s' as *;
+
+    button {
+        padding: 0px 8px;
+    }
 
 </style>

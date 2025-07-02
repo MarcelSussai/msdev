@@ -137,7 +137,7 @@
         flex-flow: row wrap;
         gap: 16px;
         padding: 8px;
-        background: clr('surface', 'y08', .72);
+        background: clr('surface', 'y08', .48);
         color: clr('surface', 'x08');
         margin: 16px;
         border-radius: 48px;
