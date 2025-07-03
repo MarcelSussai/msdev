@@ -17,47 +17,107 @@
 
 // ----------------------------------------------------------------
 
-// html {
-//     animation:
-//         ani-hue-surface 10s linear infinite,
-//         ani-hue-aux     6s linear infinite
-//     ;
-// }
-
 body {
     background: clr('surface', 'y08');
     color: clr('surface', 'x08');
     font-family: v('font-main');
 }
 
+// .btn-00 {
+//     $clr-hs: 'aux';
+//     background:      clr(#{$clr-hs}, 'x12');
+//     color:           clr(#{$clr-hs}, 'y04');
+//     border-radius:   999px;
+//     min-height:      40px;
+//     display:         flex;
+//     justify-content: center;
+//     align-items:     center;
+//     transition:      all .3s $ease_in_out_sine;
+//     font-size:       1rem;
+//     cursor:          pointer;
+//     border:          solid 2px clr(#{$clr-hs}, 'x08');
+//     box-shadow:
+//         inset 4px 4px 8px 2px clr(#{$clr-hs}, 'r-y24', .8),
+//         inset -4px -4px 8px 2px clr(#{$clr-hs}, 'r-x08', .4),
+//         // 0 0 16px -2px clr(#{$clr-hs}, 'y00', .8)
+//     ;
+//     text-shadow: 0px 0px 2px clr(#{$clr-hs}, 'x02');
+
+//     &:hover, &.sel_hover {
+//         background: clr(#{$clr-hs}, 'x06');
+//         border:     solid 2px clr(#{$clr-hs}, 'y06');
+//         box-shadow:
+//             inset 4px 4px 8px 2px clr(#{$clr-hs}, 'y24', .24),
+//             inset -4px -4px 8px 2px clr(#{$clr-hs}, 'x04', .32),
+//             0 0 32px -2px clr(#{$clr-hs}, 'r-000', .8)
+//         ;
+//     }
+// }
+
 .btn-00 {
-    $clr-hs: 'aux';
-    background:      clr(#{$clr-hs}, 'x12');
-    color:           clr(#{$clr-hs}, 'y04');
-    border-radius:   999px;
-    min-height:      40px;
-    display:         flex;
+    $clr-hs: 'surface';
+    --pad-default: 0px;
+    --pad: #{v('pad-block', v('pad-default'))} #{v('pad-inline', v('pad-default'))};
+    --bg-clr: #{clr($clr-hs, 'x14')};
+    --clr: #{clr($clr-hs, 'y05')};
+    --font-w: 400;
+
+    display: flex;
     justify-content: center;
-    align-items:     center;
-    transition:      all .3s $ease_in_out_sine;
-    font-size:       1rem;
-    cursor:          pointer;
-    border:          solid 2px clr(#{$clr-hs}, 'x08');
+    align-items: center;
+    padding:  v('pad', v('pad-default'));
+    
+    min-height: 40px;
+    min-width: 40px;
+
+    // border: solid 4px transparent;
+    border-radius: 999px;
+    background: v('bg-clr');
+    color: v('clr');
+    font-weight: v('font-w');
+    text-transform: uppercase;
+    font-size: .88rem;
+    line-height: .88;
+    cursor: pointer;
+    transition: $transition_00;
+    margin: 3px;
+
+    --inset-shadow-spread: 10px;
+    --shadow-border-w: 2px;
+    --shadow-border-spread: 1px;
     box-shadow:
-        inset 4px 4px 8px 2px clr(#{$clr-hs}, 'r-y24', .8),
-        inset -4px -4px 8px 2px clr(#{$clr-hs}, 'r-x08', .4),
-        0 0 16px -2px clr(#{$clr-hs}, 'y00', .8)
+        inset -6px -6px v('inset-shadow-spread') 1px clr($clr-hs, 'r-x01', .48),
+        inset 6px 6px v('inset-shadow-spread') 1px clr($clr-hs, 'r-y20', .8),
+        0px 0px v('shadow-border-spread') v('shadow-border-w') clr($clr-hs, 'x10', 1)
     ;
-    text-shadow: 0px 0px 2px clr(#{$clr-hs}, 'x02');
 
     &:hover, &.sel_hover {
-        background: clr(#{$clr-hs}, 'x06');
-        border:     solid 2px clr(#{$clr-hs}, 'y06');
         box-shadow:
-            inset 4px 4px 8px 2px clr(#{$clr-hs}, 'y24', .24),
-            inset -4px -4px 8px 2px clr(#{$clr-hs}, 'x04', .32),
-            0 0 32px -2px clr(#{$clr-hs}, 'r-000', .8)
+            inset -6px -6px v('inset-shadow-spread') 1px clr($clr-hs, 'r-x01', 0),
+            inset 6px 6px v('inset-shadow-spread') 1px clr($clr-hs, 'r-y20', 0),
+            0px 0px v('shadow-border-spread') v('shadow-border-w') clr($clr-hs, 'y00', 1),
+            0px 0px 32px -3px clr($clr-hs, 'x12', .64),
         ;
+        --bg-clr: #{clr($clr-hs, 'x12')};
+    }
+
+    [theme="dark"] & {
+        --font-w: 600;
+        box-shadow:
+            inset -6px -6px v('inset-shadow-spread') 1px clr($clr-hs, 'r-x01', .40),
+            inset 6px 6px v('inset-shadow-spread') 1px clr($clr-hs, 'r-y04', .88),
+            0px 0px v('shadow-border-spread') v('shadow-border-w') clr($clr-hs, 'x10', 1)
+        ;
+        
+        &:hover, &.sel_hover {
+            box-shadow:
+                inset -6px -6px v('inset-shadow-spread') 1px clr($clr-hs, 'r-x01', 0),
+                inset 6px 6px v('inset-shadow-spread') 1px clr($clr-hs, 'r-y04', 0),
+                0px 0px v('shadow-border-spread') v('shadow-border-w') clr($clr-hs, 'y00', 1),
+                0px 0px 32px -3px clr($clr-hs, 'x12', .8),
+            ;
+            --bg-clr: #{clr($clr-hs, 'x10')};
+        }
     }
 }
 

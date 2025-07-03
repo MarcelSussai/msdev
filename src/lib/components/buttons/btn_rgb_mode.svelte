@@ -14,15 +14,17 @@
 
 <!-- ---------------------------------------------------------------- -->
 
-<button class="btn-00" onclick={() => mudar = !mudar}>modo rgb</button>
+<button
+    class="btn-00 {mudar ? 'sel_hover' : ''}"
+    style:--pad-inline="16px"
+    onclick={() => mudar = !mudar}
+>
+    modo rgb
+</button>
 
 <!-- ---------------------------------------------------------------- -->
 
 <style lang="scss">
     @use '_s' as *;
-
-    button {
-        padding: 0px 8px;
-    }
 
 </style>

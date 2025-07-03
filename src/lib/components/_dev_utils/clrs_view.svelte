@@ -45,11 +45,11 @@
             style="
                 border-radius: 999px;
                 gap: 8px;
-                padding: 0px 16px;
                 font-family: var(--font-main);
                 min-width: 168px;
                 justify-content: space-between;
             "
+            style:--pad-inline="16px"
             onclick={() => is_locked_tone = !is_locked_tone}
         >
             <span style="font-size: small;">tons:</span> {is_locked_tone ? 'travado' : 'destravado'}

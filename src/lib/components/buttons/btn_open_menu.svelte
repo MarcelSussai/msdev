@@ -25,9 +25,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: solid 1px clr(#{$clr-hs}, 'r-x22');
-        border-radius: 50%;
-        // border-radius: 12px;
+        border: solid 2px clr(#{$clr-hs}, 'r-x22');
+        border-radius: 999px;
         transition: $transition_00;
         cursor: pointer;
         background:
@@ -40,14 +39,15 @@
             inset -4px -4px 8px 0px clr(#{$clr-hs}, 'r-x08', .64),
             3px 3px 12px 2px clr(#{$clr-hs}, 'r-x02', .64)
         ;
-        // transform: translateY(-4px);
+
         &:hover {
             box-shadow:
                 inset 4px 4px 24px 2px clr(#{$clr-hs}, 'r-x14', .64),
                 inset -4px -4px 24px 1px clr(#{$clr-hs}, 'r-y00', .32),
                 0px 0px 12px 2px clr(#{$clr-hs}, 'r-y18', .32)
             ;
-            border: solid 1px clr(#{$clr-hs}, 'r-000');
+            // border: solid 1px clr(#{$clr-hs}, 'r-000');
+            border: solid 2px clr('detail', '000');
             & > .bars {
                 --bg: #{clr('detail', 'r-000')};
             }
@@ -58,22 +58,13 @@
                 inset -4px -4px 24px 1px clr('aux', 'r-x16', .32),
                 0px 0px 12px 2px clr('aux', 'r-y18', .32)
             ;
-            border: solid 1px clr('error', 'r-y12');
+            border: solid 2px clr('error', 'r-y12');
         }
-        // &::after {
-        //     content: 'menu';
-        //     position: absolute;
-        //     bottom: -16px;
-        //     color: clr('surface', 'r-x22');
-        //     text-shadow: 1px 1px 1px clr('surface', 'r-x12');
-        //     font-size: .72rem;
-        //     opacity: .48;
-        // }
         @include md($md_02) { --size: 48px; }
     }
 
     .bars {
-        $clr-hs-bars: 'surface';
+        $clr-hs-bars: 'detail';
         --w: 24px;
         --h: 4px;
         --bg: #{clr(#{$clr-hs-bars}, 'r-y08')};

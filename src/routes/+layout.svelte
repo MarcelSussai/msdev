@@ -8,7 +8,17 @@
 
     let { data, children }: LayoutProps = $props()
 
+    let matching_media = $state(false)
+    function handle_match_media(e: MediaQueryListEventInit) {
+        if(e.matches) { matching_media = true } else { matching_media = false }
+        // console.log(`-------- layout - DEBUG - { matching_media } = ${ matching_media }`);
+    }
+
+    // $inspect(matching_media)
+
     onMount(() => {
+        window.matchMedia('(min-width: 968px)').addEventListener('change', handle_match_media)
+        handle_match_media(window.matchMedia('(min-width: 968px)'))
         config_theme()
         hand_is_active_link(data.url)
     })
@@ -21,8 +31,8 @@
 <section class="hero">seja bem vind@</section>
 {#key data.url}
     <main
-        in:fade={{ duration: 200, delay: 200 }}
-        out:fade={{ duration: 200 }}
+        in:fade={{ duration: 300, delay: matching_media ? 300 : 600 }}
+        out:fade={{ duration: 300, delay: matching_media ? 0 : 300 }}
     > {@render children()} </main>
 {/key}
 
@@ -47,15 +57,7 @@
         padding: 6px 12px 4px 12px;
         width: 100%;
         font-family: v('font-logo');
-        // background-color: clr('surface', 'y16', .8);
-        // background:
-        //     linear-gradient(to bottom,
-        //         clr('surface', 'y18', .8),
-        //         clr('surface', 'y10', .8),
-        //     )
-        // ;
         margin-bottom: 6px;
-        // text-shadow: 1px 2px 6px clr('surface', 'y00', .8);
         color: clr('surface', 'x18');
 
         @include md($md_02) {
