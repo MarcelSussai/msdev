@@ -15,11 +15,11 @@
 <!-- ---------------------------------------------------------------- -->
 
 <button
-    class="btn-00 {mudar ? 'sel_hover' : ''}"
+    class="btn-on {mudar ? 'on' : ''}"
     style:--pad-inline="16px"
     onclick={() => mudar = !mudar}
 >
-    modo rgb
+    <span>modo rgb: </span>
 </button>
 
 <!-- ---------------------------------------------------------------- -->

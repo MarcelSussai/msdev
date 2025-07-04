@@ -139,6 +139,7 @@
     .config {
         display: flex;
         flex-flow: row wrap;
+        align-items: center;
         gap: 8px;
         padding: 8px;
         background: clr('surface', 'y00', .24);

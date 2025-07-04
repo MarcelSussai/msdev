@@ -81,6 +81,7 @@ body {
     cursor: pointer;
     transition: $transition_00;
     margin: 3px;
+    user-select: none;
 
     --inset-shadow-spread: 10px;
     --shadow-border-w: 2px;
@@ -120,6 +121,83 @@ body {
         }
     }
 }
+
+.btn-on {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0px 64px 0px 8px;
+    position: relative;
+    border-radius: 8px / 16px;
+    background: clr('surface', 'y05');
+    color: clr('surface', 'x10');
+    transition: $transition_00;
+    border: solid 2px clr('surface', 'y12');
+    cursor: pointer;
+    max-height: fit-content;
+    box-shadow: 2px 2px 12px -1px clr('surface', 'r-x12', .32);
+    font-size: .88rem;
+    user-select: none;
+    
+    & span {
+        padding: 6px 12px;
+        // line-height: 1;
+    }
+    
+    &::before, &::after {
+        position: absolute;
+        transition: $transition_00;
+    }
+    &::before {
+        content: '';
+        height: 100%;
+        width: 64px;
+        background: clr('surface', 'y09');
+        right: 0;
+        z-index: 1;
+        border-left: solid 1px clr('surface', 'y12');
+        border-radius: 0 6px 6px 0 / 0 12px 12px 0;
+    }
+    &::after {
+        content: 'off';
+        display: flex;
+        justify-content: flex-start;
+        padding-inline: 4px;
+        align-items: center;
+        font-family: v('font-mono');
+        font-size: .88rem;
+        letter-spacing: -.4px;
+        color: clr('surface', 'y22');
+        font-weight: 600;
+        width: 40px;
+        height: calc(100% - 4px);
+        background: clr('surface', 'y13');
+        right: 21px;
+        z-index: 2;
+        border-radius: 0 6px 6px 0 / 0 12px 12px 0;
+    }
+
+    &.on {
+        &::before {
+            background: clr('surface', 'y18');
+        }
+        &::after {
+            content: 'on';
+            right: 2px;
+            color: clr('surface', 'y04');
+            background: clr('surface', 'x24');
+            justify-content: flex-end;
+            font-weight: 800;
+        }
+        box-shadow: 2px 2px 12px 0px clr('surface', '000', .48);
+    }
+
+    &:hover {
+        border: solid 2px clr('surface', '000');
+    }
+}
+
+
 
 @keyframes ani_appear_001 {
     0% {

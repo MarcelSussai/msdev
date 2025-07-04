@@ -41,18 +41,16 @@
         <BtnTheme />
         |
         <button
-            class="btn-00 {is_locked_tone ? 'sel_hover' : ''}"
+            class="btn-on {is_locked_tone ? 'on' : ''}"
             style="
-                border-radius: 999px;
                 gap: 8px;
                 font-family: var(--font-main);
                 min-width: 168px;
                 justify-content: space-between;
             "
-            style:--pad-inline="16px"
             onclick={() => is_locked_tone = !is_locked_tone}
         >
-            <span style="font-size: small;">tons:</span> {is_locked_tone ? 'travado' : 'destravado'}
+            <span style="font-weight: 400; font-size: .88rem;">travar tons: </span> 
         </button>
     </div>
 

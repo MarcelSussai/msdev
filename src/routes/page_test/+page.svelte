@@ -1,5 +1,7 @@
 <script lang="ts">
 
+    let test_btn_modo = $state(false)
+    const handle_test_btn_modo = () => test_btn_modo = !test_btn_modo
 </script>
 
 <!-- ---------------------------------------------------------------- -->
@@ -14,6 +16,10 @@
     style:--pad-inline="calc(var(--pad-default) * 2)"
 >
     botão longo
+</button>
+
+<button class="btn-on {test_btn_modo ? 'on' : ''}" onclick={handle_test_btn_modo}>
+    <span>modo:</span>
 </button>
 
 <!-- ---------------------------------------------------------------- -->
