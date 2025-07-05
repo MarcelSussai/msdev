@@ -30,6 +30,14 @@
         initial-value: 0deg;
     }
 
+    h1 {
+        position: sticky;
+        z-index: 4;
+        top: 96px;
+        width: 100%;
+        background: gray;
+    }
+
     .test {
         --var-test: #{v('hue-test')}, 100%;
         --size: 168px;

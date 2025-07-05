@@ -11,10 +11,7 @@
     let matching_media = $state(false)
     function handle_match_media(e: MediaQueryListEventInit) {
         if(e.matches) { matching_media = true } else { matching_media = false }
-        // console.log(`-------- layout - DEBUG - { matching_media } = ${ matching_media }`);
     }
-
-    // $inspect(matching_media)
 
     onMount(() => {
         window.matchMedia('(min-width: 968px)').addEventListener('change', handle_match_media)
@@ -47,6 +44,7 @@
         align-items: center;
         gap: 8px;
         padding: 8px 0 2000px 0;
+        position: relative;
     }
     .hero {
         display: flex;

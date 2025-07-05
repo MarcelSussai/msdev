@@ -14,12 +14,8 @@
 
 <!-- ---------------------------------------------------------------- -->
 
-<button
-    class="btn-on {mudar ? 'on' : ''}"
-    style:--pad-inline="16px"
-    onclick={() => mudar = !mudar}
->
-    <span>modo rgb: </span>
+<button class="btn-on {mudar ? 'on' : ''}" style:--pad-inline="16px" onclick={() => mudar = !mudar}>
+    modo rgb:
 </button>
 
 <!-- ---------------------------------------------------------------- -->

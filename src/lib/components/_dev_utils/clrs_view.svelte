@@ -43,10 +43,7 @@
         <button
             class="btn-on {is_locked_tone ? 'on' : ''}"
             style="
-                gap: 8px;
                 font-family: var(--font-main);
-                min-width: 168px;
-                justify-content: space-between;
             "
             onclick={() => is_locked_tone = !is_locked_tone}
         >
@@ -61,9 +58,9 @@
 
     <div class="infos">
         css:
-        <span style="width: 100%;">hsl( <br>
+        <span style="width: 100%;">hsla( <br>
             &nbsp;&nbsp;&nbsp;&nbsp;var(--hs-{clr_name}), <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;var(--l-{is_locked_tone ? 'r-' : ''}{clr_tone}) <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var(--l-{is_locked_tone ? 'r-' : ''}{clr_tone}), 1 <br>
         )</span>
     </div>
 

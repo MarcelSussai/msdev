@@ -18,41 +18,10 @@
 // ----------------------------------------------------------------
 
 body {
-    background: clr('surface', 'y08');
+    background: clr('surface', 'y07');
     color: clr('surface', 'x08');
     font-family: v('font-main');
 }
-
-// .btn-00 {
-//     $clr-hs: 'aux';
-//     background:      clr(#{$clr-hs}, 'x12');
-//     color:           clr(#{$clr-hs}, 'y04');
-//     border-radius:   999px;
-//     min-height:      40px;
-//     display:         flex;
-//     justify-content: center;
-//     align-items:     center;
-//     transition:      all .3s $ease_in_out_sine;
-//     font-size:       1rem;
-//     cursor:          pointer;
-//     border:          solid 2px clr(#{$clr-hs}, 'x08');
-//     box-shadow:
-//         inset 4px 4px 8px 2px clr(#{$clr-hs}, 'r-y24', .8),
-//         inset -4px -4px 8px 2px clr(#{$clr-hs}, 'r-x08', .4),
-//         // 0 0 16px -2px clr(#{$clr-hs}, 'y00', .8)
-//     ;
-//     text-shadow: 0px 0px 2px clr(#{$clr-hs}, 'x02');
-
-//     &:hover, &.sel_hover {
-//         background: clr(#{$clr-hs}, 'x06');
-//         border:     solid 2px clr(#{$clr-hs}, 'y06');
-//         box-shadow:
-//             inset 4px 4px 8px 2px clr(#{$clr-hs}, 'y24', .24),
-//             inset -4px -4px 8px 2px clr(#{$clr-hs}, 'x04', .32),
-//             0 0 32px -2px clr(#{$clr-hs}, 'r-000', .8)
-//         ;
-//     }
-// }
 
 .btn-00 {
     $clr-hs: 'surface';
@@ -126,70 +95,63 @@ body {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    padding: 0px 64px 0px 8px;
+    padding: 0px calc(56px + 16px) 0px 16px;
     position: relative;
-    border-radius: 8px / 16px;
+    border-radius: 99px;
     background: clr('surface', 'y05');
     color: clr('surface', 'x10');
     transition: $transition_00;
-    border: solid 2px clr('surface', 'y12');
+    border: solid 2px clr('surface', 'y16');
     cursor: pointer;
-    max-height: fit-content;
-    box-shadow: 2px 2px 12px -1px clr('surface', 'r-x12', .32);
+    min-height: 40px;
     font-size: .88rem;
     user-select: none;
-    
-    & span {
-        padding: 6px 12px;
-        // line-height: 1;
-    }
+    box-shadow: 2px 2px 8px 0px clr('surface', 'r-x04', .24);
     
     &::before, &::after {
         position: absolute;
-        transition: $transition_00;
+        transition: $transition_02;
+        border-radius: 99px;
     }
     &::before {
         content: '';
-        height: 100%;
-        width: 64px;
+        right: 2px;
+        height: calc(100% - 4px);
+        width: 56px;
         background: clr('surface', 'y09');
-        right: 0;
         z-index: 1;
-        border-left: solid 1px clr('surface', 'y12');
-        border-radius: 0 6px 6px 0 / 0 12px 12px 0;
     }
     &::after {
-        content: 'off';
-        display: flex;
-        justify-content: flex-start;
-        padding-inline: 4px;
-        align-items: center;
-        font-family: v('font-mono');
-        font-size: .88rem;
-        letter-spacing: -.4px;
-        color: clr('surface', 'y22');
-        font-weight: 600;
-        width: 40px;
-        height: calc(100% - 4px);
+        content: '✖';
+        right: 29px;
+        height: calc(100% - 12px);
+        width: 24px;
         background: clr('surface', 'y13');
-        right: 21px;
+        color: clr('surface', 'y22');
+        padding-inline: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .96rem;
+        line-height: .96rem;
+        letter-spacing: -.4px;
+        font-weight: 500;
         z-index: 2;
-        border-radius: 0 6px 6px 0 / 0 12px 12px 0;
     }
 
     &.on {
         &::before {
-            background: clr('surface', 'y18');
+            background: clr('surface', 'y16');
+            transition: $transition_02;
         }
         &::after {
-            content: 'on';
-            right: 2px;
+            content: '✔';
+            right: 7px;
             color: clr('surface', 'y04');
-            background: clr('surface', 'x24');
-            justify-content: flex-end;
-            font-weight: 800;
+            background: clr('surface', 'x20');
+            font-weight: 700;
         }
-        box-shadow: 2px 2px 12px 0px clr('surface', '000', .48);
+        box-shadow: 0px 0px 20px 1px clr('surface', '000', .64);
     }
 
     &:hover {
