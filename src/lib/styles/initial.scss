@@ -18,7 +18,17 @@
 // ----------------------------------------------------------------
 
 body {
-    background: clr('surface', 'y07');
+    --body-bg-clr: #{clr('surface', 'y07')};
+    background:
+        radial-gradient(clr('surface', 'y07', .80) 15%, transparent 16%) 0 0,
+        radial-gradient(clr('surface', 'y07', .80) 15%, transparent 16%) 8px 8px,
+        radial-gradient(clr('surface', 'x07', .07) 15%, transparent 20%) 0px 1px,
+        radial-gradient(clr('surface', 'x07', .07) 15%, transparent 20%) 8px 9px,
+        v('body-bg-clr')
+    ;
+    // background-color: v('body-bg-clr');
+    background-size: 16px 16px;
+    background-attachment: fixed;
     color: clr('surface', 'x08');
     font-family: v('font-main');
 }
@@ -92,21 +102,22 @@ body {
 }
 
 .btn-on {
+    $main-clr-btn-on: 'surface';
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     padding: 0px calc(56px + 16px) 0px 16px;
     position: relative;
     border-radius: 99px;
-    background: clr('surface', 'y05');
-    color: clr('surface', 'x10');
+    background: clr($main-clr-btn-on, 'y05');
+    color: clr($main-clr-btn-on, 'x10');
     transition: $transition_00;
-    border: solid 2px clr('surface', 'y16');
+    border: solid 2px clr($main-clr-btn-on, 'y16');
     cursor: pointer;
     min-height: 40px;
     font-size: .88rem;
     user-select: none;
-    box-shadow: 2px 2px 8px 0px clr('surface', 'r-x04', .24);
+    box-shadow: 2px 2px 8px 0px clr($main-clr-btn-on, 'r-x04', .24);
     
     &::before, &::after {
         position: absolute;
@@ -118,7 +129,7 @@ body {
         right: 2px;
         height: calc(100% - 4px);
         width: 56px;
-        background: clr('surface', 'y09');
+        background: clr($main-clr-btn-on, 'y09');
         z-index: 1;
     }
     &::after {
@@ -126,8 +137,8 @@ body {
         right: 29px;
         height: calc(100% - 12px);
         width: 24px;
-        background: clr('surface', 'y13');
-        color: clr('surface', 'y22');
+        background: clr($main-clr-btn-on, 'y13');
+        color: clr($main-clr-btn-on, 'y22');
         padding-inline: 4px;
         display: flex;
         justify-content: center;
@@ -141,21 +152,21 @@ body {
 
     &.on {
         &::before {
-            background: clr('surface', 'y16');
+            background: clr($main-clr-btn-on, 'y16');
             transition: $transition_02;
         }
         &::after {
             content: '✔';
             right: 7px;
-            color: clr('surface', 'y04');
-            background: clr('surface', 'x20');
+            color: clr($main-clr-btn-on, 'y04');
+            background: clr($main-clr-btn-on, 'x20');
             font-weight: 700;
         }
-        box-shadow: 0px 0px 20px 1px clr('surface', '000', .64);
+        box-shadow: 0px 0px 20px 1px clr($main-clr-btn-on, '000', .64);
     }
 
     &:hover {
-        border: solid 2px clr('surface', '000');
+        border: solid 2px clr($main-clr-btn-on, '000');
     }
 }
 

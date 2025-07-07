@@ -35,16 +35,16 @@
 
         background: linear-gradient(
             45deg,
-            clr('surface', 'r-x08', .88),
-            clr('surface', 'r-x04', .88) 32%,
-            clr('surface', 'r-x04', .88) 68%,
-            clr('surface', 'r-x08', .88),
+            clr('surface', 'r-x08', .86),
+            clr('surface', 'r-x04', .86) 32%,
+            clr('surface', 'r-x04', .86) 68%,
+            clr('surface', 'r-x08', .86),
         );
         backdrop-filter: blur(8px);
         border: solid 1px clr('surface', 'r-x12');
         border-radius: 16px;
         box-shadow:
-            inset 0 0 24px clr('surface', 'r-000', .40),
+            inset 0 0 24px clr('surface', 'r-000', .48),
             0px 8px 12px -2px clr('surface', 'r-x06', .48)
         ;
 

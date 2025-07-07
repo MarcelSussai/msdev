@@ -18,10 +18,7 @@
     $effect(() => {
         value_of_name = get_value_of_css_var('hs-' + clr_name)
         value_of_tone = get_value_of_css_var('l-' + clr_tone)
-    })
-    // let value_of_name = $derived(get_value_of_css_var('hs-' + clr_name))
-    // let value_of_tone = $derived(get_value_of_css_var('l-' + clr_tone))
-    
+    })    
     onMount(() => {
         name_clrs = root_css_clear_names('hs')
         tones_clr = root_css_clear_names('l-r')
@@ -114,31 +111,32 @@
     .all-clrs-view {
         --pad: 6px;
 
-        border:        solid 2px clr('surface', 'x20');
+        border: solid 2px clr('surface', 'x20');
         border-radius: 4px;
-        display:       flex;
-        flex-flow:     column;
-        width:         298px;
+        display: flex;
+        flex-flow: column;
+        width: 298px;
+        background: v('body-bg-clr');
 
         @include md($md_16) { width: fit-content; }
     }
 
     h2 {
-        font-size:     1.12rem;
-        font-weight:   800;
-        line-height:   1.36;
-        padding:       v('pad');
+        font-size: 1.12rem;
+        font-weight: 800;
+        line-height: 1.36;
+        padding: v('pad');
         border-bottom: solid 1px clr('surface', 'x20');
-        text-align:    center;
+        text-align: center;
         @include user-select(none);
     }
 
     .all-clrs-names {
-        display:               grid;
+        display: grid;
         grid-template-columns: repeat(8, 1fr);
-        padding:               v('pad');
-        gap:                   v('pad');
-        border-bottom:         solid 1px clr('surface', 'x20');
+        padding: v('pad');
+        gap: v('pad');
+        border-bottom: solid 1px clr('surface', 'x20');
         width: fit-content;
         margin-inline: auto;
 
@@ -146,48 +144,48 @@
     }
 
     .all-clrs-tones {
-        display:               grid;
+        display: grid;
         grid-template-columns: repeat(8, 1fr);
-        padding:               v('pad');
-        gap:                   v('pad');
-        width:                 fit-content;
-        margin-inline:         auto;
+        padding: v('pad');
+        gap: v('pad');
+        width: fit-content;
+        margin-inline: auto;
         
         @include md($md_16) { grid-template-columns: repeat(24, 1fr); }
     }
 
     .clr-btn {
         --size: 30px;
-        min-width:     v('w', #{v('size')});
-        height:        v('size');
-        background:    hsl(v('clr'), v('l-clr', #{v('l-000')}));
-        border:        solid 2px hsl(v('clr'), v('l-x20'));
+        min-width: v('w', #{v('size')});
+        height: v('size');
+        background: hsl(v('clr'), v('l-clr', #{v('l-000')}));
+        border: solid 2px hsl(v('clr'), v('l-x20'));
         border-radius: 4px;
-        transition:    all .3s $ease_in_out_sine;
-        cursor:        pointer;
+        transition: all .3s $ease_in_out_sine;
+        cursor: pointer;
         
         &:hover, &.selected {
-            border:     solid 2px hsl(v('clr'), v('l-y08'));
+            border: solid 2px hsl(v('clr'), v('l-y08'));
             background: hsl(v('clr'), v('l-clr', #{v('l-000')}));
         }
         &.selected {
-            border:     solid 2px hsl(v('clr'), v('l-y02'));
+            border: solid 2px hsl(v('clr'), v('l-y02'));
         }
     }
     .btn-tone { border: solid 1px hsl(v('clr'), v('l-x20')); }
 
     .infos {
-        display:       flex;
-        flex-flow:     row wrap;
-        align-items:   center;
-        gap:           8px;
-        padding:       8px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
         border-bottom: solid 1px clr('surface', 'x20');
-        font-size:     .88rem;
-        font-family:   v('font-mono');
+        font-size: .88rem;
+        font-family: v('font-mono');
         
         span {
-            font-size:   1rem;
+            font-size: 1rem;
             font-weight: 800;
         }
     }
