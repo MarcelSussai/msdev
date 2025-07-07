@@ -23,9 +23,11 @@
 
 <!-- ---------------------------------------------------------------- -->
 
+<section class="hero">
+    <h2>seja bem vind@</h2>
+</section>
 <Header />
 <NavMenu />
-<section class="hero">seja bem vind@</section>
 {#key data.url}
     <main
         in:fade={{ duration: 300, delay: matching_media ? 300 : 600 }}
@@ -50,16 +52,32 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.36rem;
+        font-size: 1.68rem;
         font-weight: 900;
         padding: 6px 12px 4px 12px;
         width: 100%;
         font-family: v('font-logo');
-        margin-bottom: 6px;
+        // margin-bottom: 6px;
         color: clr('surface', 'x18');
+        position: absolute;
+        height: 100dvh;
+        background: clr('surface', 'y07');
+        z-index: 999999;
+        // opacity: 0;
+        pointer-events: none;
+        animation:
+            ani_appear_002 .4s 1.76s $ease_in_out_sine reverse forwards
+        ;
+
+        & h2 {
+            opacity: 0;
+            animation:
+                ani_appear_002 .4s .28s $ease_in_out_sine forwards
+            ;
+        }
 
         @include md($md_02) {
-            font-size: 1.68rem;
+            font-size: 2rem;
         }
     }
     :global([theme="dark"]) .hero {
