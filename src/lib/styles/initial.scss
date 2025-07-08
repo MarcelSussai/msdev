@@ -6,8 +6,13 @@
 // ----------------------------------------------------------------
 // scrollbars
 :root {
+    --header-height: 64px;
     --clr-thumb: #{clr('surface', 'r-y22')};
     --clr-track: #{clr('surface', 'r-x20')};
+
+    @include md($md_02) {
+        --header-height: 80px;
+    }
 }
 
 * {
@@ -197,3 +202,14 @@ body {
 }
 
 @keyframes ani_appear_002 { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+@keyframes ani_appear_003 {
+    0% {
+        transform: translate3d(0, calc( -100% + 8px ), 0);
+        // opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        // opacity: 1;
+    }
+}

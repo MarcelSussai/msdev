@@ -69,7 +69,7 @@
         // opacity: 0;
         pointer-events: none;
         animation:
-            ani_appear_002 .4s 1.76s $ease_in_out_sine reverse forwards
+            ani_appear_002 .4s $time-ani-hero $ease_in_out_sine reverse forwards
         ;
 
         & h2 {

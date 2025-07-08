@@ -29,7 +29,7 @@
 
         width: calc(100% - 12px);
         max-width: 968px;
-        height: v('header-height', 64px);
+        height: v('header-height');
         margin: auto;
         margin-bottom: 16px;
         padding: 0px 8px 0px 5px;
@@ -42,15 +42,16 @@
             clr('surface', 'r-x08', .86),
         );
         backdrop-filter: blur(8px);
-        border: solid 1px clr('surface', 'r-x12');
+        border: solid 2px clr('surface', 'r-x12');
         border-radius: 16px;
         box-shadow:
             inset 0 0 24px clr('surface', 'r-000', .48),
             0px 8px 12px -2px clr('surface', 'r-x06', .48)
         ;
+        transform: translate3d(0, calc( -100% + 8px ), 0);
+        animation: ani_appear_003 .4s $time-ani-hero $ease_in_out_sine forwards;
 
         @include md($md_02) {
-            height: v('header-height', 80px);
             width: calc(100% - 16px);
             top: 8px;
             padding: 0px 10px 0px 5px;

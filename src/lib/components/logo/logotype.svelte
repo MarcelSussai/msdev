@@ -61,7 +61,7 @@
         transition: $transition_00;
         z-index: 999;
 
-        @include mix-ani-appear-001();
+        @include mix-ani-appear-001($delay: calc(#{$time-ani-hero} + .5s));
 
         
         @include md($bp_00) {
@@ -78,7 +78,7 @@
         height: 40px;
         width: fit-content;
         transition: $transition_00;
-        // opacity: 0;
+        opacity: 0;
         
         @include md($bp_00) { height: 56px; }
     }
@@ -111,8 +111,14 @@
 
         @include md($bp_00) { font-size: 2.08rem; }
     }
-    .m { color: clr('main'); transition: $transition_00; }
-    .s { color: clr('second'); transition: $transition_00; }
+    .m {
+        color: clr('main'); transition: $transition_00;
+        opacity: 0;
+    }
+    .s {
+        color: clr('second'); transition: $transition_00;
+        opacity: 0;
+    }
     
     .desc {
         display: flex;
@@ -125,6 +131,7 @@
         font-weight: 300;
         color: clr('detail', 'r-y12');
         transition: $transition_00;
+        opacity: 0;
 
         @include md($bp_00)  { font-size: 1.18rem; }
     }
