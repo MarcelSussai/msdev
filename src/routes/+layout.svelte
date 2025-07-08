@@ -62,6 +62,9 @@
         position: absolute;
         height: 100dvh;
         background: clr('surface', 'y07');
+        background:
+            radial-gradient(clr('surface', 'y06'), clr('surface', 'y12') )
+        ;
         z-index: 999999;
         // opacity: 0;
         pointer-events: none;
@@ -81,6 +84,10 @@
         }
     }
     :global([theme="dark"]) .hero {
-        color: clr('surface', 'x10');
+        color: clr('surface', 'x08');
+        background:
+            radial-gradient(clr('surface', 'y12'), clr('surface', 'y06') )
+        ;
+        text-shadow: 1px 2px 2px clr('surface', 'r-x04');
     }
 </style>

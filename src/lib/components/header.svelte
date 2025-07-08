@@ -28,6 +28,7 @@
         gap: 8px;
 
         width: calc(100% - 12px);
+        max-width: 968px;
         height: v('header-height', 64px);
         margin: auto;
         margin-bottom: 16px;

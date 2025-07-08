@@ -61,6 +61,7 @@
             border: solid 2px clr('error', 'r-y12');
         }
         @include md($md_02) { --size: 48px; }
+        @include md($md_16) { display: none; }
     }
 
     .bars {
