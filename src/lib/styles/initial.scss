@@ -10,6 +10,19 @@
     --clr-thumb: #{clr('surface', 'r-y22')};
     --clr-track: #{clr('surface', 'r-x20')};
 
+    --time-ani-start: 1.76s;
+    --time-ani-header: .4s;
+    --time-ani-delay-00: calc( #{v('time-ani-start')} + .2s );
+    --time-ani-delay-01: calc(
+        #{v('time-ani-delay-00')} + #{v('time-ani-header')} + .2s
+    );
+    --time-ani-delay-02: calc( #{v('time-ani-delay-01')} + .8s );
+    --time-ani-delay-03: calc( #{v('time-ani-delay-02')} + .1s );
+    --time-ani-delay-04: calc( #{v('time-ani-delay-03')} + .2s );
+    --time-ani-delay-05: calc( #{v('time-ani-delay-04')} + .2s );
+    --time-ani-delay-06: calc( #{v('time-ani-delay-05')} + .2s );
+
+
     @include md($md_02) {
         --header-height: 80px;
     }
@@ -179,7 +192,7 @@ body {
 
 @keyframes ani_appear_001 {
     0% {
-        max-height: 0px;
+        max-height: 8px;
         max-width: 0px;
         transform: translate3d(-100%, 0, 0);
         opacity: 0;
@@ -189,7 +202,7 @@ body {
     }
     64% {
         max-width: v('all-w');
-        max-height: 0px;
+        max-height: 8px;
         transform: translate3d(0, 0, 0);
         opacity: 1;
     }
@@ -205,7 +218,7 @@ body {
 
 @keyframes ani_appear_003 {
     0% {
-        transform: translate3d(0, calc( -100% + 8px ), 0);
+        transform: translate3d(0, calc( -100% - 16px ), 0);
         // opacity: 0;
     }
     100% {

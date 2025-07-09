@@ -61,7 +61,7 @@
         transition: $transition_00;
         z-index: 999;
 
-        @include mix-ani-appear-001($delay: calc(#{$time-ani-hero} + .5s));
+        @include mix-ani-appear-001($delay: #{v('time-ani-delay-01')});
 
         
         @include md($bp_00) {
@@ -79,6 +79,7 @@
         width: fit-content;
         transition: $transition_00;
         opacity: 0;
+        animation: ani_appear_002 .3s v('time-ani-delay-02') forwards;
         
         @include md($bp_00) { height: 56px; }
     }
@@ -114,10 +115,12 @@
     .m {
         color: clr('main'); transition: $transition_00;
         opacity: 0;
+        animation: ani_appear_002 .3s v('time-ani-delay-03') forwards;
     }
     .s {
         color: clr('second'); transition: $transition_00;
         opacity: 0;
+        animation: ani_appear_002 .3s v('time-ani-delay-04') forwards;
     }
     
     .desc {
@@ -132,6 +135,9 @@
         color: clr('detail', 'r-y12');
         transition: $transition_00;
         opacity: 0;
+        animation:
+            ani_appear_002 .3s v('time-ani-delay-05') forwards
+        ;
 
         @include md($bp_00)  { font-size: 1.18rem; }
     }

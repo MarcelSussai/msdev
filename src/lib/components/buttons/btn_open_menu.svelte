@@ -25,7 +25,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: solid 2px clr(#{$clr-hs}, 'r-x22');
+        // border: solid 2px clr(#{$clr-hs}, 'r-x22');
+        // border: solid 2px transparent;
         border-radius: 999px;
         transition: $transition_00;
         cursor: pointer;
@@ -37,17 +38,21 @@
         box-shadow:
             inset 4px 4px 8px 0px clr(#{$clr-hs}, 'r-y12', .4),
             inset -4px -4px 8px 0px clr(#{$clr-hs}, 'r-x08', .64),
-            3px 3px 12px 2px clr(#{$clr-hs}, 'r-x02', .64)
+            3px 3px 12px 2px clr(#{$clr-hs}, 'r-x02', .64),
+            0px 0px 0px 2px clr('detail', 'r-y12', 1)
         ;
+        opacity: 0;
+        animation: ani_appear_002 .3s v('time-ani-delay-06') forwards;
 
         &:hover {
             box-shadow:
                 inset 4px 4px 24px 2px clr(#{$clr-hs}, 'r-x14', .64),
                 inset -4px -4px 24px 1px clr(#{$clr-hs}, 'r-y00', .32),
-                0px 0px 12px 2px clr(#{$clr-hs}, 'r-y18', .32)
+                0px 0px 12px 2px clr(#{$clr-hs}, 'r-y18', .32),
+                0px 0px 0px 2px clr('detail', 'r-000', .96)
             ;
             // border: solid 1px clr(#{$clr-hs}, 'r-000');
-            border: solid 2px clr('detail', '000');
+            // border: solid 2px clr('detail', '000');
             & > .bars {
                 --bg: #{clr('detail', 'r-000')};
             }
@@ -56,9 +61,10 @@
             box-shadow:
                 inset 4px 4px 24px 2px clr('aux', 'r-y24', .64),
                 inset -4px -4px 24px 1px clr('aux', 'r-x16', .32),
-                0px 0px 12px 2px clr('aux', 'r-y18', .32)
+                0px 0px 12px 2px clr('aux', 'r-y18', .32),
+                0px 0px 0px 2px clr('error', 'r-y16', .96)
             ;
-            border: solid 2px clr('error', 'r-y12');
+            // border: solid 2px clr('error', 'r-y12');
         }
         @include md($md_02) { --size: 48px; }
         @include md($md_16) { display: none; }
@@ -68,9 +74,9 @@
         $clr-hs-bars: 'detail';
         --w: 24px;
         --h: 4px;
-        --bg: #{clr(#{$clr-hs-bars}, 'r-y08')};
+        --bg: #{clr(#{$clr-hs-bars}, 'r-y12')};
         --border-rad: 32px;
-        --box-shad: 0px 0px 0px 1px #{clr(#{$clr-hs}, 'r-x06', .32)};
+        --box-shad: 0px 0px 0px 1px #{clr(#{$clr-hs-bars}, 'r-x10', .8)};
         --spacing: 8px;
 
         position: absolute;
