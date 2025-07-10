@@ -71,7 +71,6 @@
         animation:
             ani_appear_002 .4s v('time-ani-start') $ease_in_out_sine reverse forwards
         ;
-    overflow-x: clip;
 
         & h2 {
             opacity: 0;
