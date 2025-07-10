@@ -1,6 +1,14 @@
 <script lang="ts">
     import ClrsView from '_components/_dev_utils/clrs_view.svelte'
-    import { LogoSymbol } from '_components'
+    import {
+        LogoSymbol,
+        NavIconAboutMe,
+        NavIconArticles,
+        NavIconContact,
+        NavIconHome,
+        NavIconPortfolio,
+        NavIconSkills
+    } from '_components'
 
 </script>
 
@@ -11,7 +19,12 @@
 <!-- <div class="test-icon">
     <LogoSymbol />
 </div> -->
-<div class="test"></div>
+<div class="test"> <NavIconAboutMe /> </div>
+<div class="test"> <NavIconArticles /> </div>
+<div class="test"> <NavIconContact /> </div>
+<div class="test"> <NavIconHome /> </div>
+<div class="test"> <NavIconPortfolio /> </div>
+<div class="test"> <NavIconSkills /> </div>
 
 
 <!-- ---------------------------------------------------------------- -->
@@ -40,14 +53,18 @@
 
     .test {
         --var-test: #{v('hue-test')}, 100%;
-        --size: 168px;
+        --size: 64px;
         // --teste-clr-hs: #{v_hs('detail')};
-        // --teste-clr-l: #{v('l-y12')};
+        // --teste-clr-l: #{v_l('x12')};
         width: v('size');
         height: v('size');
-        border: solid 1px;
+        // border-radius: 999px;
+        border-radius: 16px;
+        padding: 6px;
+        // border: solid 1px;
         // background: clr($var: 'teste-clr');
-        background: clr('surface', 'x20', 1, 'teste-clr');
+        background: clr('aux', 'r-x18', 1, 'teste-clr');
+        // background: v('nav-icon-clr-02');
         // animation: test-ani 8s linear infinite;
     }
 

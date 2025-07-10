@@ -10,7 +10,9 @@
     --clr-thumb: #{clr('surface', 'r-y22')};
     --clr-track: #{clr('surface', 'r-x20')};
 
-    --nav-icon-clr-01: #{clr('surface', 'r-x20')};
+    --nav-icon-clr-hs: #{v_hs('detail')};
+    --nav-icon-clr-01: #{clr('surface', 'r-y12', 1, 'nav-icon-clr')};
+    --nav-icon-clr-02: #{clr('surface', 'r-x21', 1, 'nav-icon-clr')};
 
     --time-ani-start: 1.76s;
     --time-ani-header: .4s;
@@ -190,6 +192,9 @@ body {
     }
 }
 
+.nav-icon-clr-01 { fill: v('nav-icon-clr-01'); }
+.nav-icon-clr-02 { fill: v('nav-icon-clr-02'); }
+.even { fill-rule: evenodd; clip-rule: evenodd; }
 
 
 @keyframes ani_appear_001 {
