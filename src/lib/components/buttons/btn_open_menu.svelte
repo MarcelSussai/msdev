@@ -18,7 +18,7 @@
 
     $clr-hs: 'aux';
     button {
-        --size: 44px;
+        --size: 40px;
         width: v('size');
         height: v('size');
         position: relative;

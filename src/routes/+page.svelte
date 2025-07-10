@@ -11,7 +11,7 @@
 <!-- <div class="test-icon">
     <LogoSymbol />
 </div> -->
-<!-- <div class="test"></div> -->
+<div class="test"></div>
 
 
 <!-- ---------------------------------------------------------------- -->
@@ -38,15 +38,18 @@
     //     background: gray;
     // }
 
-    // .test {
-    //     --var-test: #{v('hue-test')}, 100%;
-    //     --size: 168px;
-    //     width: v('size');
-    //     height: v('size');
-    //     border: solid 1px;
-    //     background: hsl(v('var-test'), 50%);
-    //     // animation: test-ani 8s linear infinite;
-    // }
+    .test {
+        --var-test: #{v('hue-test')}, 100%;
+        --size: 168px;
+        // --teste-clr-hs: #{v_hs('detail')};
+        // --teste-clr-l: #{v('l-y12')};
+        width: v('size');
+        height: v('size');
+        border: solid 1px;
+        // background: clr($var: 'teste-clr');
+        background: clr('surface', 'x20', 1, 'teste-clr');
+        // animation: test-ani 8s linear infinite;
+    }
 
     // @keyframes test-ani { 0% { --hue-test: 0deg; } 100% { --hue-test: 360deg; } }
 </style>

@@ -13,8 +13,15 @@
     @else { @return var(--#{$var}, #{$alt}); }
 }
 @function v_hs($name: 'default') { @return var(--hs-#{$name}); }
-@function clr($name: 'default', $l: 'r-000', $a: 1) {
-    @return hsla(#{v_hs($name)}, var(--l-#{$l}), $a);
+@function clr($name: 'default', $l: 'r-000', $a: 1, $var: '') {
+    @if $var == '' { @return hsla(#{v_hs($name)}, var(--l-#{$l}), $a); }
+    @else {
+        @return hsla(
+            #{v(#{$var}-hs, #{v_hs($name)})},
+            #{v(#{$var}-l, #{v(l-#{$l})})},
+            #{v(#{$var}-a, #{$a})}
+        )
+    }
 }
 // ----------------------------------------------------------------
 

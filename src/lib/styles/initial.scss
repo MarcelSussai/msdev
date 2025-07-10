@@ -10,6 +10,8 @@
     --clr-thumb: #{clr('surface', 'r-y22')};
     --clr-track: #{clr('surface', 'r-x20')};
 
+    --nav-icon-clr-01: #{clr('surface', 'r-x20')};
+
     --time-ani-start: 1.76s;
     --time-ani-header: .4s;
     --time-ani-delay-00: calc( #{v('time-ani-start')} + .2s );
@@ -214,7 +216,7 @@ body {
     }
 }
 
-@keyframes ani_appear_002 { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes ani_appear_002 { 0% { opacity: 0; transform: scale(1.28); } 100% { opacity: 1; transform: scale(1); } }
 
 @keyframes ani_appear_003 {
     0% {
