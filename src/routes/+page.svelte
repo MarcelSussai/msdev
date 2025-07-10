@@ -19,12 +19,12 @@
 <!-- <div class="test-icon">
     <LogoSymbol />
 </div> -->
-<div class="test"> <NavIconAboutMe /> </div>
+<!-- <div class="test"> <NavIconAboutMe /> </div>
 <div class="test"> <NavIconArticles /> </div>
 <div class="test"> <NavIconContact /> </div>
 <div class="test"> <NavIconHome /> </div>
 <div class="test"> <NavIconPortfolio /> </div>
-<div class="test"> <NavIconSkills /> </div>
+<div class="test"> <NavIconSkills /> </div> -->
 
 
 <!-- ---------------------------------------------------------------- -->

@@ -55,7 +55,7 @@
         font-size: 1.68rem;
         font-weight: 900;
         padding: 6px 12px 4px 12px;
-        width: 100%;
+        width: 100dvw;
         font-family: v('font-logo');
         // margin-bottom: 6px;
         color: clr('surface', 'x18');
@@ -71,6 +71,7 @@
         animation:
             ani_appear_002 .4s v('time-ani-start') $ease_in_out_sine reverse forwards
         ;
+    overflow-x: clip;
 
         & h2 {
             opacity: 0;

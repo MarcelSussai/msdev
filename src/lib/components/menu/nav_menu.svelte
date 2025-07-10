@@ -1,5 +1,8 @@
 <script lang="ts">
-    import { BtnTheme, BtnRgbMode } from '_components'
+    import {
+        BtnTheme,
+        BtnRgbMode
+    } from '_components'
     import { is_open, is_closing, hand_is_open_tog } from '_stores/nav_store'
     import { onMount } from 'svelte'
 

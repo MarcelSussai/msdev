@@ -27,7 +27,7 @@
         z-index: 900;
         gap: 8px;
 
-        width: calc(100% - 12px);
+        width: calc(100dvw - 12px);
         max-width: 968px;
         height: v('header-height');
         margin: auto;
