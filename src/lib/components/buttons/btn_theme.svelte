@@ -28,7 +28,7 @@
     @use '_s' as *;
 
     button {
-        width:           40px;
+        // width:           40px;
         aspect-ratio:    1;
         position:        relative;
         overflow:        hidden;

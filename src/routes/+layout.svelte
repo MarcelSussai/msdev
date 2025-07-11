@@ -2,7 +2,7 @@
     import type { LayoutProps } from './$types'
     import { onMount } from 'svelte'
     import { fade } from 'svelte/transition'
-    import { hand_is_active_link } from '_stores/nav_store'
+    import { hand_is_active_link, is_active_link } from '_stores/nav_store'
     import { config_theme } from '_stores/theme'
     import { Header, NavMenu } from '_components'
 
@@ -13,11 +13,16 @@
         if(e.matches) { matching_media = true } else { matching_media = false }
     }
 
+    $effect(() => {
+        hand_is_active_link(data.url)
+        console.log(`-------- DEBUG - { $is_active_link } = ${ $is_active_link }`);
+    })
+
     onMount(() => {
         window.matchMedia('(min-width: 968px)').addEventListener('change', handle_match_media)
         handle_match_media(window.matchMedia('(min-width: 968px)'))
         config_theme()
-        hand_is_active_link(data.url)
+        // hand_is_active_link(data.url)
     })
 </script>
 
@@ -59,7 +64,7 @@
         font-family: v('font-logo');
         // margin-bottom: 6px;
         color: clr('surface', 'x18');
-        position: absolute;
+        position: fixed;
         height: 100dvh;
         background: clr('surface', 'y07');
         background:

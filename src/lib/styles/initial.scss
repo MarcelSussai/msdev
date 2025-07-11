@@ -68,8 +68,8 @@ body {
     align-items: center;
     padding:  v('pad', v('pad-default'));
     
-    min-height: 40px;
-    min-width: 40px;
+    min-height: 32px;
+    min-width:  32px;
 
     // border: solid 4px transparent;
     border-radius: 999px;
@@ -121,6 +121,11 @@ body {
             --bg-clr: #{clr($clr-hs, 'x10')};
         }
     }
+
+    @include md($md_02) {
+        min-height: 40px;
+        min-width: 40px;
+    }
 }
 
 .btn-on {
@@ -136,8 +141,8 @@ body {
     transition: $transition_00;
     border: solid 2px clr($main-clr-btn-on, 'y16');
     cursor: pointer;
-    min-height: 40px;
-    font-size: .88rem;
+    min-height: 36px;
+    font-size: .80rem;
     user-select: none;
     box-shadow: 2px 2px 8px 0px clr($main-clr-btn-on, 'r-x04', .24);
     
@@ -156,17 +161,17 @@ body {
     }
     &::after {
         content: '✖';
-        right: 29px;
+        right: 33px;
         height: calc(100% - 12px);
-        width: 24px;
+        width: 20px;
         background: clr($main-clr-btn-on, 'y13');
         color: clr($main-clr-btn-on, 'y22');
         padding-inline: 4px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: .96rem;
-        line-height: .96rem;
+        font-size: .88rem;
+        line-height: .88rem;
         letter-spacing: -.4px;
         font-weight: 500;
         z-index: 2;
@@ -189,6 +194,18 @@ body {
 
     &:hover {
         border: solid 2px clr($main-clr-btn-on, '000');
+    }
+
+    @include md($md_02) {
+        min-height: 40px;
+        font-size: .88rem;
+
+        &::after {
+            right: 29px;
+            width: 24px;
+            font-size: .96rem;
+            line-height: .96rem;
+        }
     }
 }
 
