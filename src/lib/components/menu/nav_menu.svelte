@@ -140,11 +140,12 @@
             clr('surface', 'r-x12', .96),
         );
         backdrop-filter: blur(8px);
-        border-radius: 16px;
+        border-radius: 24px;
         pointer-events: none;
         padding: 8px;
         display: grid;
         grid-template-rows: min-content min-content min-content;
+        place-items: center;
         gap: 16px;
 
         &.open {
@@ -183,7 +184,7 @@
         align-items: center;
         gap: 8px;
         padding: 8px;
-        background: clr('surface', 'y00', .24);
+        // background: clr('surface', 'y00', .24);
         color: clr('surface', 'x08');
         // justify-self: stretch;
         
@@ -206,6 +207,9 @@
     }
     .icons-nav {
         height: 40px;
+        @include md($md_02) {
+            height: 64px;
+        }
     }
     .link-label {
         width: 100%;
@@ -219,7 +223,7 @@
         // max-width: 88px;
         width: 100%;
         // max-height: 64px;
-        font-size: 1.44rem;
+        font-size: 1.20rem;
         color: clr('surface', 'r-y06');
         font-weight: 300;
         padding: 0px 8px 0px 8px;
@@ -227,13 +231,20 @@
         background: clr('surface', 'r-x10');
         // border: solid 1px clr('surface', 'r-x16');
         // border-radius: 16px / 16px;
-        border-radius: 2px;
+        // border-radius: 160px 64px 64px 160px;
+        border-radius: 160px;
         box-shadow:
-            inset 8px 8px 12px 0px clr('surface', 'r-y24', .4),
-            inset -8px -8px 12px 0px clr('surface', 'r-x04', .48),
+            inset 8px 8px 24px 0px clr('surface', 'r-x22', .4),
+            inset -8px -8px 24px 0px clr('surface', 'r-x04', .48),
             0px 0px 0px 1px clr('surface', 'r-x16'),
-            3px 6px 4px 0px clr('surface', 'r-x04', .64),
+            0px 0px 2px 3px clr('surface', 'r-x06'),
+            3px 6px 4px 0px clr('surface', 'r-x02', .64),
         ;
+        text-transform: uppercase;
+        font-family: v('font-logo');
+        @include md($md_02) {
+            font-size: 1.6rem;
+        }
     }
 
 </style>
