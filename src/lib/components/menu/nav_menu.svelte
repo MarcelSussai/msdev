@@ -224,7 +224,7 @@
         width: 100%;
         // max-height: 64px;
         font-size: 1.20rem;
-        color: clr('surface', 'r-y06');
+        color: clr('detail', 'r-y02', .8);
         font-weight: 300;
         padding: 0px 8px 0px 8px;
         text-wrap: nowrap;
@@ -236,12 +236,14 @@
         box-shadow:
             inset 8px 8px 24px 0px clr('surface', 'r-x22', .4),
             inset -8px -8px 24px 0px clr('surface', 'r-x04', .48),
-            0px 0px 0px 1px clr('surface', 'r-x16'),
+            0px 0px 0px 1px clr('aux', 'r-y20', .64),
             0px 0px 2px 3px clr('surface', 'r-x06'),
             3px 6px 4px 0px clr('surface', 'r-x02', .64),
         ;
         text-transform: uppercase;
-        font-family: v('font-logo');
+        // font-family: v('font-logo');
+        text-shadow: 2px 2px 4px clr('surface', 'r-x02');
+
         @include md($md_02) {
             font-size: 1.6rem;
         }
