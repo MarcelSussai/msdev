@@ -34,12 +34,11 @@
         class="all-nav-backdrop {$is_open ? 'open' : $is_closing ? 'close': ''}"
     >
         <nav class="{ $is_open ? 'open' : '' } {$is_closing && !matching_media ? 'close': ''}">
-            <a href="/page_test" onclick={hand_is_open_tog}> TESTE </a>
-            <menu class="all-links-pages">
+            <menu>
                 <a href="/" onclick={hand_is_open_tog} class="menu-link {get_style_class_selected('/')}">
                     <div class="icons-nav"> <NavIconHome /> </div> <span class="link-label">home</span>
                 </a>
-                <a href="/" onclick={hand_is_open_tog} class="menu-link">
+                <a href="/page_test" onclick={hand_is_open_tog} class="menu-link {get_style_class_selected('/page_test')}">
                     <div class="icons-nav"> <NavIconAboutMe /> </div> <span class="link-label {$is_active_link == '/about_me' ? '.sel-link' : ''}">quem sou</span>
                 </a>
                 <a href="/" onclick={hand_is_open_tog} class="menu-link">
@@ -134,10 +133,11 @@
         backdrop-filter: blur(8px);
         border-radius: 24px;
         pointer-events: none;
-        padding: 8px;
+        padding: 32px 0px 24px 0px;
         display: grid;
-        grid-template-rows: min-content min-content min-content;
-        place-items: center;
+        // grid-template-rows: min-content min-content min-content;
+        // place-items: center;
+        justify-items: center;
         gap: 16px;
 
         &.open {
@@ -167,6 +167,11 @@
                 animation: unset;
                 min-height: fit-content;
             }
+            background: none;
+            backdrop-filter: none;
+            width: fit-content;
+            left: calc(50dvw - 25dvw + 240px);
+            top: -16px;
         }
     }
 
@@ -175,7 +180,7 @@
         flex-flow: row wrap;
         align-items: center;
         gap: 8px;
-        padding: 8px;
+        padding: 0px;
         // background: clr('surface', 'y00', .24);
         color: clr('surface', 'x08');
         // justify-self: stretch;
@@ -187,7 +192,7 @@
         transition: $transition_00;
     }
 
-    .all-links-pages {
+    menu {
         display: flex;
         flex-flow: column;
         justify-items: flex-start;
@@ -199,6 +204,12 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
+        @include md($md_08) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include md($md_16) {
+            grid-template-columns: repeat(6, 1fr);
+        }
     }
     .icons-nav {
         height: 40px;
@@ -208,8 +219,8 @@
             width: 64px;
         }
         @include md($md_04) {
-            height: 48px;
-            width: 48px;
+            height: 40px;
+            width: 40px;
         }
     }
     .link-label {
@@ -243,11 +254,11 @@
         // border-radius: 16px / 16px;
         // border-radius: 160px 64px 64px 160px;
         // border-radius: 160px;
-        border-radius: 8px;
+        border-radius: 40px / 80px;
         box-shadow:
-            inset 8px 8px 24px 0px clr('surface', 'r-x22', .4),
-            inset -8px -8px 24px 0px clr('surface', 'r-x04', .48),
-            0px 0px 0px 1px clr('aux', 'r-y20', .64),
+            inset 8px 8px 16px -2px clr('surface', 'r-y24', .64),
+            inset -8px -8px 16px 0px clr('surface', 'r-x03', .64),
+            0px 0px 0px 2px clr('surface', 'r-000', .8),
             0px 0px 2px 3px clr('surface', 'r-x06'),
             3px 6px 4px 0px clr('surface', 'r-x02', .64),
         ;
@@ -258,8 +269,8 @@
             --nav-icon-clr-01: #{clr('detail', 'r-y12', 1, 'nav-icon-clr-01')};
             --nav-icon-clr-02: #{clr('detail', 'r-000', 1, 'nav-icon-clr-02')};
             box-shadow:
-                inset 8px 8px 24px 0px clr('surface', 'r-x22', .4),
-                inset -8px -8px 24px 0px clr('surface', 'r-x04', .48),
+                inset 8px 8px 16px -2px clr('surface', 'r-y24', .64),
+                inset -8px -8px 16px 0px clr('surface', 'r-x03', .64),
                 0px 0px 0px 2px clr('detail', 'r-y20', .96),
                 0px 0px 32px 3px clr('detail', 'r-y12', .40),
                 3px 6px 4px 0px clr('surface', 'r-x02', .64),
@@ -269,8 +280,8 @@
             --nav-icon-clr-01: #{clr('surface', 'r-y12', 1, 'nav-icon-clr-01')};
             --nav-icon-clr-02: #{clr('surface', 'r-000', 1, 'nav-icon-clr-02')};
             box-shadow:
-                inset 8px 8px 24px 0px clr('surface', 'r-x22', .4),
-                inset -8px -8px 24px 0px clr('surface', 'r-x04', .48),
+                inset 8px 8px 16px -2px clr('surface', 'r-y24', .64),
+                inset -8px -8px 16px 0px clr('surface', 'r-x03', .64),
                 0px 0px 1px 2px clr('surface', 'r-y12', .96),
                 0px 0px 32px 4px clr('aux', 'r-y12', .40),
                 3px 6px 4px 0px clr('surface', 'r-x02', .64),
@@ -282,7 +293,15 @@
             font-size: 1.12rem;
             flex-flow: column;
             gap: 0;
-            max-height: 72px;
+            max-height: 80px;
+            padding: 4px 20px 4px 20px;
+        }
+        @include md($md_16) {
+            padding: 2px 12px 2px 12px;
+            border-radius: 12px;
+            font-size: .8rem;
+            gap: 0px;
+            max-width: 112px;
         }
     }
 
