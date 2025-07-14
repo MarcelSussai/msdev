@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Logotype, BtnOpenMenu } from '_components'
+    import { Logotype, BtnOpenMenu, Menu } from '_components'
 
 </script>
 
@@ -7,6 +7,7 @@
 
 <header>
     <Logotype />
+    <nav> <Menu /> </nav>
     <BtnOpenMenu />
 </header>
 
@@ -28,7 +29,7 @@
         gap: 8px;
 
         width: calc(100dvw - 12px);
-        max-width: 968px;
+        max-width: 1080px;
         height: v('header-height');
         margin: auto;
         margin-bottom: 16px;
@@ -55,6 +56,22 @@
             width: calc(100% - 16px);
             top: 8px;
             padding: 0px 10px 0px 6px;
+        }
+    }
+    nav {
+        color: white;
+        font-weight: 900;
+        width: fit-content;
+        // background: red;
+        height: 100%;
+        display: none;
+
+        @include md($md_17) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+
         }
     }
 </style>

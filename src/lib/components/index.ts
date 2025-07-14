@@ -12,6 +12,7 @@ import NavIconPortfolio from './icons/nav_icon_portfolio.svelte'
 import NavIconSkills from './icons/nav_icon_skills.svelte'
 import LogoSymbol from './logo/logo_symbol.svelte'
 import Logotype from './logo/logotype.svelte'
+import Menu from './menu/menu.svelte'
 import NavMenu from './menu/nav_menu.svelte'
 
 
@@ -31,5 +32,6 @@ export {
     NavIconSkills,
     LogoSymbol,
     Logotype,
+    Menu,
     NavMenu,
 }
