@@ -112,9 +112,9 @@
         // border-radius: 40px / 80px;
         border-radius: 8px;
         box-shadow:
-            inset 8px 8px 16px -2px clr('surface', 'r-y24', .64),
+            inset 8px 8px 16px -2px clr('surface', 'r-x22', .64),
             inset -8px -8px 16px 0px clr('surface', 'r-x03', .64),
-            0px 0px 0px 2px clr('surface', 'r-000', .8),
+            0px 0px 0px 2px clr('surface', 'r-x10', .8),
             0px 0px 2px 3px clr('surface', 'r-x06'),
             3px 6px 4px 0px clr('surface', 'r-x02', .64),
         ;
@@ -125,7 +125,7 @@
             --nav-icon-clr-01: #{clr('detail', 'r-y12', 1, 'nav-icon-clr-01')};
             --nav-icon-clr-02: #{clr('detail', 'r-000', 1, 'nav-icon-clr-02')};
             box-shadow:
-                inset 8px 8px 16px -2px clr('surface', 'r-y24', .64),
+                inset 8px 8px 16px -2px clr('surface', 'r-x22', .64),
                 inset -8px -8px 16px 0px clr('surface', 'r-x03', .64),
                 0px 0px 0px 2px clr('detail', 'r-y20', .96),
                 0px 0px 32px 3px clr('detail', 'r-y12', .40),
@@ -137,7 +137,7 @@
             --nav-icon-clr-01: #{clr('surface', 'r-y12', 1, 'nav-icon-clr-01')};
             --nav-icon-clr-02: #{clr('surface', 'r-000', 1, 'nav-icon-clr-02')};
             box-shadow:
-                inset 8px 8px 16px -2px clr('surface', 'r-y24', .64),
+                inset 8px 8px 16px -2px clr('surface', 'r-x22', .64),
                 inset -8px -8px 16px 0px clr('surface', 'r-x03', .64),
                 0px 0px 1px 2px clr('surface', 'r-y12', .96),
                 0px 0px 32px 4px clr('aux', 'r-y12', .40),

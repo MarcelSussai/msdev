@@ -15,7 +15,7 @@
 
     $effect(() => {
         hand_is_active_link(data.url)
-        console.log(`-------- DEBUG - { $is_active_link } = ${ $is_active_link }`);
+        // console.log(`-------- DEBUG - { $is_active_link } = ${ $is_active_link }`);
     })
 
     onMount(() => {
