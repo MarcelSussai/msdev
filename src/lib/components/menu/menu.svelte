@@ -99,7 +99,7 @@
         // max-height: 64px;
         font-size: 1rem;
         color: clr('detail', 'r-y02', .8);
-        font-weight: 800;
+        font-weight: 400;
         line-height: 1;
         padding: 0px 8px 0px 8px;
         text-wrap: nowrap;
@@ -115,7 +115,7 @@
             inset 8px 8px 16px -2px clr('surface', 'r-x22', .64),
             inset -8px -8px 16px 0px clr('surface', 'r-x03', .64),
             0px 0px 0px 2px clr('surface', 'r-x10', .8),
-            0px 0px 2px 3px clr('surface', 'r-x06'),
+            0px 0px 2px 2px clr('surface', 'r-x06'),
             3px 6px 4px 0px clr('surface', 'r-x02', .64),
         ;
         text-transform: uppercase;
@@ -128,7 +128,7 @@
                 inset 8px 8px 16px -2px clr('surface', 'r-x22', .64),
                 inset -8px -8px 16px 0px clr('surface', 'r-x03', .64),
                 0px 0px 0px 2px clr('detail', 'r-y20', .96),
-                0px 0px 32px 3px clr('detail', 'r-y12', .40),
+                0px 0px 32px 2px clr('detail', 'r-y12', .40),
                 3px 6px 4px 0px clr('surface', 'r-x02', .64),
             ;
             color: clr('detail', 'r-y12', 1);
