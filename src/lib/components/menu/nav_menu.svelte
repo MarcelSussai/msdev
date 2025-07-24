@@ -13,8 +13,8 @@
         else { is_open.set(false); matching_media = false }
     }
     onMount(() => {
-        window.matchMedia('(min-width: 968px)').addEventListener('change', handle_match_media)
-        handle_match_media(window.matchMedia('(min-width: 968px)'))
+        window.matchMedia('(min-width: 1080px)').addEventListener('change', handle_match_media)
+        handle_match_media(window.matchMedia('(min-width: 1080px)'))
     })
 
 </script>
