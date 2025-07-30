@@ -59,14 +59,10 @@
         }
     }
     nav {
-        color: white;
-        font-weight: 900;
-        width: fit-content;
-        // background: red;
-        height: 100%;
         display: none;
 
         @include md($md_17) {
+            width: fit-content;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-evenly;

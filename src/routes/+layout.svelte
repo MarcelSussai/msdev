@@ -4,7 +4,7 @@
     import { fade } from 'svelte/transition'
     import { hand_is_active_link, is_active_link } from '_stores/nav_store'
     import { config_theme } from '_stores/theme'
-    import { Header, NavMenu } from '_components'
+    import { Header, NavMenu, all_config_media_min_width_menu } from '_components'
 
     let { data, children }: LayoutProps = $props()
 
@@ -19,8 +19,8 @@
     })
 
     onMount(() => {
-        window.matchMedia('(min-width: 1080px)').addEventListener('change', handle_match_media)
-        handle_match_media(window.matchMedia('(min-width: 1080px)'))
+        window.matchMedia(all_config_media_min_width_menu).addEventListener('change', handle_match_media)
+        handle_match_media(window.matchMedia(all_config_media_min_width_menu))
         config_theme()
         // hand_is_active_link(data.url)
     })

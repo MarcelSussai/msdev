@@ -12,10 +12,12 @@ import NavIconPortfolio from './icons/nav_icon_portfolio.svelte'
 import NavIconSkills from './icons/nav_icon_skills.svelte'
 import LogoSymbol from './logo/logo_symbol.svelte'
 import Logotype from './logo/logotype.svelte'
+import ConfigMenu from './menu/config_menu.svelte'
 import Menu from './menu/menu.svelte'
 import NavMenu from './menu/nav_menu.svelte'
 
-
+const config_media_menu = '1080'
+const all_config_media_min_width_menu = `(min-width: ${config_media_menu}px)`
 
 export {
     BtnOpenMenu,
@@ -32,6 +34,9 @@ export {
     NavIconSkills,
     LogoSymbol,
     Logotype,
+    ConfigMenu,
     Menu,
     NavMenu,
+    all_config_media_min_width_menu,
+    config_media_menu
 }
