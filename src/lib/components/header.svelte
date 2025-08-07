@@ -1,5 +1,10 @@
 <script lang="ts">
-    import { Logotype, BtnOpenMenu, Menu } from '_components'
+    import { Logotype, BtnOpenMenu, Menu, ConfigMenu } from '_components'
+    import { fade } from 'svelte/transition'
+
+    let open_config = $state(false)
+
+    function open_config_toggle() { open_config = !open_config }
 
 </script>
 
@@ -7,7 +12,15 @@
 
 <header>
     <Logotype />
-    <nav> <Menu /> </nav>
+    <nav>
+        <Menu />
+        <button class="config-menu" aria-label="menu de configuração" onclick={open_config_toggle}> <div class="symbol-config-menu"></div> </button>
+        {#if open_config}
+            <section transition:fade={{duration: 300}} class="config">
+                <ConfigMenu />
+            </section>
+        {/if}
+    </nav>
     <BtnOpenMenu />
 </header>
 
@@ -28,7 +41,7 @@
         z-index: 900;
         gap: 8px;
 
-        width: calc(100dvw - 12px);
+        width: calc(100dvw - 24px);
         max-width: 1080px;
         height: v('header-height');
         margin: auto;
@@ -67,7 +80,66 @@
             flex-flow: row nowrap;
             justify-content: space-evenly;
             align-items: center;
+            gap: 12px;
 
         }
+    }
+    .config-menu {
+        display: none;
+        @include md($md_17) {
+            display: flex;
+            justify-content: center;
+            transition: $transition_00;
+            align-items: center;
+            padding: 8px 4px;
+            background: transparent;
+            cursor: pointer;
+            height: 40px;
+            border: solid 1px transparent;
+            border-radius: 999px;
+            // backdrop-filter: blur(16px);
+            opacity: 0;
+            animation: ani_appear_002 .3s v('time-ani-delay-08') forwards;
+            &:hover {
+                border: solid 1px clr('surface', 'r-y16');
+            }
+        }
+    }
+    .symbol-config-menu {
+        width: 6px;
+        height: 6px;
+        background: clr('surface', 'r-y16');
+        border-radius: 999px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: inherit;
+            border-radius: 999px;
+        }
+        &::before {
+            top: -10px;
+        }
+        &::after {
+            top: 10px;
+        }
+    }
+    .config {
+        position: absolute;
+        bottom: calc(-100% + 8px);
+        right: 0;
+        padding: 8px 12px 8px 8px;
+        // width: 200px;
+        // height: 64px;
+        background: clr('surface', 'r-x14');
+        border-radius: 999px;
+        box-shadow: 4px 4px 8px 0px clr('surface', 'r-x04', .48);
+        border: solid 1px clr('surface', 'r-x20');
     }
 </style>

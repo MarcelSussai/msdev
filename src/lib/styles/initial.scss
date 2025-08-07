@@ -25,6 +25,8 @@
     --time-ani-delay-04: calc( #{v('time-ani-delay-03')} + .2s );
     --time-ani-delay-05: calc( #{v('time-ani-delay-04')} + .2s );
     --time-ani-delay-06: calc( #{v('time-ani-delay-05')} + .2s );
+    --time-ani-delay-07: calc( #{v('time-ani-delay-06')} + .2s );
+    --time-ani-delay-08: calc( #{v('time-ani-delay-07')} + .2s + .5s );
 
 
     @include md($md_02) {

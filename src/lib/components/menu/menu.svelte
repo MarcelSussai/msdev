@@ -17,22 +17,22 @@
 <!-- ---------------------------------------------------------------- -->
 
 <menu>
-    <a href="/" onclick={hand_is_open_tog} class="menu-link {get_style_class_selected('/')}">
+    <a href="/" onclick={hand_is_open_tog} class="menu-link {get_style_class_selected('/')}" style="--time-plus-delay: 0s">
         <div class="icons-nav"> <NavIconHome /> </div> <span class="link-label">home</span>
     </a>
-    <a href="/page_test" onclick={hand_is_open_tog} class="menu-link {get_style_class_selected('/page_test')}">
+    <a href="/page_test" onclick={hand_is_open_tog} class="menu-link {get_style_class_selected('/page_test')}" style="--time-plus-delay: .1s">
         <div class="icons-nav"> <NavIconAboutMe /> </div> <span class="link-label {$is_active_link == '/about_me' ? '.sel-link' : ''}">quem sou</span>
     </a>
-    <a href="/" onclick={hand_is_open_tog} class="menu-link">
+    <a href="/" onclick={hand_is_open_tog} class="menu-link" style="--time-plus-delay: .2s">
         <div class="icons-nav"> <NavIconSkills /> </div> <span class="link-label {$is_active_link == '/skills' ? '.sel-link' : ''}">habilidades</span>
     </a>
-    <a href="/" onclick={hand_is_open_tog} class="menu-link">
+    <a href="/" onclick={hand_is_open_tog} class="menu-link" style="--time-plus-delay: .3s">
         <div class="icons-nav"> <NavIconPortfolio /> </div> <span class="link-label {$is_active_link == '/portfolio' ? '.sel-link' : ''}">portfolio</span>
     </a>
-    <a href="/" onclick={hand_is_open_tog} class="menu-link">
+    <a href="/" onclick={hand_is_open_tog} class="menu-link" style="--time-plus-delay: .4s">
         <div class="icons-nav"> <NavIconArticles /> </div> <span class="link-label {$is_active_link == '/articles' ? '.sel-link' : ''}">artigos</span>
     </a>
-    <a href="/" onclick={hand_is_open_tog} class="menu-link">
+    <a href="/" onclick={hand_is_open_tog} class="menu-link" style="--time-plus-delay: .5s">
         <div class="icons-nav"> <NavIconContact /> </div> <span class="link-label {$is_active_link == '/contact' ? '.sel-link' : ''}">contato</span>
     </a>
 </menu>
@@ -159,6 +159,8 @@
             font-size: .72rem;
             line-height: .72;
             gap: 4px;
+            opacity: 0;
+            animation: ani_appear_002 .3s calc( v('time-ani-delay-07') + v('time-plus-delay', 0s)) forwards;
             // width: fit-content ;
             // max-width: 112px;
         }
